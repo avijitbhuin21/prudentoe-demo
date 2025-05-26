@@ -131,11 +131,21 @@
     />
     <style>
       /* For the multi-color Google text, inline styles are simplest with Tailwind without custom config */
-      .google-g { color: #4285F4; }
-      .google-o1 { color: #EA4335; }
-      .google-o2 { color: #FBBC05; }
-      .google-l { color: #34A853; }
-      .google-e { color: #EA4335; }
+      .google-g {
+        color: #4285f4;
+      }
+      .google-o1 {
+        color: #ea4335;
+      }
+      .google-o2 {
+        color: #fbbc05;
+      }
+      .google-l {
+        color: #34a853;
+      }
+      .google-e {
+        color: #ea4335;
+      }
 
       @media (min-width: 1024px) {
         body {
@@ -268,7 +278,7 @@
       }
       #heroCarousel .carousel-slide img {
         width: 100%;
-        height: auto;
+        height: 300px;
         object-fit: cover;
         display: block;
         transition: transform 0.3s ease;
@@ -336,6 +346,71 @@
       .animate-on-scroll.is-visible {
         opacity: 1;
         transform: translateY(0);
+      }
+      
+      /* WhatsApp Floating Animations */
+      .whatsapp-float {
+        animation: whatsappFloat 3s ease-in-out infinite, whatsappPulse 2s ease-in-out infinite alternate;
+        transition: transform 0.3s ease;
+      }
+      
+      .whatsapp-float:hover {
+        animation-play-state: paused;
+        transform: scale(1.1) translateY(-5px);
+      }
+      
+      @keyframes whatsappFloat {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-8px) rotate(1deg);
+        }
+        50% {
+          transform: translateY(-12px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-8px) rotate(-1deg);
+        }
+      }
+      
+      @keyframes whatsappPulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        }
+        100% {
+          box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+        }
+      }
+      
+      /* Additional glow effect */
+      .whatsapp-glow {
+        position: relative;
+      }
+      
+      .whatsapp-glow::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #25d366, #128c7e, #25d366);
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.7;
+        animation: whatsappGlow 2s ease-in-out infinite alternate;
+      }
+      
+      @keyframes whatsappGlow {
+        0% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0.3;
+          transform: scale(1.05);
+        }
       }
     </style>
     <script>
@@ -407,9 +482,26 @@
                 style="margin-left: -0.5rem"
               />
             </a>
-            <!-- <button class="p-2 bg-prudentoe-green rounded-10px" aria-label="Open menu">
-                        <svg class="w-5 h-4 text-white" fill="none" viewBox="0 0 22 14"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 1h20M1 7h20M1 13h20"/></svg>
-                    </button> -->
+            <!-- <button
+              class="p-2 bg-prudentoe-green rounded-10px"
+              aria-label="Open menu"
+            >
+               <svg class="w-5 h-4 text-white" fill="none" viewBox="0 0 22 14">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M1 1h20M1 7h20M1 13h20"
+                />
+            </svg> 
+            </button> -->
+            <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
+              <img
+                src="https://img.freepik.com/premium-photo/whatsapp-logo_1080029-96.jpg?ga=GA1.1.1160482311.1748263993&semt=ais_hybrid&w=740"
+                alt="WhatsApp Icon"
+                class="w-[60px] h-[60px] bg-white rounded-full whatsapp-float"
+              />
+            </a>
           </div>
           <div class="relative z-10">
             <div class="animate-on-scroll">
@@ -465,12 +557,12 @@
           <img
             src="static/images/semi-circle.png"
             alt="semi-circle"
-            class="absolute right-[-15px] w-[190px] h-[250px] object-fill z-[1] opacity-100 top-[160px]"
+            class="absolute right-[-15px] w-[190px] h-[250px] object-fill z-[1] opacity-100 top-[134px]"
           />
           <img
             src="static/images/smiling-nurse.png"
             alt="Smiling nurse"
-            class="absolute right-[-30px] bottom-[0px] h-[325px] w-auto z-10"
+            class="absolute right-[-40px] bottom-[0px] h-[325px] w-auto z-10"
           />
         </div>
         <div class="pt-8 px-5">
@@ -596,7 +688,7 @@
                 <img
                   src="static/images/dentist-patient.jpg"
                   alt="Dentist with patient"
-                  class="w-full h-auto"
+                  class="w-full h-auto object-cover"
                 />
                 <div
                   class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 rounded-b-8px"
@@ -616,7 +708,7 @@
                 class="shadow-custom-image rounded-8px overflow-hidden relative h-auto"
               >
                 <img
-                  src="https://picsum.photos/400/267?random=100"
+                  src="//prudentoe.com/wp-content/uploads/slider/cache/d74467297aad14cef75ac8719de05f7a/Post-Care-Treatment.jpg"
                   alt="Dental problem"
                   class="w-full h-auto object-cover"
                 />
@@ -660,7 +752,7 @@
                 class="shadow-custom-image rounded-8px overflow-hidden relative h-auto"
               >
                 <img
-                  src="https://picsum.photos/400/267?random=1"
+                  src="//prudentoe.com/wp-content/uploads/slider/cache/4f7974bdecc3c27fbff7aa16b85cbcd1/dental-problems-in-children.jpg"
                   alt="Modern dental office"
                   class="w-full h-auto object-cover"
                 />
@@ -682,7 +774,7 @@
                 class="shadow-custom-image rounded-8px overflow-hidden relative h-auto"
               >
                 <img
-                  src="https://picsum.photos/400/267?random=2"
+                  src="//prudentoe.com/wp-content/uploads/slider/cache/80edafc7ea2f3e027caca793d074a0e3/smile-makeover-consultation.jpg"
                   alt="Advanced dental equipment"
                   class="w-full h-auto object-cover"
                 />
@@ -704,7 +796,7 @@
                 class="shadow-custom-image rounded-8px overflow-hidden relative h-auto"
               >
                 <img
-                  src="https://picsum.photos/400/267?random=3"
+                  src="//prudentoe.com/wp-content/uploads/slider/cache/0b4cd02073b7e60b28980bc65d0aaf1a/Comfort-and-Support-During-Procedures.jpg"
                   alt="Happy family with healthy smiles"
                   class="w-full h-auto object-cover"
                 />
@@ -915,12 +1007,17 @@
               class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll"
               style="animation-delay: 0.1s"
             >
-            <img
+              <img
                 src="static/images/dentist-tools.png"
                 alt="dentist tools icon"
                 class="w-9 h-9 mb-2.5"
-                style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated; filter: contrast(1.1) brightness(1.05);"
-            />
+                style="
+                  image-rendering: -webkit-optimize-contrast;
+                  image-rendering: crisp-edges;
+                  image-rendering: pixelated;
+                  filter: contrast(1.1) brightness(1.05);
+                "
+              />
               <p
                 class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
               >
@@ -1059,70 +1156,157 @@
             Real smiles, real results! Explore our patient reviews and see why
             we're the ultimate choice for dental care.
           </p>
-          <div class="mx-auto mb-5 w-full max-w-[340px] animate-on-scroll" style="animation-delay: 0.2s">
+          <div
+            class="mx-auto mb-5 w-full max-w-[340px] animate-on-scroll"
+            style="animation-delay: 0.2s"
+          >
             <div class="bg-white p-4 rounded-lg w-full">
-                <!-- Top Section: Image and Info -->
-                <div class="flex items-start space-x-3">
-                    <!-- Circular Image -->
-                    <div>
-                        <img src="https://lh3.googleusercontent.com/places/ANXAkqHNHE_5L9AWi5lOHOg0jXkL8EGEU0UZzK5HDpFoUlHqDBCshQHj46C4euUUPrtAtkJBq9Ho35D9RijWPjuwxXFpjcFF4Vrevi8=s1600-w300-h300" alt="Prudentoe Dental Clinic" class="w-16 h-16 rounded-full object-cover border border-gray-200">
-                    </div>
-
-                    <!-- Text Info -->
-                    <div class="flex-1">
-                        <h2 class="text-[17px] text-left font-bold text-gray-800 leading-tight">
-                            Prudentoe Dental | Best Dental Clinic In Hyderabad | Home Dental Services
-                        </h2>
-
-                        <!-- Rating -->
-                        <div class="flex items-center mt-1">
-                            <span class="text-4xl font-bold text-orange-500 mr-1.5">5.0</span>
-                            <!-- Stars -->
-                            <div class="flex text-orange-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z" clip-rule="evenodd" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z" clip-rule="evenodd" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z" clip-rule="evenodd" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z" clip-rule="evenodd" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <p class="text-xs text-left text-gray-500 mt-0.5">Based on 61 reviews</p>
-
-                        <p class="text-xs text-left text-gray-500 mt-2">
-                            powered by
-                            <span class="font-semibold">
-                                <span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g">g</span><span class="google-l">l</span><span class="google-e">e</span>
-                            </span>
-                        </p>
-                    </div>
+              <!-- Top Section: Image and Info -->
+              <div class="flex items-start space-x-3">
+                <!-- Circular Image -->
+                <div>
+                  <img
+                    src="https://lh3.googleusercontent.com/places/ANXAkqHNHE_5L9AWi5lOHOg0jXkL8EGEU0UZzK5HDpFoUlHqDBCshQHj46C4euUUPrtAtkJBq9Ho35D9RijWPjuwxXFpjcFF4Vrevi8=s1600-w300-h300"
+                    alt="Prudentoe Dental Clinic"
+                    class="w-16 h-16 rounded-full object-cover border border-gray-200"
+                  />
                 </div>
 
-                <!-- Button Section -->
-                <div class="mt-4">
-                    <a href="https://search.google.com/local/reviews?placeid=ChIJb_VYgYSXyzsRiVLr0C5r5Sc" target="_blank" rel="noopener noreferrer" class="w-fit bg-[#1a73e8] hover:bg-[#1765cc] text-white font-semibold py-2 px-4 ml-[4.7rem] rounded-full flex items-center justify-center text-sm shadow-sm">
-                        review us on
-                        <span class="ml-2 bg-white rounded-full p-[1px] w-5 h-5 flex items-center justify-center">
-                            <!-- Google G logo SVG -->
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                            </svg>
-                        </span>
-                    </a>
+                <!-- Text Info -->
+                <div class="flex-1">
+                  <h2
+                    class="text-[17px] text-left font-bold text-gray-800 leading-tight"
+                  >
+                    Prudentoe Dental | Best Dental Clinic In Hyderabad | Home
+                    Dental Services
+                  </h2>
+
+                  <!-- Rating -->
+                  <div class="flex items-center mt-1">
+                    <span class="text-4xl font-bold text-orange-500 mr-1.5"
+                      >5.0</span
+                    >
+                    <!-- Stars -->
+                    <div class="flex text-orange-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433L10.788 3.21z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <p class="text-xs text-left text-gray-500 mt-0.5">
+                    Based on 61 reviews
+                  </p>
+
+                  <p class="text-xs text-left text-gray-500 mt-2">
+                    powered by
+                    <span class="font-semibold">
+                      <span class="google-g">G</span
+                      ><span class="google-o1">o</span
+                      ><span class="google-o2">o</span
+                      ><span class="google-g">g</span
+                      ><span class="google-l">l</span
+                      ><span class="google-e">e</span>
+                    </span>
+                  </p>
                 </div>
+              </div>
+
+              <!-- Button Section -->
+              <div class="mt-4">
+                <a
+                  href="https://search.google.com/local/reviews?placeid=ChIJb_VYgYSXyzsRiVLr0C5r5Sc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-fit bg-[#1a73e8] hover:bg-[#1765cc] text-white font-semibold py-2 px-4 ml-[4.7rem] rounded-full flex items-center justify-center text-sm shadow-sm"
+                >
+                  review us on
+                  <span
+                    class="ml-2 bg-white rounded-full p-[1px] w-5 h-5 flex items-center justify-center"
+                  >
+                    <!-- Google G logo SVG -->
+                    <svg
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        fill="#FBBC05"
+                      />
+                      <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
           <div id="reviewsCarousel" class="relative carousel-container">
