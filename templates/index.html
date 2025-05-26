@@ -432,14 +432,68 @@
         }
       }
       
-      /* Grey shadow effect for all buttons */
+      /* Enhanced hover effects for all buttons */
       button {
         box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important;
-        transition: box-shadow 0.3s ease;
+        transition: all 0.3s ease !important;
+        position: relative;
+        overflow: hidden;
       }
       
       button:hover {
-        box-shadow: 0 6px 12px rgba(128, 128, 128, 0.4), 0 3px 6px rgba(128, 128, 128, 0.3) !important;
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 8px 16px rgba(128, 128, 128, 0.4), 0 4px 8px rgba(128, 128, 128, 0.3) !important;
+      }
+      
+      /* Specific hover effects for green buttons */
+      button.bg-prudentoe-green:hover {
+        background-color: #134521 !important;
+        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.4), 0 4px 10px rgba(26, 71, 42, 0.3) !important;
+      }
+      
+      /* Specific hover effects for white buttons */
+      button.bg-white:hover {
+        background-color: #f8f9fa !important;
+        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.3), 0 4px 10px rgba(26, 71, 42, 0.2) !important;
+      }
+      
+      /* Pulse effect for primary action buttons */
+      button.bg-prudentoe-green::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+        z-index: 0;
+      }
+      
+      button.bg-prudentoe-green:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+      
+      /* Ensure button content stays above the pulse effect */
+      button.bg-prudentoe-green > * {
+        position: relative;
+        z-index: 1;
+      }
+      
+      /* Enhanced hover for rounded buttons with icons */
+      button.rounded-full:hover {
+        transform: translateY(-3px) scale(1.05) !important;
+      }
+      
+      /* Glow effect on hover for all buttons */
+      button:hover {
+        box-shadow:
+          0 8px 16px rgba(128, 128, 128, 0.4),
+          0 4px 8px rgba(128, 128, 128, 0.3),
+          0 0 0 2px rgba(26, 71, 42, 0.1) !important;
       }
     </style>
     <script>
