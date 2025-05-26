@@ -613,7 +613,7 @@
               <button
                 class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px mb-5 shadow-sm"
               >
-                I just want to know I'm okay
+                Book An Appointment
               </button>
             </a>
             <div
@@ -740,10 +740,10 @@
               style="animation-delay: 0.6s"
             >
               <button
-                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[45px]"
+                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5  rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px] text-[1rem]"
               >
                 <span
-                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
+                  class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center"
                 >
                   <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
@@ -753,7 +753,7 @@
               </button>
             </a>
             <p
-              class="text-prudentoe-dark text-dynamic-xxs leading-1.37 animate-on-scroll"
+              class="text-prudentoe-dark text-dynamic-xs leading-1.37 animate-on-scroll"
               style="animation-delay: 0.7s"
             >
               Book a slot for just Rs.99 - pay the rest after service
@@ -914,7 +914,7 @@
               />
               <div class="flex-1">
                 <p
-                  class="text-prudentoe-dark text-dynamic-xxs leading-1.37 mb-1"
+                  class="text-prudentoe-dark text-dynamic-xs leading-1.37 mb-1"
                 >
                   That statement shows up more than you'd think. Cavities,
                   infections, and oral cancers don't start loud. That's the
@@ -926,9 +926,9 @@
                   class="inline-block w-full"
                 >
                   <button
-                    class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px w-full shadow-sm"
+                    class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px w-full shadow-sm mt-[1.5rem]"
                   >
-                    Can someone go check?
+                    Book An Appointment
                   </button>
                 </a>
               </div>
@@ -1071,7 +1071,7 @@
                 <button
                   class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center p-1"
                 >
-                  Help me find my first<br />check-up option
+                  Book An Appointment
                 </button>
               </a>
             </div>
@@ -1210,7 +1210,7 @@
                   <button
                     class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-2 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[31px]"
                   >
-                    Can someone just check?
+                    Book An Appointment
                   </button>
                 </a>
               </div>
@@ -1543,7 +1543,7 @@
                     class="w-[22px] h-[22px]"
                   />
                 </span>
-                Yes, show me how it works
+                Book An Appointment
               </button>
             </a>
           </div>
@@ -1660,6 +1660,269 @@
           el.classList.add("is-visible");
         });
       });
+    </script>
+
+    <!-- URL Parameter Preservation Script -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // Configuration
+        const config = {
+          preserveInternalLinks: true,
+          preserveExternalLinks: true,
+          preserveForms: true,
+          excludeParameters: [], // Parameters to exclude from preservation
+          debug: false // Set to true for debugging
+        };
+        
+        // Utility function for debugging
+        function debugLog(message, data) {
+          if (config.debug) {
+            console.log('[URL Parameter Preservation]', message, data || '');
+          }
+        }
+        
+        // Extract all URL parameters from current page
+        function extractCurrentParameters() {
+          const params = new URLSearchParams(window.location.search);
+          const paramObj = {};
+          
+          for (const [key, value] of params.entries()) {
+            if (!config.excludeParameters.includes(key)) {
+              paramObj[key] = value;
+            }
+          }
+          
+          debugLog('Extracted parameters:', paramObj);
+          return paramObj;
+        }
+        
+        // Convert parameter object to URL search string
+        function parametersToString(params) {
+          const searchParams = new URLSearchParams();
+          
+          for (const [key, value] of Object.entries(params)) {
+            searchParams.append(key, value);
+          }
+          
+          return searchParams.toString();
+        }
+        
+        // Append parameters to URL
+        function appendParametersToUrl(url, params) {
+          if (!url || Object.keys(params).length === 0) {
+            return url;
+          }
+          
+          try {
+            const urlObj = new URL(url, window.location.origin);
+            
+            // Preserve existing parameters and add new ones
+            for (const [key, value] of Object.entries(params)) {
+              if (!urlObj.searchParams.has(key)) {
+                urlObj.searchParams.append(key, value);
+              }
+            }
+            
+            return urlObj.toString();
+          } catch (error) {
+            debugLog('Error processing URL:', { url, error: error.message });
+            
+            // Fallback for relative URLs or malformed URLs
+            const separator = url.includes('?') ? '&' : '?';
+            const paramString = parametersToString(params);
+            
+            if (paramString) {
+              return url + separator + paramString;
+            }
+            
+            return url;
+          }
+        }
+        
+        // Process anchor tags
+        function processAnchorTags(params) {
+          const anchors = document.querySelectorAll('a[href]');
+          
+          anchors.forEach(anchor => {
+            const originalHref = anchor.getAttribute('href');
+            
+            // Skip if href is empty, just a hash, javascript:, mailto:, tel:, etc.
+            if (!originalHref ||
+                originalHref === '#' ||
+                originalHref.startsWith('javascript:') ||
+                originalHref.startsWith('mailto:') ||
+                originalHref.startsWith('tel:') ||
+                originalHref.startsWith('sms:')) {
+              return;
+            }
+            
+            // Determine if it's an internal or external link
+            let isExternal = false;
+            try {
+              const linkUrl = new URL(originalHref, window.location.origin);
+              isExternal = linkUrl.hostname !== window.location.hostname;
+            } catch (error) {
+              // Assume relative URLs are internal
+              isExternal = false;
+            }
+            
+            // Apply configuration settings
+            if ((isExternal && !config.preserveExternalLinks) ||
+                (!isExternal && !config.preserveInternalLinks)) {
+              return;
+            }
+            
+            const newHref = appendParametersToUrl(originalHref, params);
+            
+            if (newHref !== originalHref) {
+              anchor.setAttribute('href', newHref);
+              debugLog('Updated anchor:', { original: originalHref, new: newHref });
+            }
+          });
+        }
+        
+        // Process form elements
+        function processForms(params) {
+          if (!config.preserveForms) return;
+          
+          const forms = document.querySelectorAll('form');
+          
+          forms.forEach(form => {
+            // Add hidden inputs for each parameter
+            for (const [key, value] of Object.entries(params)) {
+              // Check if parameter already exists as form field
+              const existingField = form.querySelector(`[name="${key}"]`);
+              
+              if (!existingField) {
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = key;
+                hiddenInput.value = value;
+                hiddenInput.setAttribute('data-url-param-preservation', 'true');
+                
+                form.appendChild(hiddenInput);
+                debugLog('Added hidden input to form:', { key, value });
+              }
+            }
+          });
+        }
+        
+        // Handle programmatic navigation
+        function interceptProgrammaticNavigation(params) {
+          // Store original methods
+          const originalPushState = history.pushState;
+          const originalReplaceState = history.replaceState;
+          
+          // Intercept history.pushState
+          history.pushState = function(state, title, url) {
+            if (url && Object.keys(params).length > 0) {
+              url = appendParametersToUrl(url, params);
+              debugLog('Intercepted pushState:', { original: arguments[2], new: url });
+            }
+            return originalPushState.call(this, state, title, url);
+          };
+          
+          // Intercept history.replaceState
+          history.replaceState = function(state, title, url) {
+            if (url && Object.keys(params).length > 0) {
+              url = appendParametersToUrl(url, params);
+              debugLog('Intercepted replaceState:', { original: arguments[2], new: url });
+            }
+            return originalReplaceState.call(this, state, title, url);
+          };
+          
+          // Note: window.location.assign and window.location.replace are read-only properties
+          // in many browsers and cannot be intercepted directly. URL parameters are preserved
+          // through link processing for most navigation scenarios.
+          
+          debugLog('Programmatic navigation interception setup complete (history API only)');
+        }
+        
+        // Handle dynamically added content
+        function observeNewContent(params) {
+          const observer = new MutationObserver(function(mutations) {
+            let shouldProcess = false;
+            
+            mutations.forEach(function(mutation) {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                  // Check if new anchors or forms were added
+                  if (node.tagName === 'A' ||
+                      node.tagName === 'FORM' ||
+                      node.querySelector('a[href], form')) {
+                    shouldProcess = true;
+                  }
+                }
+              });
+            });
+            
+            if (shouldProcess) {
+              debugLog('Processing newly added content');
+              processAnchorTags(params);
+              processForms(params);
+            }
+          });
+          
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+          
+          return observer;
+        }
+        
+        // Initialize the parameter preservation system
+        function initializeParameterPreservation() {
+          debugLog('Initializing URL parameter preservation system');
+          
+          const currentParams = extractCurrentParameters();
+          
+          // Only proceed if we have parameters to preserve
+          if (Object.keys(currentParams).length === 0) {
+            debugLog('No URL parameters found to preserve');
+            return;
+          }
+          
+          debugLog('Found parameters to preserve:', currentParams);
+          
+          // Process existing content
+          processAnchorTags(currentParams);
+          processForms(currentParams);
+          
+          // Set up interception for programmatic navigation
+          interceptProgrammaticNavigation(currentParams);
+          
+          // Observe for dynamically added content
+          observeNewContent(currentParams);
+          
+          debugLog('URL parameter preservation system initialized successfully');
+        }
+        
+        // Wait for DOM to be ready and initialize
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeParameterPreservation);
+        } else {
+          initializeParameterPreservation();
+        }
+        
+        // Also re-initialize when the page becomes visible (handles some edge cases)
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden) {
+            setTimeout(initializeParameterPreservation, 100);
+          }
+        });
+        
+        // Expose utility functions for manual use if needed
+        window.urlParameterPreservation = {
+          extractCurrentParameters: extractCurrentParameters,
+          appendParametersToUrl: appendParametersToUrl,
+          reinitialize: initializeParameterPreservation,
+          config: config
+        };
+        
+      })();
     </script>
   </body>
 </html>
