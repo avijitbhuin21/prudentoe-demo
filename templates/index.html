@@ -340,13 +340,32 @@
         }
       }
       .animate-on-scroll {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
       }
       .animate-on-scroll.is-visible {
         opacity: 1;
         transform: translateY(0);
       }
+      
+      /* Fade in animation for sections below hero */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Staggered animation delays */
+      .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
+      .fade-in-section:nth-child(2) { transition-delay: 0.2s; }
+      .fade-in-section:nth-child(3) { transition-delay: 0.3s; }
+      .fade-in-section:nth-child(4) { transition-delay: 0.4s; }
+      .fade-in-section:nth-child(5) { transition-delay: 0.5s; }
       
       /* WhatsApp Floating Animations */
       .whatsapp-float {
@@ -411,6 +430,16 @@
           opacity: 0.3;
           transform: scale(1.05);
         }
+      }
+      
+      /* Grey shadow effect for all buttons */
+      button {
+        box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important;
+        transition: box-shadow 0.3s ease;
+      }
+      
+      button:hover {
+        box-shadow: 0 6px 12px rgba(128, 128, 128, 0.4), 0 3px 6px rgba(128, 128, 128, 0.3) !important;
       }
     </style>
     <script>
@@ -495,13 +524,14 @@
                 />
             </svg> 
             </button> -->
-            <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
+            
+            <!-- <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
               <img
                 src="https://img.freepik.com/premium-photo/whatsapp-logo_1080029-96.jpg?ga=GA1.1.1160482311.1748263993&semt=ais_hybrid&w=740"
                 alt="WhatsApp Icon"
                 class="w-[60px] h-[60px] bg-white rounded-full whatsapp-float"
               />
-            </a>
+            </a> -->
           </div>
           <div class="relative z-10">
             <div class="animate-on-scroll">
@@ -565,7 +595,7 @@
             class="absolute right-[-40px] bottom-[0px] h-[325px] w-auto z-10"
           />
         </div>
-        <div class="pt-8 px-5">
+        <div class="pt-8 px-5 fade-in-section">
           <div
             class="bg-[#FCFCFC] shadow-custom-card rounded-15px p-4 text-center animate-on-scroll"
           >
@@ -662,11 +692,9 @@
                 <span
                   class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
                 >
-                  <img
-                    src="static/images/calendar-icon.png"
-                    alt="calendar icon"
-                    class="w-[27px] h-[20px]"
-                  />
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
+                  </svg>
                 </span>
                 Let a Dentist take a<br />quick look - At home
               </button>
@@ -679,7 +707,7 @@
             </p>
           </div>
         </div>
-        <div id="heroCarousel" class="py-4 relative carousel-container">
+        <div id="heroCarousel" class="py-4 relative carousel-container fade-in-section">
           <div class="carousel-slides">
             <div class="carousel-slide relative">
               <div
@@ -816,7 +844,7 @@
           </div>
           <div class="carousel-dots mt-4"></div>
         </div>
-        <div class="py-5 px-1">
+        <div class="py-5 px-1 fade-in-section">
           <div
             class="bg-white shadow-custom-medical rounded-25px p-5 animate-on-scroll"
           >
@@ -854,7 +882,7 @@
             </div>
           </div>
         </div>
-        <div class="py-8 px-5 text-center">
+        <div class="py-8 px-5 text-center fade-in-section">
           <p
             class="w-[300px] mx-auto mb-3 animate-on-scroll text-center text-prudentoe-dark text-dynamic-large leading-tight font-bold"
             style="font-size: 1.3rem"
@@ -955,7 +983,7 @@
           </a>
         </div>
         <div
-          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[275px] animate-on-scroll"
+          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[275px] animate-on-scroll fade-in-section"
         >
           <img
             src="static/images/semi-circle-left.png"
@@ -996,7 +1024,7 @@
             </div>
           </div>
         </div>
-        <div class="pt-2 pb-8 px-5 text-center">
+        <div class="pt-2 pb-8 px-5 text-center fade-in-section">
           <h2
             class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-5 animate-on-scroll"
           >
@@ -1074,7 +1102,7 @@
             </div>
           </div>
         </div>
-        <div class="pb-8 px-1">
+        <div class="pb-8 px-1 fade-in-section">
           <div
             class="bg-white shadow-custom-gentle rounded-19px p-5 animate-on-scroll"
           >
@@ -1143,7 +1171,7 @@
             </div>
           </div>
         </div>
-        <div class="py-8 px-5 text-center">
+        <div class="py-8 px-5 text-center fade-in-section">
           <h2
             class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-2 animate-on-scroll"
           >
@@ -1426,7 +1454,7 @@
           <div class="carousel-dots"></div>
         </div>
         <div
-          class="relative min-h-[237px] mt-8 mx-auto w-full max-w-[380px] animate-on-scroll"
+          class="relative min-h-[237px] mt-8 mx-auto w-full max-w-[380px] animate-on-scroll fade-in-section"
         >
           <img
             src="static/images/blurred-medical-professionals.png"
@@ -1553,9 +1581,28 @@
         }
         setupCarousel("heroCarousel", 5000);
         setupCarousel("reviewsCarousel", 7000);
-        // Disable scroll animations to prevent scroll interference
-        const animatedElements =
-          document.querySelectorAll(".animate-on-scroll");
+        
+        // Fade-in animation observer for sections below hero
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+        
+        // Observe all fade-in sections
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+          fadeInObserver.observe(section);
+        });
+        
+        // Keep existing scroll animations active for immediate visibility
+        const animatedElements = document.querySelectorAll(".animate-on-scroll");
         animatedElements.forEach((el) => {
           el.classList.add("is-visible");
         });
