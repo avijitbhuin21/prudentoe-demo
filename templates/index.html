@@ -167,7 +167,7 @@
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
-        overflow-x: hidden;
+        overflow: clip;
         position: relative;
       }
       /* Disable scroll interference only where needed */
@@ -177,6 +177,28 @@
       body {
         touch-action: auto !important;
       }
+      /* Override any overflow issues on sections */
+      .overflow-x-hidden {
+        overflow: clip !important;
+      }
+      
+      /* Float in animation for grid items */
+      .float-in-item {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .float-in-item.animate-in {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      
+      /* Staggered delays for sequential animation */
+      .float-in-item:nth-child(1) { transition-delay: 0.1s; }
+      .float-in-item:nth-child(2) { transition-delay: 0.3s; }
+      .float-in-item:nth-child(3) { transition-delay: 0.5s; }
+      .float-in-item:nth-child(4) { transition-delay: 0.7s; }
       .border-dashed-prudentoe-green {
         border: 1px dashed #1a472a;
       }
@@ -587,7 +609,7 @@
     <div class="main-container font-helvetica">
       <div class="bg-white">
         <div
-          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px]"
+          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px] overflow-x-hidden"
         >
           <div class="flex justify-between items-center mb-[0.5rem]">
             <a href="https://prudentoe.com/" target="_blank">
@@ -630,7 +652,7 @@
                 About Your Teeth?
               </h1>
               <p
-                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[60%]"
+                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[55%]"
               >
                 Healthy teeth don’t always stay that way. Regular checks help
                 keep them in top shape. Prudento brings expert dental checkups
@@ -703,6 +725,61 @@
             </p>
           </div>
           <div class="bg-white rounded-15px p-4 text-center mt-[20px]">
+            <div
+              class="grid grid-cols-2 gap-2.5 mb-5 text-dynamic-xxs leading-1.37"
+              id="symptomsGrid"
+            >
+              <div
+                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[54px] float-in-item"
+              >
+                <img
+                  src="static/images/bad-smell-tooth.png"
+                  alt="bad breath icon"
+                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
+                />
+                <span class="text-prudentoe-dark"
+                  >Morning breath that lingers longer than usual</span
+                >
+              </div>
+              <div
+                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[54px] float-in-item"
+              >
+                <img
+                  src="static/images/toothache.png"
+                  alt="toothache icon"
+                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
+                />
+                <span class="text-prudentoe-dark"
+                  >Kids refusing food more often</span
+                >
+              </div>
+              <div
+                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[54px] float-in-item"
+              >
+                <img
+                  src="static/images/open-mouth.png"
+                  alt="open mouth icon"
+                  class="w-[22px] h-[22px] mr-1.5 ml-1 flex-shrink-0"
+                />
+                <span class="text-prudentoe-dark"
+                  >Elderly people chewing on just one side</span
+                >
+              </div>
+              <div
+                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[54px] float-in-item"
+              >
+                <img
+                  src="static/images/gingivitis-icon.png"
+                  alt="gingivitis icon"
+                  class="w-[26px] h-[27px] mr-1.5 flex-shrink-0"
+                />
+                <span class="text-prudentoe-dark"
+                  >Gums looking slightly duller or pulling back</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- <div class="bg-white rounded-15px p-4 text-center mt-[20px]">
             <div id="signsCarousel" class="relative carousel-container mb-5">
               <div class="carousel-slides">
                 <div class="carousel-slide">
@@ -765,7 +842,7 @@
                     >
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- <button class="carousel-prev signs-carousel-prev hidden sm:flex">
                 <i class="fas fa-chevron-left"></i>
               </button>
@@ -773,7 +850,7 @@
                 <i class="fas fa-chevron-right"></i>
               </button>
               <div class="carousel-dots signs-carousel-dots"></div> -->
-            </div>
+            <!-- </div> -->
             <p
               class="text-prudentoe-dark text-dynamic-small leading-1.37 mb-5 animate-on-scroll"
               style="animation-delay: 0.5s"
@@ -784,7 +861,7 @@
             <a
               href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
               target="_blank"
-              class="inline-block animate-on-scroll"
+              class="inline-block animate-on-scroll ml-[4rem] mr-auto"
               style="animation-delay: 0.6s"
             >
               <button
@@ -797,11 +874,11 @@
                     <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
                   </svg>
                 </span>
-                <span class="text-center">Let a Dentist take a<br />quick look - At home</span>
+                <span class="text-center">Let a Dentist take a<br/>quick look - At home</span>
               </button>
             </a>
             <p
-              class="text-prudentoe-dark text-dynamic-xs leading-1.37 animate-on-scroll"
+              class="text-prudentoe-dark text-dynamic-s leading-1.37 animate-on-scroll"
               style="animation-delay: 0.7s"
             >
               Book a slot for just Rs.99 - pay the rest after service
@@ -1084,17 +1161,17 @@
           </a>
         </div>
         <div
-          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[275px] animate-on-scroll fade-in-section"
+          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[285px] animate-on-scroll fade-in-section overflow-x-hidden"
         >
           <img
             src="static/images/semi-circle-left.png"
             alt="semi-circle"
-            class="absolute left-[0px] top-[45px] w-[190px] h-[231px] object-fill z-[0] opacity-100"
+            class="absolute left-[0px] top-[58px] w-[190px] h-[231px] object-fill z-[0] opacity-100"
           />
           <img
             src="static/images/smiling-dentist.png"
             alt="Smiling dentist with tools"
-            class="absolute left-[10px] top-[-2px] h-[277px] w-auto z-1 transform scale-x-[-1] ml-[-8rem]"
+            class="absolute left-[-25px] top-[10px] h-[277px] w-auto z-1 transform scale-x-[-1] ml-[-6rem] max-w-none"
           />
           <div
             class="relative z-10 flex flex-col items-end text-right pt-auto pb-auto pr-5"
@@ -1106,7 +1183,7 @@
                 Small Changes Aren't Small Always!
               </h2>
               <p
-                class="text-black font-bold text-dynamic-small leading-tight mt-[1rem] ml-[5.5rem] mb-[1rem]"
+                class="text-black font-bold text-dynamic-xs leading-tight mt-[1rem] ml-[3.5rem] mb-[1rem]"
               >
                 Let's make this easier.<br />
                 Match your moments...
@@ -1114,10 +1191,10 @@
               <a
                 href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
                 target="_blank"
-                class="inline-block mt-2.5 ml-[6.2rem]"
+                class="inline-block mt-2.5 ml-[3.5rem]"
               >
                 <button
-                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3"
+                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3 mr-[1.2rem]"
                 >
                   Book An Appointment
                 </button>
@@ -1708,6 +1785,29 @@
         animatedElements.forEach((el) => {
           el.classList.add("is-visible");
         });
+        
+        // Float in animation for symptoms grid
+        const symptomsGrid = document.getElementById('symptomsGrid');
+        if (symptomsGrid) {
+          const gridObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const items = entry.target.querySelectorAll('.float-in-item');
+                items.forEach((item, index) => {
+                  setTimeout(() => {
+                    item.classList.add('animate-in');
+                  }, index * 200); // 200ms delay between each item
+                });
+                gridObserver.unobserve(entry.target); // Only animate once
+              }
+            });
+          }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+          });
+          
+          gridObserver.observe(symptomsGrid);
+        }
       });
     </script>
 
