@@ -181,31 +181,31 @@
         border: 1px dashed #1a472a;
       }
       .text-dynamic-hero {
-        font-size: clamp(24px, 7vw, 31px);
+        font-size: clamp(24px, 7vw, 35px);
       }
       .text-dynamic-large {
-        font-size: clamp(18px, 5vw, 25px);
+        font-size: clamp(24px, 6.5vw, 36px);
       }
       .text-dynamic-xl {
-        font-size: clamp(16px, 4.5vw, 20px);
+        font-size: clamp(20px, 5.5vw, 26px);
       }
       .text-dynamic-medium {
-        font-size: clamp(14px, 3.5vw, 18px);
+        font-size: clamp(18px, 4.5vw, 24px);
       }
       .text-dynamic-base {
-        font-size: clamp(12px, 3vw, 14px);
+        font-size: clamp(16px, 4vw, 20px);
       }
       .text-dynamic-small {
-        font-size: clamp(11px, 2.8vw, 13px);
+        font-size: clamp(15px, 3.5vw, 18px);
       }
       .text-dynamic-xs {
-        font-size: clamp(10px, 2.5vw, 12px);
+        font-size: clamp(14px, 3.2vw, 17px);
       }
       .text-dynamic-xxs {
-        font-size: clamp(9px, 2.2vw, 11px);
+        font-size: clamp(13px, 2.8vw, 15px);
       }
       .text-dynamic-button {
-        font-size: clamp(11px, 2.8vw, 12px);
+        font-size: clamp(13px, 3vw, 15px); /* Increased button font size */
       }
       .carousel-container {
         position: relative;
@@ -254,6 +254,45 @@
       #reviewsCarousel .carousel-next i {
         color: #1a472a;
         font-size: 16px;
+      }
+
+      /* Controls for Signs Carousel */
+      #signsCarousel .carousel-prev,
+      #signsCarousel .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #d1d5db; /* Tailwind gray-300 */
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        /* display: flex; */ /* Control via hidden sm:flex in HTML */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+      #signsCarousel .carousel-prev {
+        left: 8px;
+      }
+      #signsCarousel .carousel-next {
+        right: 8px;
+      }
+      #signsCarousel .carousel-prev i,
+      #signsCarousel .carousel-next i {
+        color: #1A472A; /* prudentoe-green */
+        font-size: 14px;
+      }
+      #signsCarousel .carousel-dots {
+        text-align: center;
+        margin-top: 0.75rem; /* 12px */
+      }
+      #signsCarousel .carousel-slide > div { /* Styling for the item box within the slide */
+        width: 100%; /* Make item box take full width of slide's content area */
+        box-sizing: border-box;
       }
       /* #heroCarousel {
             width: 100%; No specific padding here either
@@ -635,12 +674,12 @@
           <img
             src="static/images/semi-circle.png"
             alt="semi-circle"
-            class="absolute right-[-15px] w-[190px] h-[250px] object-fill z-[1] opacity-100 top-[134px]"
+            class="absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px]"
           />
           <img
             src="static/images/smiling-nurse.png"
             alt="Smiling nurse"
-            class="absolute right-[-40px] bottom-[0px] h-[325px] w-auto z-10"
+            class="absolute right-[-55px] bottom-[0px] h-[375px] w-auto z-10"
           />
         </div>
         <div class="pt-8 px-5 fade-in-section">
@@ -664,61 +703,76 @@
             </p>
           </div>
           <div class="bg-white rounded-15px p-4 text-center mt-[20px]">
-            <div
-              class="grid grid-cols-2 gap-2.5 mb-5 text-dynamic-xxs leading-1.37"
-            >
-              <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.1s"
-              >
-                <img
-                  src="static/images/bad-smell-tooth.png"
-                  alt="bad breath icon"
-                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
-                />
-                <span class="text-prudentoe-dark"
-                  >Morning breath that lingers longer than usual</span
-                >
+            <div id="signsCarousel" class="relative carousel-container mb-5">
+              <div class="carousel-slides">
+                <div class="carousel-slide">
+                  <div
+                    class="border border-prudentoe-green rounded-8px p-3 flex items-center text-left h-auto min-h-[70px] animate-on-scroll w-full"
+                    style="animation-delay: 0.1s"
+                  >
+                    <img
+                      src="static/images/bad-smell-tooth.png"
+                      alt="bad breath icon"
+                      class="w-[27px] h-[27px] mr-2 flex-shrink-0"
+                    />
+                    <span class="text-prudentoe-dark text-dynamic-xxs leading-1.37"
+                      >Morning breath that lingers longer than usual</span
+                    >
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div
+                    class="border border-prudentoe-green rounded-8px p-3 flex items-center text-left h-auto min-h-[70px] animate-on-scroll w-full"
+                    style="animation-delay: 0.2s"
+                  >
+                    <img
+                      src="static/images/toothache.png"
+                      alt="toothache icon"
+                      class="w-[27px] h-[27px] mr-2 flex-shrink-0"
+                    />
+                    <span class="text-prudentoe-dark text-dynamic-xxs leading-1.37"
+                      >Kids refusing food more often</span
+                    >
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div
+                    class="border border-prudentoe-green rounded-8px p-3 flex items-center text-left h-auto min-h-[70px] animate-on-scroll w-full"
+                    style="animation-delay: 0.3s"
+                  >
+                    <img
+                      src="static/images/open-mouth.png"
+                      alt="open mouth icon"
+                      class="w-[22px] h-[22px] mr-2 ml-1 flex-shrink-0"
+                    />
+                    <span class="text-prudentoe-dark text-dynamic-xxs leading-1.37"
+                      >Elderly people chewing on just one side</span
+                    >
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div
+                    class="border border-prudentoe-green rounded-8px p-3 flex items-center text-left h-auto min-h-[70px] animate-on-scroll w-full"
+                    style="animation-delay: 0.4s"
+                  >
+                    <img
+                      src="static/images/gingivitis-icon.png"
+                      alt="gingivitis icon"
+                      class="w-[26px] h-[27px] mr-2 flex-shrink-0"
+                    />
+                    <span class="text-prudentoe-dark text-dynamic-xxs leading-1.37"
+                      >Gums looking slightly duller or pulling back</span
+                    >
+                  </div>
+                </div>
               </div>
-              <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.2s"
-              >
-                <img
-                  src="static/images/toothache.png"
-                  alt="toothache icon"
-                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
-                />
-                <span class="text-prudentoe-dark"
-                  >Kids refusing food more often</span
-                >
-              </div>
-              <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.3s"
-              >
-                <img
-                  src="static/images/open-mouth.png"
-                  alt="open mouth icon"
-                  class="w-[22px] h-[22px] mr-1.5 ml-1 flex-shrink-0"
-                />
-                <span class="text-prudentoe-dark"
-                  >Elderly people chewing on just one side</span
-                >
-              </div>
-              <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.4s"
-              >
-                <img
-                  src="static/images/gingivitis-icon.png"
-                  alt="gingivitis icon"
-                  class="w-[26px] h-[27px] mr-1.5 flex-shrink-0"
-                />
-                <span class="text-prudentoe-dark"
-                  >Gums looking slightly duller or pulling back</span
-                >
-              </div>
+              <!-- <button class="carousel-prev signs-carousel-prev hidden sm:flex">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carousel-next signs-carousel-next hidden sm:flex">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              <div class="carousel-dots signs-carousel-dots"></div> -->
             </div>
             <p
               class="text-prudentoe-dark text-dynamic-small leading-1.37 mb-5 animate-on-scroll"
@@ -734,16 +788,16 @@
               style="animation-delay: 0.6s"
             >
               <button
-                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5  rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px] text-[1rem]"
+                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-2 px-3 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px]"
               >
                 <span
-                  class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center"
+                  class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center flex-shrink-0"
                 >
                   <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
                   </svg>
                 </span>
-                Let a Dentist take a<br />quick look - At home
+                <span class="text-center">Let a Dentist take a<br />quick look - At home</span>
               </button>
             </a>
             <p
@@ -900,15 +954,15 @@
             >
               "If Only We'd Caught This Sooner…"
             </h2>
-            <div class="flex gap-4 items-start">
+            <!-- <div class="flex gap-4 items-start">
               <img
                 src="static/images/medical-professionals.png"
                 alt="Medical professionals collage"
                 class="w-[175px] h-[148px] mt-1"
               />
-              <div class="flex-1">
+              <div class="flex-1"> -->
                 <p
-                  class="text-prudentoe-dark text-dynamic-xs leading-1.37 mb-1"
+                  class="text-prudentoe-dark text-dynamic-s leading-1.37 mb-1 mt-[1rem]"
                 >
                   That statement shows up more than you'd think. Cavities,
                   infections, and oral cancers don't start loud. That's the
@@ -920,7 +974,7 @@
                   class="inline-block w-full"
                 >
                   <button
-                    class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px w-full shadow-sm mt-[1.5rem]"
+                    class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px w-75px shadow-sm mt-[2rem] ml-[6.7rem] text-align-center"
                   >
                     Book An Appointment
                   </button>
@@ -937,7 +991,7 @@
             Real Life Doesn’t Pause for Dental Clinics
           </p>
           <p
-            class="w-[300px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
+            class="w-[350px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
             style="animation-delay: 0.1s"
           >
             Between work calls, school runs, elder care, and city <br />traffic,
@@ -1063,7 +1117,7 @@
                 class="inline-block mt-2.5 ml-[6.2rem]"
               >
                 <button
-                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center p-1"
+                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3"
                 >
                   Book An Appointment
                 </button>
@@ -1526,10 +1580,10 @@
               class="inline-block"
             >
               <button
-                class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center shadow-sm h-[45px]"
+                class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-2 px-4 rounded-full flex items-center shadow-sm min-h-[48px]"
               >
                 <span
-                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
+                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center flex-shrink-0"
                 >
                   <img
                     src="static/images/megaphone-icon.png"
@@ -1628,6 +1682,7 @@
         }
         setupCarousel("heroCarousel", 5000);
         setupCarousel("reviewsCarousel", 7000);
+        setupCarousel("signsCarousel", 4000); // Initialize the new carousel
         
         // Fade-in animation observer for sections below hero
         const observerOptions = {
