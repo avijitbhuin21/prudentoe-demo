@@ -11,5 +11,9 @@ def index():
 def test():
     return render_template('trial.html')
 
+@app.route('/fix')
+def fix():
+    return render_template('fix.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
