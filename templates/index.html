@@ -149,7 +149,48 @@
 
       @media (min-width: 1024px) {
         body {
-          zoom: 1.4;
+          zoom: 1.0; /* Remove zoom to prevent layout issues */
+        }
+        
+        /* Ensure all sections are constrained to center column on desktop */
+        .main-container {
+          max-width: 500px; /* Constrain to center column */
+          margin: 0 auto;
+        }
+        
+        /* Additional constraint for specific sections */
+        .fade-in-section,
+        .py-8,
+        .pt-8,
+        .pb-8 {
+          max-width: 505px;
+          margin-left: auto;
+          margin-right: auto;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure content within sections doesn't exceed container */
+        .fade-in-section > *,
+        .py-8 > *,
+        .pt-8 > *,
+        .pb-8 > * {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Specifically target the grid layout */
+        .grid-cols-3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.625rem;
+          max-width: 100%;
+          width: 100%;
+        }
+        
+        /* Ensure grid items don't overflow */
+        .grid-cols-3 > div {
+          max-width: 100%;
+          min-width: 0;
         }
       }
       ::-webkit-scrollbar {
@@ -290,7 +331,6 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: all 0.3s ease;
         z-index: 10;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
@@ -578,6 +618,100 @@
           0 4px 8px rgba(128, 128, 128, 0.3),
           0 0 0 2px rgba(26, 71, 42, 0.1) !important;
       }
+      
+      /* Desktop-specific constraints for center column layout */
+      @media (min-width: 768px) {
+        /* Ensure all main content sections stay within center column */
+        .main-container > div > div {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Specific constraints for sections that might overflow */
+        .text-center {
+          max-width: 500px;
+        }
+        
+        /* Ensure grid layouts don't exceed container */
+        .grid {
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Specific constraint for the grid-cols-3 layout */
+        .grid-cols-3 {
+          max-width: 100%;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Constrain the specific section with py-8 px-5 */
+        .py-8.px-5.text-center {
+          max-width: 100%;
+          width: 100%;
+          box-sizing: border-box;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Ensure all content within py-8 sections is constrained */
+        .py-8 > * {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Constrain carousel and other wide elements */
+        .carousel-container,
+        .relative {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure images and content don't break out */
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      
+      /* Additional desktop constraints for larger screens */
+      @media (min-width: 1200px) {
+        /* Further constrain the main container on very large screens */
+        .main-container {
+          max-width: 500px;
+        }
+        
+        /* Ensure the problematic section stays centered */
+        .py-8.px-5.text-center.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Constrain the "Small Changes" section */
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      
+      /* Specific constraints for the "Small Changes" section */
+      @media (min-width: 768px) {
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure content within this section is properly constrained */
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section > div {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+      }
     </style>
     <script>
       tailwind.config = {
@@ -680,7 +814,7 @@
                 About Your Teeth?
               </h1>
               <p
-                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[58%]"
+                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[58%] md:w-[70%]"
               >
                 Healthy teeth don’t always stay that way. Regular checks help
                 keep them in top shape. Prudentoe brings expert dental checkups
@@ -724,7 +858,7 @@
           <img
             src="static/images/semi-circle.png"
             alt="semi-circle"
-            class="absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px]"
+            class="absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px] md:top-[205px]"
           />
           <img
             src="static/images/smiling-nurse.png"
@@ -822,7 +956,7 @@
             <a
               href="https://book.prudentoe.com/#/279761000000042044"
               target="_blank"
-              class="inline-block animate-on-scroll ml-[4rem] mr-auto"
+              class="block animate-on-scroll mx-auto w-fit"
               style="animation-delay: 0.6s"
             >
               <button
@@ -1030,7 +1164,7 @@
             Real Life Doesn’t Pause for Dental Clinics
           </p>
           <p
-            class="w-[350px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
+            class="w-[350px] md:w-[420px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
             style="animation-delay: 0.1s"
           >
             Between work calls, school runs, elder care, and city <br />traffic,
@@ -1075,7 +1209,7 @@
             </div>
           </div>
           <p
-            class="text-prudentoe-dark text-dynamic-small leading-1.2 mb-3 mx-auto max-w-[300px] animate-on-scroll"
+            class="text-prudentoe-dark text-dynamic-small leading-1.2 mb-3 mx-auto max-w-[400px] animate-on-scroll"
             style="animation-delay: 0.5s"
           >
             And yes, it's true care. Prudentoe invests wisely in full sterilized
@@ -1295,7 +1429,7 @@
                   class="inline-block"
                 >
                   <button
-                    class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[31px]"
+                    class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[51px]"
                   >
                     Book An Appointment
                   </button>
@@ -1584,17 +1718,17 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-prev">
+            <!-- <button class="carousel-prev">
               <i class="fas fa-chevron-left"></i>
             </button>
             <button class="carousel-next">
               <i class="fas fa-chevron-right"></i>
-            </button>
+            </button> -->
           </div>
           <div class="carousel-dots"></div>
         </div>
         <div
-          class="relative min-h-[237px] mt-8 mx-auto w-full max-w-[380px] animate-on-scroll fade-in-section"
+          class="relative min-h-[237px] mx-auto w-full max-w-[380px] animate-on-scroll fade-in-section"
         >
           <img
             src="static/images/blurred-medical-professionals.png"

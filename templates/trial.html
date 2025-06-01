@@ -149,7 +149,48 @@
 
       @media (min-width: 1024px) {
         body {
-          zoom: 1.4;
+          zoom: 1.0; /* Remove zoom to prevent layout issues */
+        }
+        
+        /* Ensure all sections are constrained to center column on desktop */
+        .main-container {
+          max-width: 500px; /* Constrain to center column */
+          margin: 0 auto;
+        }
+        
+        /* Additional constraint for specific sections */
+        .fade-in-section,
+        .py-8,
+        .pt-8,
+        .pb-8 {
+          max-width: 505px;
+          margin-left: auto;
+          margin-right: auto;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure content within sections doesn't exceed container */
+        .fade-in-section > *,
+        .py-8 > *,
+        .pt-8 > *,
+        .pb-8 > * {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Specifically target the grid layout */
+        .grid-cols-3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.625rem;
+          max-width: 100%;
+          width: 100%;
+        }
+        
+        /* Ensure grid items don't overflow */
+        .grid-cols-3 > div {
+          max-width: 100%;
+          min-width: 0;
         }
       }
       ::-webkit-scrollbar {
@@ -167,7 +208,7 @@
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
-        overflow-x: hidden;
+        overflow: clip;
         position: relative;
       }
       /* Disable scroll interference only where needed */
@@ -177,46 +218,96 @@
       body {
         touch-action: auto !important;
       }
+      /* Override any overflow issues on sections */
+      .overflow-x-hidden {
+        overflow: clip !important;
+      }
+      
+      /* Float in animation for grid items */
+      .float-in-item {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .float-in-item.animate-in {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      
+      /* Staggered delays for sequential animation */
+      .float-in-item:nth-child(1) { transition-delay: 0.1s; }
+      .float-in-item:nth-child(2) { transition-delay: 0.3s; }
+      .float-in-item:nth-child(3) { transition-delay: 0.5s; }
+      .float-in-item:nth-child(4) { transition-delay: 0.7s; }
+      
+      /* Auto fade-in animation for symptoms grid */
+      .symptoms-fade-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .symptoms-fade-item.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Sequential delays for auto fade-in */
+      .symptoms-fade-item:nth-child(1) { transition-delay: 0.2s; }
+      .symptoms-fade-item:nth-child(2) { transition-delay: 0.5s; }
+      .symptoms-fade-item:nth-child(3) { transition-delay: 0.8s; }
+      .symptoms-fade-item:nth-child(4) { transition-delay: 1.1s; }
       .border-dashed-prudentoe-green {
         border: 1px dashed #1a472a;
       }
+      .border-solid-prudentoe-green {
+        border: 1px solid #1a472a;
+      }
       .text-dynamic-hero {
-        font-size: clamp(24px, 7vw, 31px);
+        font-size: clamp(24px, 7vw, 35px);
       }
       .text-dynamic-large {
-        font-size: clamp(18px, 5vw, 25px);
+        font-size: clamp(24px, 6.5vw, 36px);
       }
       .text-dynamic-xl {
-        font-size: clamp(16px, 4.5vw, 20px);
+        font-size: clamp(20px, 5.5vw, 26px);
       }
       .text-dynamic-medium {
-        font-size: clamp(14px, 3.5vw, 18px);
+        font-size: clamp(18px, 4.5vw, 24px);
       }
       .text-dynamic-base {
-        font-size: clamp(12px, 3vw, 14px);
+        font-size: clamp(16px, 4vw, 20px);
       }
       .text-dynamic-small {
-        font-size: clamp(11px, 2.8vw, 13px);
+        font-size: clamp(15px, 3.5vw, 18px);
       }
       .text-dynamic-xs {
-        font-size: clamp(10px, 2.5vw, 12px);
+        font-size: clamp(14px, 3.2vw, 17px);
       }
       .text-dynamic-xxs {
-        font-size: clamp(9px, 2.2vw, 11px);
+        font-size: clamp(13px, 2.8vw, 15px);
       }
       .text-dynamic-button {
-        font-size: clamp(11px, 2.8vw, 12px);
+        font-size: clamp(13px, 3vw, 15px); /* Increased button font size */
       }
       .carousel-container {
         position: relative;
         overflow: hidden;
         width: 100%;
         max-width: 100%;
+        touch-action: pan-y; /* Allow vertical scrolling, handle horizontal manually */
       }
       .carousel-slides {
         display: flex;
         transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         width: 100%;
+        cursor: grab; /* Show grab cursor for desktop users */
+        user-select: none; /* Prevent text selection during drag */
+      }
+      .carousel-slides:active {
+        cursor: grabbing; /* Show grabbing cursor when dragging */
       }
       .carousel-slide {
         min-width: 100%;
@@ -240,15 +331,8 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: all 0.3s ease;
         z-index: 10;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-      #reviewsCarousel .carousel-prev:hover,
-      #reviewsCarousel .carousel-next:hover {
-        background: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transform: translateY(-50%) scale(1.05);
       }
       #reviewsCarousel .carousel-prev {
         left: 15px;
@@ -260,6 +344,45 @@
       #reviewsCarousel .carousel-next i {
         color: #1a472a;
         font-size: 16px;
+      }
+
+      /* Controls for Signs Carousel */
+      #signsCarousel .carousel-prev,
+      #signsCarousel .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #d1d5db; /* Tailwind gray-300 */
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        /* display: flex; */ /* Control via hidden sm:flex in HTML */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+      #signsCarousel .carousel-prev {
+        left: 8px;
+      }
+      #signsCarousel .carousel-next {
+        right: 8px;
+      }
+      #signsCarousel .carousel-prev i,
+      #signsCarousel .carousel-next i {
+        color: #1A472A; /* prudentoe-green */
+        font-size: 14px;
+      }
+      #signsCarousel .carousel-dots {
+        text-align: center;
+        margin-top: 0.75rem; /* 12px */
+      }
+      #signsCarousel .carousel-slide > div { /* Styling for the item box within the slide */
+        width: 100%; /* Make item box take full width of slide's content area */
+        box-sizing: border-box;
       }
       /* #heroCarousel {
             width: 100%; No specific padding here either
@@ -340,13 +463,32 @@
         }
       }
       .animate-on-scroll {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
       }
       .animate-on-scroll.is-visible {
         opacity: 1;
         transform: translateY(0);
       }
+      
+      /* Fade in animation for sections below hero */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Staggered animation delays */
+      .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
+      .fade-in-section:nth-child(2) { transition-delay: 0.2s; }
+      .fade-in-section:nth-child(3) { transition-delay: 0.3s; }
+      .fade-in-section:nth-child(4) { transition-delay: 0.4s; }
+      .fade-in-section:nth-child(5) { transition-delay: 0.5s; }
       
       /* WhatsApp Floating Animations */
       .whatsapp-float {
@@ -412,6 +554,164 @@
           transform: scale(1.05);
         }
       }
+      
+      /* Enhanced hover effects for all buttons */
+      button {
+        box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important;
+        transition: all 0.3s ease !important;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      button:hover {
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 8px 16px rgba(128, 128, 128, 0.4), 0 4px 8px rgba(128, 128, 128, 0.3) !important;
+      }
+      
+      /* Specific hover effects for green buttons */
+      button.bg-prudentoe-green:hover {
+        background-color: #134521 !important;
+        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.4), 0 4px 10px rgba(26, 71, 42, 0.3) !important;
+      }
+      
+      /* Specific hover effects for white buttons */
+      button.bg-white:hover {
+        background-color: #f8f9fa !important;
+        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.3), 0 4px 10px rgba(26, 71, 42, 0.2) !important;
+      }
+      
+      /* Pulse effect for primary action buttons */
+      button.bg-prudentoe-green::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+        z-index: 0;
+      }
+      
+      button.bg-prudentoe-green:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+      
+      /* Ensure button content stays above the pulse effect */
+      button.bg-prudentoe-green > * {
+        position: relative;
+        z-index: 1;
+      }
+      
+      /* Enhanced hover for rounded buttons with icons */
+      button.rounded-full:hover {
+        transform: translateY(-3px) scale(1.05) !important;
+      }
+      
+      /* Glow effect on hover for all buttons */
+      button:hover {
+        box-shadow:
+          0 8px 16px rgba(128, 128, 128, 0.4),
+          0 4px 8px rgba(128, 128, 128, 0.3),
+          0 0 0 2px rgba(26, 71, 42, 0.1) !important;
+      }
+      
+      /* Desktop-specific constraints for center column layout */
+      @media (min-width: 768px) {
+        /* Ensure all main content sections stay within center column */
+        .main-container > div > div {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Specific constraints for sections that might overflow */
+        .text-center {
+          max-width: 500px;
+        }
+        
+        /* Ensure grid layouts don't exceed container */
+        .grid {
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Specific constraint for the grid-cols-3 layout */
+        .grid-cols-3 {
+          max-width: 100%;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Constrain the specific section with py-8 px-5 */
+        .py-8.px-5.text-center {
+          max-width: 100%;
+          width: 100%;
+          box-sizing: border-box;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Ensure all content within py-8 sections is constrained */
+        .py-8 > * {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Constrain carousel and other wide elements */
+        .carousel-container,
+        .relative {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure images and content don't break out */
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      
+      /* Additional desktop constraints for larger screens */
+      @media (min-width: 1200px) {
+        /* Further constrain the main container on very large screens */
+        .main-container {
+          max-width: 500px;
+        }
+        
+        /* Ensure the problematic section stays centered */
+        .py-8.px-5.text-center.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Constrain the "Small Changes" section */
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      
+      /* Specific constraints for the "Small Changes" section */
+      @media (min-width: 768px) {
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          box-sizing: border-box;
+        }
+        
+        /* Ensure content within this section is properly constrained */
+        .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section > div {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+      }
     </style>
     <script>
       tailwind.config = {
@@ -471,7 +771,7 @@
     <div class="main-container font-helvetica">
       <div class="bg-white">
         <div
-          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px]"
+          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px] overflow-x-hidden"
         >
           <div class="flex justify-between items-center mb-[0.5rem]">
             <a href="https://prudentoe.com/" target="_blank">
@@ -495,13 +795,14 @@
                 />
             </svg> 
             </button> -->
-            <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
+            
+            <!-- <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
               <img
                 src="https://img.freepik.com/premium-photo/whatsapp-logo_1080029-96.jpg?ga=GA1.1.1160482311.1748263993&semt=ais_hybrid&w=740"
                 alt="WhatsApp Icon"
                 class="w-[60px] h-[60px] bg-white rounded-full whatsapp-float"
               />
-            </a>
+            </a> -->
           </div>
           <div class="relative z-10">
             <div class="animate-on-scroll">
@@ -513,15 +814,15 @@
                 About Your Teeth?
               </h1>
               <p
-                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[60%]"
+                class="text-prudentoe-dark text-dynamic-base leading-snug mb-3 w-[58%]"
               >
                 Healthy teeth don’t always stay that way. Regular checks help
-                keep them in top shape. Prudento brings expert dental checkups
+                keep them in top shape. Prudentoe brings expert dental checkups
                 to your home!
               </p>
             </div>
             <a
-              href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+              href="https://book.prudentoe.com/#/279761000000042044"
               target="_blank"
               class="inline-block animate-on-scroll"
               style="animation-delay: 0.2s"
@@ -529,7 +830,7 @@
               <button
                 class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px mb-5 shadow-sm"
               >
-                I just want to know I'm okay
+                Book An Appointment
               </button>
             </a>
             <div
@@ -557,23 +858,22 @@
           <img
             src="static/images/semi-circle.png"
             alt="semi-circle"
-            class="absolute right-[-15px] w-[190px] h-[250px] object-fill z-[1] opacity-100 top-[134px]"
+            class="absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px]"
           />
           <img
             src="static/images/smiling-nurse.png"
             alt="Smiling nurse"
-            class="absolute right-[-40px] bottom-[0px] h-[325px] w-auto z-10"
+            class="absolute right-[-55px] bottom-[0px] h-[375px] w-auto z-10"
           />
         </div>
-        <div class="pt-8 px-5">
+        <div class="pt-8 px-5 fade-in-section">
           <div
             class="bg-[#FCFCFC] shadow-custom-card rounded-15px p-4 text-center animate-on-scroll"
           >
-            <img
-              src="static/images/dental-icon2.png"
-              alt="dental icon"
-              class="w-12 h-12 mx-auto mb-3.5"
-            />
+            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-3.5">
+              <path d="M19.7963 14.6068C21.1133 15.9237 22.002 17.5857 22.368 19.4127C22.5225 20.1875 23.2095 20.75 24 20.75C24.7905 20.75 25.4775 20.1875 25.6327 19.4113L26.088 17.1327C26.1188 16.979 26.3812 16.9798 26.412 17.132L26.8673 19.412C27.0225 20.1875 27.7095 20.75 28.5 20.75C29.2905 20.75 29.9775 20.1875 30.1327 19.412C30.498 17.585 31.3875 15.9237 32.7045 14.606L33.0375 14.273C33.981 13.3303 34.5 12.0763 34.5 10.742C34.5 7.9895 32.2605 5.75 29.5072 5.75H28.9395L28.2803 6.40925C27.7455 6.94325 27.006 7.25 26.25 7.25C25.494 7.25 24.7545 6.94325 24.2197 6.40925L23.5605 5.75H22.9927C20.2395 5.75 18 7.9895 18 10.7427C18 12.077 18.519 13.331 19.4625 14.273L19.7963 14.6068ZM22.9395 7.25L23.1592 7.469C23.973 8.2835 25.0995 8.75 26.25 8.75C27.4005 8.75 28.527 8.2835 29.3407 7.46975L29.5605 7.25C31.4618 7.27925 33 8.83475 33 10.7427C33 11.6765 32.637 12.5533 31.977 13.2125L31.644 13.5455C30.117 15.0732 29.0857 16.9993 28.662 19.1165C28.6312 19.2703 28.3688 19.2695 28.338 19.1173L27.8827 16.8373C27.7275 16.0625 27.0405 15.5 26.25 15.5C25.4595 15.5 24.7725 16.0625 24.6173 16.8387L24.162 19.1173C24.1312 19.271 23.8688 19.271 23.838 19.1173C23.415 17 22.3838 15.0733 20.856 13.5463L20.523 13.2117C19.863 12.5525 19.5 11.6757 19.5 10.7427C19.5 8.83475 21.0383 7.27925 22.9395 7.25Z" fill="#1A472A"/>
+              <path d="M45.7702 29.414C45.3097 29.1432 44.784 29 44.2507 29C43.1932 29 42.2025 29.5662 41.664 30.479L40.3088 32.783C39.9442 31.3355 39.075 30.089 37.824 29.2557C37.6485 29.1388 37.4625 29.0435 37.2772 28.9468C38.7593 28.0183 39.75 26.375 39.75 24.5C39.75 21.839 37.758 19.6392 35.1878 19.3002C36.6818 17.3533 37.5 14.999 37.5 12.5C37.5 6.29675 32.4533 1.25 26.25 1.25C20.0467 1.25 15 6.29675 15 12.5C15 13.0798 15.0495 13.6588 15.1395 14.2333C14.6175 14.0848 14.0693 14 13.5 14C10.1918 14 7.5 16.6918 7.5 20C7.5 22.1248 8.613 23.99 10.2833 25.0565C6.48525 26.39 3.75 30.002 3.75 34.25V40.25C3.75 40.799 3.909 41.3068 4.167 41.75H3.75C2.0955 41.75 0.75 43.0955 0.75 44.75C0.75 46.4045 2.0955 47.75 3.75 47.75H32.8898C36.33 47.75 39.5497 45.908 41.2943 42.9432L46.8375 33.5188C47.6738 32.0923 47.1953 30.2502 45.7702 29.414ZM38.9108 33.368C39.0218 33.9207 39.0292 34.4795 38.9287 35.0585L38.9167 35.1493L36.1215 39.9012C35.4517 41.042 34.212 41.75 32.8898 41.75H26.25C25.6297 41.75 25.125 41.2453 25.125 40.625C25.125 40.0047 25.6297 39.5 26.25 39.5H31.9387C32.8552 39.5 33.717 39.0117 34.1895 38.2257L35.8927 35.3862L34.6065 34.6145L32.9032 37.454C32.7015 37.7907 32.331 38 31.9387 38H26.5905L30.7545 31.7533C31.5877 30.4993 32.9873 29.75 34.4977 29.75C35.388 29.75 36.2505 30.011 36.9923 30.5052C37.9928 31.1712 38.6745 32.1875 38.9108 33.368ZM19.3395 21.3582C21.3083 22.9025 23.709 23.75 26.25 23.75C27.3255 23.75 28.377 23.5798 29.4 23.2775C29.3055 23.6705 29.25 24.0785 29.25 24.5C29.25 26.3682 30.234 28.0077 31.7085 28.9385C30.8333 29.3982 30.0712 30.0718 29.5057 30.9222L25.2878 37.25H24.9773L23.25 36.0988V34.25C23.25 30.002 20.5147 26.39 16.7167 25.0565C18.0195 24.2248 18.9788 22.907 19.3395 21.3582ZM22.2728 37.25H9.74925L12.063 35.5153C13.1512 34.6992 14.499 34.25 15.8588 34.25C17.1112 34.25 18.324 34.6175 19.3665 35.312L22.2728 37.25ZM38.25 24.5C38.25 26.5677 36.5677 28.25 34.5 28.25C32.4323 28.25 30.75 26.5677 30.75 24.5C30.75 22.4323 32.4323 20.75 34.5 20.75C36.5677 20.75 38.25 22.4323 38.25 24.5ZM16.5 12.5C16.5 7.124 20.874 2.75 26.25 2.75C31.626 2.75 36 7.124 36 12.5C36 15.1423 34.9523 17.603 33.0578 19.4562C31.95 19.7735 30.9938 20.4463 30.3158 21.3425C29.0228 21.9403 27.657 22.25 26.25 22.25C23.697 22.25 21.3053 21.2668 19.4745 19.4907C19.317 17.63 18.3105 16.0077 16.8405 15.0185C16.6185 14.192 16.5 13.3468 16.5 12.5ZM9 20C9 17.5182 11.0182 15.5 13.5 15.5C15.9818 15.5 18 17.5182 18 20C18 22.4818 15.9818 24.5 13.5 24.5C11.0182 24.5 9 22.4818 9 20ZM13.5 26C18.0487 26 21.75 29.7013 21.75 34.25V35.099L20.1982 34.064C18.909 33.2045 17.4083 32.75 15.8588 32.75C14.1772 32.75 12.5093 33.3057 11.1637 34.3145L7.25025 37.25H6.75C6.201 37.25 5.69325 37.409 5.25 37.667V34.25C5.25 29.7013 8.95125 26 13.5 26ZM5.25 40.25C5.25 39.4227 5.92275 38.75 6.75 38.75H24.4185C23.9302 39.227 23.625 39.89 23.625 40.625C23.625 41.0293 23.7248 41.408 23.8883 41.75H6.74625C5.92125 41.7477 5.25 41.0757 5.25 40.25ZM45.5437 32.759L40.0005 42.1828C38.5245 44.6915 35.7998 46.25 32.8898 46.25H3.75C2.92275 46.25 2.25 45.5773 2.25 44.75C2.25 43.9227 2.92275 43.25 3.75 43.25H6.74625H6.75H23.25H26.25H32.8898H32.9647V43.2448C34.7887 43.2185 36.489 42.236 37.416 40.6618L42.9577 31.2402C43.3613 30.5532 44.3205 30.3027 45.012 30.7078C45.723 31.1255 45.9615 32.0465 45.5437 32.759Z" fill="#1A472A"/>
+            </svg>
             <h2
               class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-2"
             >
@@ -586,100 +886,101 @@
               people don't. Some signs you're likely to ignore:
             </p>
           </div>
-          <div class="bg-white rounded-15px p-4 text-center mt-[20px]">
-            <div
-              class="grid grid-cols-2 gap-2.5 mb-5 text-dynamic-xxs leading-1.37"
-            >
+          <div class="bg-white rounded-15px p-4 text-center mt-[20px]" id="symptomsContainer">
+            <div class="space-y-2.5">
               <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.1s"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
               >
                 <img
                   src="static/images/bad-smell-tooth.png"
                   alt="bad breath icon"
-                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
+                  class="w-[2.25rem] h-[2.25rem] mb-2.5"
                 />
-                <span class="text-prudentoe-dark"
-                  >Morning breath that lingers longer than usual</span
+                <p
+                  class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
                 >
+                  Morning breath that lingers longer than usual
+                </p>
               </div>
               <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.2s"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
               >
                 <img
                   src="static/images/toothache.png"
                   alt="toothache icon"
-                  class="w-[27px] h-[27px] mr-1.5 flex-shrink-0"
+                  class="w-[2.25rem] h-[2.25rem] mb-2.5"
                 />
-                <span class="text-prudentoe-dark"
-                  >Kids refusing food more often</span
+                <p
+                  class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
                 >
+                  Kids refusing food more often
+                </p>
               </div>
               <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.3s"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
               >
                 <img
                   src="static/images/open-mouth.png"
                   alt="open mouth icon"
-                  class="w-[22px] h-[22px] mr-1.5 ml-1 flex-shrink-0"
+                  class="w-[2.25rem] h-[2.25rem] mb-2.5"
                 />
-                <span class="text-prudentoe-dark"
-                  >Elderly people chewing on just one side</span
+                <p
+                  class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
                 >
+                  Elderly people chewing on just one side
+                </p>
               </div>
               <div
-                class="border border-prudentoe-green rounded-8px p-1.5 flex items-center text-left h-[42px] animate-on-scroll"
-                style="animation-delay: 0.4s"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
               >
                 <img
                   src="static/images/gingivitis-icon.png"
                   alt="gingivitis icon"
-                  class="w-[26px] h-[27px] mr-1.5 flex-shrink-0"
+                  class="w-[2.25rem] h-[2.25rem] mb-2.5"
                 />
-                <span class="text-prudentoe-dark"
-                  >Gums looking slightly duller or pulling back</span
+                <p
+                  class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
                 >
+                  Gums looking slightly duller or pulling back
+                </p>
               </div>
             </div>
+          </div>
             <p
               class="text-prudentoe-dark text-dynamic-small leading-1.37 mb-5 animate-on-scroll"
-              style="animation-delay: 0.5s"
+              style="animation-delay: 0.5s; text-align: center;"
             >
               We don't call those "urgent." We call it normal life quietly
               warning you.
             </p>
             <a
-              href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+              href="https://book.prudentoe.com/#/279761000000042044"
               target="_blank"
-              class="inline-block animate-on-scroll"
+              class="block animate-on-scroll mx-auto w-fit"
               style="animation-delay: 0.6s"
             >
               <button
-                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[45px]"
+                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-2 px-3 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px]"
               >
                 <span
-                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
+                  class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center flex-shrink-0" style="margin-left: -7px;"
                 >
-                  <img
-                    src="static/images/calendar-icon.png"
-                    alt="calendar icon"
-                    class="w-[27px] h-[20px]"
-                  />
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
+                  </svg>
                 </span>
-                Let a Dentist take a<br />quick look - At home
+                <span class="text-center">Let a Dentist take a<br/>quick look - At home</span>
               </button>
             </a>
             <p
-              class="text-prudentoe-dark text-dynamic-xxs leading-1.37 animate-on-scroll"
-              style="animation-delay: 0.7s"
+              class="text-prudentoe-dark text-dynamic-s leading-1.37 animate-on-scroll"
+              style="animation-delay: 0.7s; text-align: center;"
             >
               Book a slot for just Rs.99 - pay the rest after service
             </p>
           </div>
         </div>
-        <div id="heroCarousel" class="py-4 relative carousel-container">
+        <div id="heroCarousel" class="py-4 relative carousel-container fade-in-section">
           <div class="carousel-slides">
             <div class="carousel-slide relative">
               <div
@@ -816,45 +1117,46 @@
           </div>
           <div class="carousel-dots mt-4"></div>
         </div>
-        <div class="py-5 px-1">
+        <div class="py-5 px-1 fade-in-section">
           <div
             class="bg-white shadow-custom-medical rounded-25px p-5 animate-on-scroll"
           >
             <h2
-              class="text-prudentoe-green font-bold text-dynamic-hero leading-1.2 mb-2.5"
+              class="text-prudentoe-green font-bold text-dynamic-hero leading-1.2 mb-2.5" style="text-align: center;"
             >
               "If Only We'd Caught This Sooner…"
             </h2>
-            <div class="flex gap-4 items-start">
+            <!-- <div class="flex gap-4 items-start">
               <img
-                src="static/images/medical-professionals.png"
-                alt="Medical professionals collage"
-                class="w-[175px] h-[148px] mt-1"
+            src="static/images/medical-professionals.png"
+            alt="Medical professionals collage"
+            class="w-[175px] h-[148px] mt-1"
               />
-              <div class="flex-1">
-                <p
-                  class="text-prudentoe-dark text-dynamic-xxs leading-1.37 mb-1"
+              <div class="flex-1"> -->
+            <p
+              class="text-prudentoe-dark text-dynamic-s leading-1.37 mb-1 mt-[1rem]" style="text-align: center;"
+            >
+              That statement shows up more than you'd think. Cavities,
+              infections, and oral cancers don't start loud. That's the
+              reason you need someone trained to decode those whispers.
+            </p>
+            <div class="flex justify-center mt-[2rem]">
+              <a
+                href="https://book.prudentoe.com/#/279761000000042044"
+                target="_blank"
+              >
+                <button
+                  class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px shadow-sm"
                 >
-                  That statement shows up more than you'd think. Cavities,
-                  infections, and oral cancers don't start loud. That's the
-                  reason you need someone trained to decode those whispers.
-                </p>
-                <a
-                  href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
-                  target="_blank"
-                  class="inline-block w-full"
-                >
-                  <button
-                    class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px w-full shadow-sm"
-                  >
-                    Can someone go check?
-                  </button>
-                </a>
+                  Book An Appointment
+                </button>
+              </a>
+            </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="py-8 px-5 text-center">
+        <div class="py-8 px-5 text-center fade-in-section">
           <p
             class="w-[300px] mx-auto mb-3 animate-on-scroll text-center text-prudentoe-dark text-dynamic-large leading-tight font-bold"
             style="font-size: 1.3rem"
@@ -862,7 +1164,7 @@
             Real Life Doesn’t Pause for Dental Clinics
           </p>
           <p
-            class="w-[300px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
+            class="w-[350px] md:w-[420px] mx-auto mb-5 animate-on-scroll text-center text-prudentoe-dark text-dynamic-small leading-tight"
             style="animation-delay: 0.1s"
           >
             Between work calls, school runs, elder care, and city <br />traffic,
@@ -907,14 +1209,14 @@
             </div>
           </div>
           <p
-            class="text-prudentoe-dark text-dynamic-small leading-1.2 mb-3 mx-auto max-w-[300px] animate-on-scroll"
+            class="text-prudentoe-dark text-dynamic-small leading-1.2 mb-3 mx-auto max-w-[400px] animate-on-scroll"
             style="animation-delay: 0.5s"
           >
             And yes, it's true care. Prudentoe invests wisely in full sterilized
             equipment and genuine qualifications.
           </p>
           <a
-            href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+            href="https://book.prudentoe.com/#/279761000000042044"
             target="_blank"
             class="animate-on-scroll"
             style="animation-delay: 0.6s"
@@ -926,7 +1228,7 @@
             </p>
           </a>
           <a
-            href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+            href="https://book.prudentoe.com/#/279761000000042044"
             target="_blank"
             class="inline-block animate-on-scroll"
             style="animation-delay: 0.7s"
@@ -950,22 +1252,22 @@
                   />
                 </svg>
               </span>
-              Available slots in my area
+              Book An Appointment
             </button>
           </a>
         </div>
         <div
-          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[275px] animate-on-scroll"
+          class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[285px] animate-on-scroll fade-in-section overflow-x-hidden"
         >
           <img
             src="static/images/semi-circle-left.png"
             alt="semi-circle"
-            class="absolute left-[0px] top-[45px] w-[190px] h-[231px] object-fill z-[0] opacity-100"
+            class="absolute left-[0px] top-[58px] w-[190px] h-[231px] object-fill z-[0] opacity-100"
           />
           <img
             src="static/images/smiling-dentist.png"
             alt="Smiling dentist with tools"
-            class="absolute left-[10px] top-[-2px] h-[277px] w-auto z-1 transform scale-x-[-1] ml-[-8rem]"
+            class="absolute left-[-25px] top-[10px] h-[277px] w-auto z-1 transform scale-x-[-1] ml-[-6rem] max-w-none"
           />
           <div
             class="relative z-10 flex flex-col items-end text-right pt-auto pb-auto pr-5"
@@ -977,26 +1279,26 @@
                 Small Changes Aren't Small Always!
               </h2>
               <p
-                class="text-black font-bold text-dynamic-small leading-tight mt-[1rem] ml-[5.5rem] mb-[1rem]"
+                class="text-black font-bold text-dynamic-xs leading-tight mt-[1rem] ml-[3.5rem] mb-[1rem]"
               >
                 Let's make this easier.<br />
                 Match your moments...
               </p>
               <a
-                href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+                href="https://book.prudentoe.com/#/279761000000042044"
                 target="_blank"
-                class="inline-block mt-2.5 ml-[6.2rem]"
+                class="inline-block mt-2.5 ml-[3.5rem]"
               >
                 <button
-                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center p-1"
+                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3"
                 >
-                  Help me find my first<br />check-up option
+                  Book An Appointment
                 </button>
               </a>
             </div>
           </div>
         </div>
-        <div class="pt-2 pb-8 px-5 text-center">
+        <div class="pt-2 pb-8 px-5 text-center fade-in-section">
           <h2
             class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-5 animate-on-scroll"
           >
@@ -1038,7 +1340,7 @@
                 class="text-prudentoe-green text-dynamic-small leading-1.2 max-w-[300px]"
               >
                 Your kid doesn't cry because the environment is familiar. Isn't
-                that exactly you need?
+                that exactly what you need?
               </p>
             </div>
             <div
@@ -1074,7 +1376,7 @@
             </div>
           </div>
         </div>
-        <div class="pb-8 px-1">
+        <div class="pb-8 px-1 fade-in-section">
           <div
             class="bg-white shadow-custom-gentle rounded-19px p-5 animate-on-scroll"
           >
@@ -1083,12 +1385,12 @@
             >
               Gentle, Human, Preventive
             </h2>
-            <p
+            <!-- <p
               class="text-prudentoe-dark font-bold text-dynamic-base leading-1.2 mb-5"
               style="font-size: 1rem"
             >
               Prudentoe is NOT for emergencies. It's for EVERYTHING BEFORE that.
-            </p>
+            </p> -->
             <div class="flex flex-col sm:flex-row gap-4">
               <div class="flex-1 space-y-2.5">
                 <div class="flex items-center">
@@ -1122,14 +1424,14 @@
                   >
                 </div>
                 <a
-                  href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+                  href="https://book.prudentoe.com/#/279761000000042044"
                   target="_blank"
                   class="inline-block"
                 >
                   <button
-                    class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-2 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[31px]"
+                    class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[51px]"
                   >
-                    Can someone just check?
+                    Book An Appointment
                   </button>
                 </a>
               </div>
@@ -1143,7 +1445,7 @@
             </div>
           </div>
         </div>
-        <div class="py-8 px-5 text-center">
+        <div class="py-8 px-5 text-center fade-in-section">
           <h2
             class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-2 animate-on-scroll"
           >
@@ -1416,17 +1718,17 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-prev">
+            <!-- <button class="carousel-prev">
               <i class="fas fa-chevron-left"></i>
             </button>
             <button class="carousel-next">
               <i class="fas fa-chevron-right"></i>
-            </button>
+            </button> -->
           </div>
           <div class="carousel-dots"></div>
         </div>
         <div
-          class="relative min-h-[237px] mt-8 mx-auto w-full max-w-[380px] animate-on-scroll"
+          class="relative min-h-[237px] mt-8 mx-auto w-full max-w-[380px] animate-on-scroll fade-in-section"
         >
           <img
             src="static/images/blurred-medical-professionals.png"
@@ -1446,15 +1748,15 @@
               Let a professional listen.
             </p>
             <a
-              href="https://prudentoedentalcare.zohobookings.in/#/279761000000042044"
+              href="https://book.prudentoe.com/#/279761000000042044"
               target="_blank"
               class="inline-block"
             >
               <button
-                class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center shadow-sm h-[45px]"
+                class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-2 px-4 rounded-full flex items-center shadow-sm min-h-[48px]"
               >
                 <span
-                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
+                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center flex-shrink-0"
                 >
                   <img
                     src="static/images/megaphone-icon.png"
@@ -1462,7 +1764,7 @@
                     class="w-[22px] h-[22px]"
                   />
                 </span>
-                Yes, show me how it works
+                Book An Appointment
               </button>
             </a>
           </div>
@@ -1481,6 +1783,15 @@
           const nextButton = carousel.querySelector(".carousel-next");
           let currentIndex = 0;
           let autoSlideTimer;
+          
+          // Touch/swipe variables
+          let startX = 0;
+          let startY = 0;
+          let isDragging = false;
+          let startTime = 0;
+          
+          console.log(`[${carouselId}] Initializing carousel with ${slides.length} slides, auto-interval: ${autoSlideInterval}ms`);
+          
           if (slides.length === 0) return;
           if (dotsContainer) {
             dotsContainer.innerHTML = "";
@@ -1549,17 +1860,443 @@
             carousel.addEventListener("mouseenter", stopAutoSlide);
             carousel.addEventListener("mouseleave", startAutoSlide);
           }
+          // Add touch/swipe support for manual horizontal scrolling
+          function handleTouchStart(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            startTime = Date.now();
+            isDragging = true;
+            console.log(`[${carouselId}] Touch start at X: ${startX}, Y: ${startY}`);
+          }
+          
+          function handleTouchMove(e) {
+            if (!isDragging) return;
+            
+            const currentX = e.touches[0].clientX;
+            const currentY = e.touches[0].clientY;
+            const deltaX = currentX - startX;
+            const deltaY = currentY - startY;
+            
+            // Only prevent default if this is clearly a horizontal swipe
+            // Allow vertical scrolling by not preventing default for vertical movements
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+              e.preventDefault(); // Only prevent horizontal scrolling when it's clearly horizontal
+              stopAutoSlide();
+              console.log(`[${carouselId}] Horizontal swipe detected, preventing default`);
+            }
+          }
+          
+          function handleTouchEnd(e) {
+            if (!isDragging) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+            const deltaTime = Date.now() - startTime;
+            
+            console.log(`[${carouselId}] Touch end - deltaX: ${deltaX}, deltaY: ${deltaY}, time: ${deltaTime}ms`);
+            
+            // Check if it's a horizontal swipe (not vertical scroll)
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50 && deltaTime < 500) {
+              if (deltaX > 0) {
+                console.log(`[${carouselId}] Swipe right - going to previous slide`);
+                prevSlide();
+              } else {
+                console.log(`[${carouselId}] Swipe left - going to next slide`);
+                nextSlide();
+              }
+            }
+            
+            isDragging = false;
+            resetAutoSlide();
+          }
+          
+          // Add mouse drag support for desktop
+          function handleMouseDown(e) {
+            startX = e.clientX;
+            startY = e.clientY;
+            startTime = Date.now();
+            isDragging = true;
+            stopAutoSlide();
+            console.log(`[${carouselId}] Mouse down at X: ${startX}`);
+            e.preventDefault();
+          }
+          
+          function handleMouseMove(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+          }
+          
+          function handleMouseUp(e) {
+            if (!isDragging) return;
+            
+            const endX = e.clientX;
+            const endY = e.clientY;
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+            const deltaTime = Date.now() - startTime;
+            
+            console.log(`[${carouselId}] Mouse up - deltaX: ${deltaX}, deltaY: ${deltaY}, time: ${deltaTime}ms`);
+            
+            // Check if it's a horizontal drag (not vertical)
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 30 && deltaTime < 500) {
+              if (deltaX > 0) {
+                console.log(`[${carouselId}] Drag right - going to previous slide`);
+                prevSlide();
+              } else {
+                console.log(`[${carouselId}] Drag left - going to next slide`);
+                nextSlide();
+              }
+            }
+            
+            isDragging = false;
+            resetAutoSlide();
+          }
+          
+          // Add event listeners for touch and mouse events
+          slidesContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+          slidesContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+          slidesContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
+          
+          slidesContainer.addEventListener('mousedown', handleMouseDown);
+          document.addEventListener('mousemove', handleMouseMove);
+          document.addEventListener('mouseup', handleMouseUp);
+          
+          // Prevent context menu on long press
+          slidesContainer.addEventListener('contextmenu', (e) => {
+            if (isDragging) e.preventDefault();
+          });
+          
           goToSlide(0);
         }
-        setupCarousel("heroCarousel", 5000);
+        setupCarousel("heroCarousel", 3000);
         setupCarousel("reviewsCarousel", 7000);
-        // Disable scroll animations to prevent scroll interference
-        const animatedElements =
-          document.querySelectorAll(".animate-on-scroll");
+        setupCarousel("signsCarousel", 4000); // Initialize the new carousel
+        
+        // Fade-in animation observer for sections below hero
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+        
+        // Observe all fade-in sections
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+          fadeInObserver.observe(section);
+        });
+        
+        // Keep existing scroll animations active for immediate visibility
+        const animatedElements = document.querySelectorAll(".animate-on-scroll");
         animatedElements.forEach((el) => {
           el.classList.add("is-visible");
         });
+        
+        // Float in animation for symptoms grid
+        const symptomsGrid = document.getElementById('symptomsGrid');
+        if (symptomsGrid) {
+          const gridObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const items = entry.target.querySelectorAll('.float-in-item');
+                items.forEach((item, index) => {
+                  setTimeout(() => {
+                    item.classList.add('animate-in');
+                  }, index * 200); // 200ms delay between each item
+                });
+                gridObserver.unobserve(entry.target); // Only animate once
+              }
+            });
+          }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+          });
+          
+          gridObserver.observe(symptomsGrid);
+        }
+        
+        // Auto fade-in animation for symptoms container (no scroll required)
+        const symptomsContainer = document.getElementById('symptomsContainer');
+        if (symptomsContainer) {
+          // Trigger animation automatically after page load
+          setTimeout(() => {
+            const fadeItems = symptomsContainer.querySelectorAll('.symptoms-fade-item');
+            fadeItems.forEach((item) => {
+              item.classList.add('fade-in');
+            });
+          }, 500); // Start animation 500ms after page load
+        }
       });
+    </script>
+
+    <!-- URL Parameter Preservation Script -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // Configuration
+        const config = {
+          preserveInternalLinks: true,
+          preserveExternalLinks: true,
+          preserveForms: true,
+          excludeParameters: [], // Parameters to exclude from preservation
+          debug: false // Set to true for debugging
+        };
+        
+        // Utility function for debugging
+        function debugLog(message, data) {
+          if (config.debug) {
+            console.log('[URL Parameter Preservation]', message, data || '');
+          }
+        }
+        
+        // Extract all URL parameters from current page
+        function extractCurrentParameters() {
+          const params = new URLSearchParams(window.location.search);
+          const paramObj = {};
+          
+          for (const [key, value] of params.entries()) {
+            if (!config.excludeParameters.includes(key)) {
+              paramObj[key] = value;
+            }
+          }
+          
+          debugLog('Extracted parameters:', paramObj);
+          return paramObj;
+        }
+        
+        // Convert parameter object to URL search string
+        function parametersToString(params) {
+          const searchParams = new URLSearchParams();
+          
+          for (const [key, value] of Object.entries(params)) {
+            searchParams.append(key, value);
+          }
+          
+          return searchParams.toString();
+        }
+        
+        // Append parameters to URL
+        function appendParametersToUrl(url, params) {
+          if (!url || Object.keys(params).length === 0) {
+            return url;
+          }
+          
+          try {
+            const urlObj = new URL(url, window.location.origin);
+            
+            // Preserve existing parameters and add new ones
+            for (const [key, value] of Object.entries(params)) {
+              if (!urlObj.searchParams.has(key)) {
+                urlObj.searchParams.append(key, value);
+              }
+            }
+            
+            return urlObj.toString();
+          } catch (error) {
+            debugLog('Error processing URL:', { url, error: error.message });
+            
+            // Fallback for relative URLs or malformed URLs
+            const separator = url.includes('?') ? '&' : '?';
+            const paramString = parametersToString(params);
+            
+            if (paramString) {
+              return url + separator + paramString;
+            }
+            
+            return url;
+          }
+        }
+        
+        // Process anchor tags
+        function processAnchorTags(params) {
+          const anchors = document.querySelectorAll('a[href]');
+          
+          anchors.forEach(anchor => {
+            const originalHref = anchor.getAttribute('href');
+            
+            // Skip if href is empty, just a hash, javascript:, mailto:, tel:, etc.
+            if (!originalHref ||
+                originalHref === '#' ||
+                originalHref.startsWith('javascript:') ||
+                originalHref.startsWith('mailto:') ||
+                originalHref.startsWith('tel:') ||
+                originalHref.startsWith('sms:')) {
+              return;
+            }
+            
+            // Determine if it's an internal or external link
+            let isExternal = false;
+            try {
+              const linkUrl = new URL(originalHref, window.location.origin);
+              isExternal = linkUrl.hostname !== window.location.hostname;
+            } catch (error) {
+              // Assume relative URLs are internal
+              isExternal = false;
+            }
+            
+            // Apply configuration settings
+            if ((isExternal && !config.preserveExternalLinks) ||
+                (!isExternal && !config.preserveInternalLinks)) {
+              return;
+            }
+            
+            const newHref = appendParametersToUrl(originalHref, params);
+            
+            if (newHref !== originalHref) {
+              anchor.setAttribute('href', newHref);
+              debugLog('Updated anchor:', { original: originalHref, new: newHref });
+            }
+          });
+        }
+        
+        // Process form elements
+        function processForms(params) {
+          if (!config.preserveForms) return;
+          
+          const forms = document.querySelectorAll('form');
+          
+          forms.forEach(form => {
+            // Add hidden inputs for each parameter
+            for (const [key, value] of Object.entries(params)) {
+              // Check if parameter already exists as form field
+              const existingField = form.querySelector(`[name="${key}"]`);
+              
+              if (!existingField) {
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = key;
+                hiddenInput.value = value;
+                hiddenInput.setAttribute('data-url-param-preservation', 'true');
+                
+                form.appendChild(hiddenInput);
+                debugLog('Added hidden input to form:', { key, value });
+              }
+            }
+          });
+        }
+        
+        // Handle programmatic navigation
+        function interceptProgrammaticNavigation(params) {
+          // Store original methods
+          const originalPushState = history.pushState;
+          const originalReplaceState = history.replaceState;
+          
+          // Intercept history.pushState
+          history.pushState = function(state, title, url) {
+            if (url && Object.keys(params).length > 0) {
+              url = appendParametersToUrl(url, params);
+              debugLog('Intercepted pushState:', { original: arguments[2], new: url });
+            }
+            return originalPushState.call(this, state, title, url);
+          };
+          
+          // Intercept history.replaceState
+          history.replaceState = function(state, title, url) {
+            if (url && Object.keys(params).length > 0) {
+              url = appendParametersToUrl(url, params);
+              debugLog('Intercepted replaceState:', { original: arguments[2], new: url });
+            }
+            return originalReplaceState.call(this, state, title, url);
+          };
+          
+          // Note: window.location.assign and window.location.replace are read-only properties
+          // in many browsers and cannot be intercepted directly. URL parameters are preserved
+          // through link processing for most navigation scenarios.
+          
+          debugLog('Programmatic navigation interception setup complete (history API only)');
+        }
+        
+        // Handle dynamically added content
+        function observeNewContent(params) {
+          const observer = new MutationObserver(function(mutations) {
+            let shouldProcess = false;
+            
+            mutations.forEach(function(mutation) {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                  // Check if new anchors or forms were added
+                  if (node.tagName === 'A' ||
+                      node.tagName === 'FORM' ||
+                      node.querySelector('a[href], form')) {
+                    shouldProcess = true;
+                  }
+                }
+              });
+            });
+            
+            if (shouldProcess) {
+              debugLog('Processing newly added content');
+              processAnchorTags(params);
+              processForms(params);
+            }
+          });
+          
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+          
+          return observer;
+        }
+        
+        // Initialize the parameter preservation system
+        function initializeParameterPreservation() {
+          debugLog('Initializing URL parameter preservation system');
+          
+          const currentParams = extractCurrentParameters();
+          
+          // Only proceed if we have parameters to preserve
+          if (Object.keys(currentParams).length === 0) {
+            debugLog('No URL parameters found to preserve');
+            return;
+          }
+          
+          debugLog('Found parameters to preserve:', currentParams);
+          
+          // Process existing content
+          processAnchorTags(currentParams);
+          processForms(currentParams);
+          
+          // Set up interception for programmatic navigation
+          interceptProgrammaticNavigation(currentParams);
+          
+          // Observe for dynamically added content
+          observeNewContent(currentParams);
+          
+          debugLog('URL parameter preservation system initialized successfully');
+        }
+        
+        // Wait for DOM to be ready and initialize
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeParameterPreservation);
+        } else {
+          initializeParameterPreservation();
+        }
+        
+        // Also re-initialize when the page becomes visible (handles some edge cases)
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden) {
+            setTimeout(initializeParameterPreservation, 100);
+          }
+        });
+        
+        // Expose utility functions for manual use if needed
+        window.urlParameterPreservation = {
+          extractCurrentParameters: extractCurrentParameters,
+          appendParametersToUrl: appendParametersToUrl,
+          reinitialize: initializeParameterPreservation,
+          config: config
+        };
+        
+      })();
     </script>
   </body>
 </html>
