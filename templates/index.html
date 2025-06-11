@@ -167,7 +167,7 @@
         .py-8,
         .pt-8,
         .pb-8 {
-          max-width: 505px;
+          max-width: 24rem;
           margin-left: auto;
           margin-right: auto;
           box-sizing: border-box;
@@ -276,7 +276,7 @@
         font-size: clamp(16px, 4vw, 20px);
       }
       .text-dynamic-small {
-        font-size: clamp(15px, 3.5vw, 18px);
+        font-size: clamp(15px, 3.5vw, 15px);
       }
       .text-dynamic-xs {
         font-size: clamp(14px, 3.2vw, 17px);
@@ -1756,6 +1756,56 @@
         </div>
       </div>
     </div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-prudentoe-green text-white py-8 px-5 mt-2">
+      <div class="main-container">
+        <!-- Logo and Links Side by Side -->
+        <div class="flex flex-row items-start justify-between mb-6">
+          <!-- Logo -->
+          <div class="self-start">
+            <img
+              src="static/images/prudentoe-logo1.png"
+              alt="Prudentoe Logo"
+              class="h-10 sm:h-12 filter brightness-0 invert"
+            />
+          </div>
+          
+          <!-- Footer Links - Stacked Vertically -->
+          <div class="flex flex-col items-start space-y-2 sm:space-y-3">
+            <a
+              href="https://prudentoe.com/contact-us/"
+              target="_blank"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+            >
+              Contact Us
+            </a>
+            <a
+              href="https://prudentoe.com/terms-and-conditions/"
+              target="_blank"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+            >
+              Terms and Conditions
+            </a>
+            <a
+              href="https://prudentoe.com/privacy-policy/"
+              target="_blank"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+            >
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-white/20 pt-4 text-center">
+          <p class="text-dynamic-xs text-white/80">
+            © 2025 Prudentoe Dental. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         function setupCarousel(carouselId, autoSlideInterval = 0) {
