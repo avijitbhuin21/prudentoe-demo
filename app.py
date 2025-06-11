@@ -5,6 +5,7 @@ import hashlib
 import logging
 import traceback
 from datetime import datetime
+import os
 from supabase import create_client, Client
 
 app = Flask(__name__)
@@ -24,13 +25,8 @@ logger = logging.getLogger(__name__)
 PAYMENT_AMOUNT_RS = 1  # Change this to 99 for production
 PAYMENT_AMOUNT_PAISE = PAYMENT_AMOUNT_RS * 100  # Convert to paise
 
-# Razorpay Live credentials
-# RAZORPAY_KEY_ID = 'rzp_live_nk5TusXDwjy8pV'
-# RAZORPAY_KEY_SECRET = 'vb9oKZSRYyM2BkAG4vdKsT2A'
-
-# Razorpay Test credentials (for fallback testing)
-RAZORPAY_KEY_ID = 'rzp_test_mTfoYlS40taGLb'
-RAZORPAY_KEY_SECRET = '4PNcnzuY2KzAda8ar45Cahwn'
+RAZORPAY_KEY_ID = os.getenv('RAZORPAY_KEY_ID','') if os.getenv('RAZORPAY_KEY_ID','') != '' else 'rzp_test_mTfoYlS40taGLb'
+RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET','') if os.getenv('RAZORPAY_KEY_SECRET','') != '' else '4PNcnzuY2KzAda8ar45Cahwn'
 
 # Supabase credentials
 SUPABASE_URL = 'https://ojslpvgxujrixjwqcvag.supabase.co'
