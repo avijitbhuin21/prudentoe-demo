@@ -1,0 +1,950 @@
+2025-06-08 00:53:57,436 - WARNING -  * Debugger is active!
+2025-06-08 00:53:57,440 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 00:54:33,950 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 00:54:35,818 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 00:54:35,819 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 00:54:35,819 - INFO - Environment: LIVE
+2025-06-08 00:54:35,834 - WARNING -  * Debugger is active!
+2025-06-08 00:54:35,839 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 00:55:14,947 - INFO - Payment cancelled for customer: demo client
+2025-06-08 00:55:16,175 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "GET / HTTP/1.1" 200 -
+2025-06-08 00:55:16,180 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 00:55:16,183 - INFO - Cancellation recorded: {'id': 15, 'created_at': '2025-06-07T19:25:16.951191+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'cancelled'}
+2025-06-08 00:55:16,184 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "POST /payment-cancelled HTTP/1.1" 200 -
+2025-06-08 00:55:16,292 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 00:55:16,969 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:16,982 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:16,994 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:16] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,005 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,020 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,031 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,043 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,048 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,058 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,069 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,078 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,085 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,098 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,104 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,118 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,122 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,132 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,143 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,154 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,165 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,172 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,182 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,188 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,350 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,436 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,465 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 00:55:17,483 - INFO - 127.0.0.1 - - [08/Jun/2025 00:55:17] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:57:03,186 - INFO - Creating order for customer: demo client
+2025-06-08 00:57:03,186 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 00:57:03,186 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'booking_6523589562_2025-06-07_20250608_005703', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-07', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 00:57:03,764 - ERROR - Error creating order: receipt: the length must be no more than 40.
+2025-06-08 00:57:03,766 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\app.py", line 101, in create_order
+    order = razorpay_client.order.create(data=order_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\order.py", line 71, in create
+    return self.post_url(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\base.py", line 20, in post_url
+    return self.client.post(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 156, in post
+    return self.request('post', path, data=data, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 137, in request
+    raise BadRequestError(msg)
+razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
+
+2025-06-08 00:57:03,767 - INFO - 127.0.0.1 - - [08/Jun/2025 00:57:03] "[35m[1mPOST /create-order HTTP/1.1[0m" 500 -
+2025-06-08 00:59:01,551 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "GET / HTTP/1.1" 200 -
+2025-06-08 00:59:01,632 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 00:59:01,826 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:01,827 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:01,854 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:01,857 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:01,873 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:01,974 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:01] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,007 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,044 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,048 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,053 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,056 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,062 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,063 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,070 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,070 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,076 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,079 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,088 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,092 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,094 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,095 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,105 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,108 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,108 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,119 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,121 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:02,122 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:02] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:17,152 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 00:59:19,092 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-08 00:59:19,092 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 00:59:19,092 - INFO - Environment: LIVE
+2025-06-08 00:59:19,106 - WARNING -  * Debugger is active!
+2025-06-08 00:59:19,113 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 00:59:19,177 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "GET / HTTP/1.1" 200 -
+2025-06-08 00:59:19,246 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 00:59:19,573 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,580 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,588 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,596 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,601 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,601 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,612 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,616 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,620 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,624 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,632 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,634 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,638 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,648 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,651 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,657 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,665 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,668 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,672 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,678 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,682 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,688 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,689 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,698 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,700 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,701 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:19,706 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:19] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,451 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "GET / HTTP/1.1" 200 -
+2025-06-08 00:59:39,547 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 00:59:39,755 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,756 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,779 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,779 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,795 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,807 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,862 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,874 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,881 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,894 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,903 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,930 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,942 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,969 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,979 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,988 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:39,995 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:39] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,002 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,009 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,016 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,027 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,037 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,045 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,054 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,061 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,072 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:40,080 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:40] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,121 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "GET / HTTP/1.1" 200 -
+2025-06-08 00:59:50,165 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 00:59:50,359 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,361 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,383 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,384 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,392 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,405 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,452 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,459 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,468 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,475 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,485 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,505 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,515 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,546 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,555 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,587 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,626 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,649 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,698 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,751 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,764 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,773 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,778 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,792 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,815 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,820 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 00:59:50,829 - INFO - 127.0.0.1 - - [08/Jun/2025 00:59:50] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,294 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "GET / HTTP/1.1" 200 -
+2025-06-08 01:00:26,361 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 01:00:26,578 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,578 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,595 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,596 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,611 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,703 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,707 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,742 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,743 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,774 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,779 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,783 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,786 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,791 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,795 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,799 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,802 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,804 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,814 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,821 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,821 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,826 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,833 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,837 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,839 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,848 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:26,850 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:26] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:00:39,200 - INFO - Creating order for customer: demo client
+2025-06-08 01:00:39,200 - INFO - Payment amount: Rs. 99 (980100 paise)
+2025-06-08 01:00:39,200 - INFO - Order data: {'amount': 980100, 'currency': 'INR', 'receipt': 'booking_6523589562_2025-06-08_20250608_010039', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'email', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:00:39,763 - ERROR - Error creating order: receipt: the length must be no more than 40.
+2025-06-08 01:00:39,765 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\app.py", line 101, in create_order
+    order = razorpay_client.order.create(data=order_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\order.py", line 71, in create
+    return self.post_url(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\base.py", line 20, in post_url
+    return self.client.post(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 156, in post
+    return self.request('post', path, data=data, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 137, in request
+    raise BadRequestError(msg)
+razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
+
+2025-06-08 01:00:39,767 - INFO - 127.0.0.1 - - [08/Jun/2025 01:00:39] "[35m[1mPOST /create-order HTTP/1.1[0m" 500 -
+2025-06-08 01:01:04,956 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:01:06,707 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:01:06,707 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:01:06,708 - INFO - Environment: LIVE
+2025-06-08 01:01:06,722 - WARNING -  * Debugger is active!
+2025-06-08 01:01:06,726 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:01:18,229 - INFO - Creating order for customer: demo client
+2025-06-08 01:01:18,230 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:01:18,230 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'booking_6523589562_2025-06-08_20250608_010118', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'email', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:01:19,550 - ERROR - Error creating order: receipt: the length must be no more than 40.
+2025-06-08 01:01:19,553 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\app.py", line 101, in create_order
+    order = razorpay_client.order.create(data=order_data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\order.py", line 71, in create
+    return self.post_url(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\resources\base.py", line 20, in post_url
+    return self.client.post(url, data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 156, in post
+    return self.request('post', path, data=data, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Suhas-frontEnd-POC\venv\Lib\site-packages\razorpay\client.py", line 137, in request
+    raise BadRequestError(msg)
+razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
+
+2025-06-08 01:01:19,554 - INFO - 127.0.0.1 - - [08/Jun/2025 01:01:19] "[35m[1mPOST /create-order HTTP/1.1[0m" 500 -
+2025-06-08 01:01:43,228 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:01:45,148 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:01:45,149 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:01:45,149 - INFO - Environment: LIVE
+2025-06-08 01:01:45,163 - WARNING -  * Debugger is active!
+2025-06-08 01:01:45,167 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:01:50,452 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:01:52,359 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:01:52,359 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:01:52,359 - INFO - Environment: LIVE
+2025-06-08 01:01:52,374 - WARNING -  * Debugger is active!
+2025-06-08 01:01:52,379 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:02:26,321 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "GET / HTTP/1.1" 200 -
+2025-06-08 01:02:26,383 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 01:02:26,779 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,788 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,799 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,800 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,811 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,813 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,822 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,831 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,837 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,853 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,855 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,871 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,872 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,891 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,893 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,915 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,916 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,928 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,930 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,944 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,946 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,956 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:26,958 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:26] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:27,153 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:27] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:27,190 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:27] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:27,196 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:27] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:27,215 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:27] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:32,989 - INFO - Creating order for customer: demo client
+2025-06-08 01:02:32,989 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:02:32,989 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_65235895_0608_010232', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'email', 'date': '2025-06-07', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:02:33,608 - INFO - Order created successfully: order_QeQGVp6h73sUaJ
+2025-06-08 01:02:33,608 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749324754, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQGVp6h73sUaJ', 'notes': {'address1': 'checking from ui', 'address2': '', 'booking_type': 'dental_appointment', 'date': '2025-06-07', 'email': 'deo@gmail.com', 'name': 'demo client', 'phone': '6523589562', 'preferredContact': 'email', 'time': '11:00', 'zipCode': '895623'}, 'offer_id': None, 'receipt': 'bk_65235895_0608_010232', 'status': 'created'}
+2025-06-08 01:02:33,609 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:33] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:02:34,186 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:34] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-08 01:02:34,193 - INFO - 127.0.0.1 - - [08/Jun/2025 01:02:34] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,398 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "GET / HTTP/1.1" 200 -
+2025-06-08 01:02:40,502 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,504 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,589 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,590 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,601 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,679 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,708 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,761 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,790 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,809 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,828 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,842 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,856 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,872 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,890 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,902 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,918 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,932 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,947 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,963 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,978 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:40,994 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:40] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:41,013 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:41] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:41,033 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:41] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:41,055 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:41] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:41,076 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:41] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:02:41,092 - INFO - 192.168.29.98 - - [08/Jun/2025 01:02:41] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,672 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "GET / HTTP/1.1" 200 -
+2025-06-08 01:03:11,711 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,714 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,743 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,746 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,759 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,786 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,796 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,813 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,832 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,847 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,877 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,893 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,928 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,929 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,983 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,985 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,994 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,995 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,996 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:11,997 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:11] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,012 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,013 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,021 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,022 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,023 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,024 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:12,030 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:12] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:03:33,269 - INFO - Creating order for customer: Demo
+2025-06-08 01:03:33,269 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:03:33,269 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_90642928_0608_010333', 'notes': {'name': 'Demo', 'email': 'demoi@gmail.com', 'phone': '9064292887', 'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'zipCode': '722102', 'preferredContact': 'phone', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:03:33,389 - INFO - Order created successfully: order_QeQHZ5RDj6wCln
+2025-06-08 01:03:33,389 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749324814, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQHZ5RDj6wCln', 'notes': {'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'booking_type': 'dental_appointment', 'date': '2025-06-08', 'email': 'demoi@gmail.com', 'name': 'Demo', 'phone': '9064292887', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '722102'}, 'offer_id': None, 'receipt': 'bk_90642928_0608_010333', 'status': 'created'}
+2025-06-08 01:03:33,390 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:33] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:03:42,641 - ERROR - Payment failed for customer: Demo
+2025-06-08 01:03:43,690 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:03:43,692 - INFO - Payment failure recorded: {'id': 16, 'created_at': '2025-06-07T19:33:44.429033+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:03:43,693 - INFO - 192.168.29.98 - - [08/Jun/2025 01:03:43] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:04:34,623 - ERROR - Payment failed for customer: Demo
+2025-06-08 01:04:35,207 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:04:35,209 - INFO - Payment failure recorded: {'id': 17, 'created_at': '2025-06-07T19:34:35.943449+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:04:35,210 - INFO - 192.168.29.98 - - [08/Jun/2025 01:04:35] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:07:18,462 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:07:20,438 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:07:20,438 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:07:20,439 - INFO - Environment: LIVE
+2025-06-08 01:07:20,439 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:07:20,439 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:07:20,439 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:07:20,440 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:07:20,440 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:07:20,440 - INFO - 5. Check account activation status
+2025-06-08 01:07:20,440 - INFO - =========================================
+2025-06-08 01:07:20,455 - WARNING -  * Debugger is active!
+2025-06-08 01:07:20,459 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:08:28,048 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:08:29,744 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:08:29,744 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-08 01:08:29,744 - INFO - Environment: TEST
+2025-06-08 01:08:29,745 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:08:29,745 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:08:29,745 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:08:29,745 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:08:29,746 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:08:29,746 - INFO - 5. Check account activation status
+2025-06-08 01:08:29,746 - INFO - =========================================
+2025-06-08 01:08:29,760 - WARNING -  * Debugger is active!
+2025-06-08 01:08:29,765 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:08:50,871 - ERROR - Payment failed for customer: demo client
+2025-06-08 01:08:51,934 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:08:51,937 - INFO - Payment failure recorded: {'id': 18, 'created_at': '2025-06-07T19:38:52.668731+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'email', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:08:51,938 - INFO - 127.0.0.1 - - [08/Jun/2025 01:08:51] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:10:29,326 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:10:31,127 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:10:31,128 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-08 01:10:31,128 - INFO - Environment: TEST
+2025-06-08 01:10:31,128 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:10:31,128 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:10:31,129 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:10:31,129 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:10:31,129 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:10:31,130 - INFO - 5. Check account activation status
+2025-06-08 01:10:31,130 - INFO - =========================================
+2025-06-08 01:10:31,144 - WARNING -  * Debugger is active!
+2025-06-08 01:10:31,149 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:10:38,071 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:10:38,072 - ERROR - Customer: demo client
+2025-06-08 01:10:38,072 - ERROR - Phone: 6523589562
+2025-06-08 01:10:38,072 - ERROR - Email: deo@gmail.com
+2025-06-08 01:10:38,072 - ERROR - Timestamp: Unknown
+2025-06-08 01:10:38,073 - ERROR - User Agent: Unknown
+2025-06-08 01:10:38,073 - ERROR - URL: Unknown
+2025-06-08 01:10:38,073 - ERROR - Error Code: GATEWAY_ERROR
+2025-06-08 01:10:38,073 - ERROR - Error Description: Action cannot be performed as the payment-credential request for the token was declined
+2025-06-08 01:10:38,073 - ERROR - Error Source: gateway
+2025-06-08 01:10:38,074 - ERROR - Error Step: payment_authorization
+2025-06-08 01:10:38,074 - ERROR - Error Reason: Unknown
+2025-06-08 01:10:38,074 - ERROR - Error Metadata: {'order_id': 'order_QeQGVp6h73sUaJ', 'payment_id': 'pay_QeQN47z0qt3r9Y'}
+2025-06-08 01:10:38,074 - ERROR - Error Field: Unknown
+2025-06-08 01:10:38,074 - ERROR - ===============================
+2025-06-08 01:10:39,263 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:10:39,265 - INFO - Payment failure recorded: {'id': 19, 'created_at': '2025-06-07T19:40:39.993572+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'email', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:10:39,266 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:39] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:10:42,218 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "GET / HTTP/1.1" 200 -
+2025-06-08 01:10:42,303 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 01:10:42,687 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,693 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,714 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,718 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,754 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,759 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,766 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,770 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,771 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,775 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,785 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,788 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,796 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,798 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,805 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,813 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,819 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,825 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,832 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,833 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,837 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,847 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,851 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,856 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,862 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,867 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:42,874 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:42] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:10:49,540 - INFO - Creating order for customer: demo client
+2025-06-08 01:10:49,540 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:10:49,541 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_65235895_0608_011049', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-09', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:10:50,863 - INFO - Order created successfully: order_QeQPGciM5dQUdc
+2025-06-08 01:10:50,863 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325251, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQPGciM5dQUdc', 'notes': {'address1': 'checking from ui', 'address2': '', 'booking_type': 'dental_appointment', 'date': '2025-06-09', 'email': 'deo@gmail.com', 'name': 'demo client', 'phone': '6523589562', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '895623'}, 'offer_id': None, 'receipt': 'bk_65235895_0608_011049', 'status': 'created'}
+2025-06-08 01:10:50,864 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:50] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:10:51,797 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:51] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-08 01:10:51,820 - INFO - 127.0.0.1 - - [08/Jun/2025 01:10:51] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:36,624 - INFO - Payment verification started
+2025-06-08 01:11:36,624 - INFO - Received data: {'razorpay_order_id': 'order_QeQPGciM5dQUdc', 'razorpay_payment_id': 'pay_QeQPakkSCw7YCh', 'razorpay_signature': '7d3c5f6c925355bfdf86775ac51b5bc60a115e5b7a8674212b742a833a42b0fb', 'booking_data': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-09', 'time': '11:00'}}
+2025-06-08 01:11:36,624 - INFO - Order ID: order_QeQPGciM5dQUdc
+2025-06-08 01:11:36,625 - INFO - Payment ID: pay_QeQPakkSCw7YCh
+2025-06-08 01:11:36,625 - INFO - Signature: 7d3c5f6c925355bfdf86775ac51b5bc60a115e5b7a8674212b742a833a42b0fb
+2025-06-08 01:11:36,625 - INFO - Expected signature: 7d3c5f6c925355bfdf86775ac51b5bc60a115e5b7a8674212b742a833a42b0fb
+2025-06-08 01:11:36,625 - INFO - Received signature: 7d3c5f6c925355bfdf86775ac51b5bc60a115e5b7a8674212b742a833a42b0fb
+2025-06-08 01:11:36,626 - INFO - Payment signature verified successfully
+2025-06-08 01:11:37,169 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:11:37,172 - INFO - Booking saved to database: {'id': 20, 'created_at': '2025-06-07T19:41:37.900545+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-09', 'selected_time': '11:00', 'payment_status': 'success'}
+2025-06-08 01:11:37,173 - INFO - 127.0.0.1 - - [08/Jun/2025 01:11:37] "POST /verify-payment HTTP/1.1" 200 -
+2025-06-08 01:11:48,529 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:11:50,345 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:11:50,345 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:11:50,346 - INFO - Environment: LIVE
+2025-06-08 01:11:50,346 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:11:50,346 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:11:50,347 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:11:50,347 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:11:50,347 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:11:50,347 - INFO - 5. Check account activation status
+2025-06-08 01:11:50,348 - INFO - =========================================
+2025-06-08 01:11:50,362 - WARNING -  * Debugger is active!
+2025-06-08 01:11:50,366 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:11:53,057 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "GET / HTTP/1.1" 200 -
+2025-06-08 01:11:53,338 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,341 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,468 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,469 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,480 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,527 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,594 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,596 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,599 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,600 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,601 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,601 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,612 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,613 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,624 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,625 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,631 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,631 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,639 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,639 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,650 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,651 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,662 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,662 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,665 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,672 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:11:53,673 - INFO - 192.168.29.98 - - [08/Jun/2025 01:11:53] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:12:12,645 - INFO - Creating order for customer: Demo
+2025-06-08 01:12:12,645 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:12:12,646 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_90642928_0608_011212', 'notes': {'name': 'Demo', 'email': 'demoi@gmail.com', 'phone': '9064292887', 'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'zipCode': '722102', 'preferredContact': 'phone', 'date': '2025-06-07', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:12:13,217 - INFO - Order created successfully: order_QeQQiWH8C23Z6g
+2025-06-08 01:12:13,217 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325334, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQQiWH8C23Z6g', 'notes': {'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'booking_type': 'dental_appointment', 'date': '2025-06-07', 'email': 'demoi@gmail.com', 'name': 'Demo', 'phone': '9064292887', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '722102'}, 'offer_id': None, 'receipt': 'bk_90642928_0608_011212', 'status': 'created'}
+2025-06-08 01:12:13,218 - INFO - 192.168.29.98 - - [08/Jun/2025 01:12:13] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:12:21,703 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:12:21,703 - ERROR - Customer: Demo
+2025-06-08 01:12:21,703 - ERROR - Phone: 9064292887
+2025-06-08 01:12:21,703 - ERROR - Email: demoi@gmail.com
+2025-06-08 01:12:21,703 - ERROR - Timestamp: 2025-06-07T19:42:21.627Z
+2025-06-08 01:12:21,704 - ERROR - User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
+2025-06-08 01:12:21,704 - ERROR - URL: http://192.168.29.201:5000/
+2025-06-08 01:12:21,704 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:12:21,705 - ERROR - Error Description: Your payment could not be completed due to a temporary technical issue. To complete the payment, use another payment method.
+2025-06-08 01:12:21,705 - ERROR - Error Source: internal
+2025-06-08 01:12:21,705 - ERROR - Error Step: payment_initiation
+2025-06-08 01:12:21,705 - ERROR - Error Reason: payment_risk_check_failed
+2025-06-08 01:12:21,706 - ERROR - Error Metadata: {'payment_id': 'pay_QeQQn422oDcXwT'}
+2025-06-08 01:12:21,706 - ERROR - Error Field: Unknown
+2025-06-08 01:12:21,706 - ERROR - ===============================
+2025-06-08 01:12:22,726 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:12:22,728 - INFO - Payment failure recorded: {'id': 21, 'created_at': '2025-06-07T19:42:23.460379+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:12:22,729 - INFO - 192.168.29.98 - - [08/Jun/2025 01:12:22] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:12:43,867 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:12:43,868 - ERROR - Customer: Demo
+2025-06-08 01:12:43,868 - ERROR - Phone: 9064292887
+2025-06-08 01:12:43,868 - ERROR - Email: demoi@gmail.com
+2025-06-08 01:12:43,868 - ERROR - Timestamp: 2025-06-07T19:42:43.774Z
+2025-06-08 01:12:43,869 - ERROR - User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
+2025-06-08 01:12:43,869 - ERROR - URL: http://192.168.29.201:5000/
+2025-06-08 01:12:43,869 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:12:43,870 - ERROR - Error Description: Your payment could not be completed due to a temporary technical issue. To complete the payment, use another payment method.
+2025-06-08 01:12:43,870 - ERROR - Error Source: internal
+2025-06-08 01:12:43,870 - ERROR - Error Step: payment_initiation
+2025-06-08 01:12:43,870 - ERROR - Error Reason: payment_risk_check_failed
+2025-06-08 01:12:43,871 - ERROR - Error Metadata: {'payment_id': 'pay_QeQQn422oDcXwT'}
+2025-06-08 01:12:43,871 - ERROR - Error Field: Unknown
+2025-06-08 01:12:43,871 - ERROR - ===============================
+2025-06-08 01:12:44,425 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:12:44,427 - INFO - Payment failure recorded: {'id': 22, 'created_at': '2025-06-07T19:42:45.161413+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:12:44,427 - INFO - 192.168.29.98 - - [08/Jun/2025 01:12:44] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:12:50,131 - INFO - Creating order for customer: demo client
+2025-06-08 01:12:50,131 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:12:50,131 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_65235895_0608_011250', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-09', 'time': '14:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:12:50,267 - INFO - Order created successfully: order_QeQRMw8TePqJoZ
+2025-06-08 01:12:50,268 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325371, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQRMw8TePqJoZ', 'notes': {'address1': 'checking from ui', 'address2': '', 'booking_type': 'dental_appointment', 'date': '2025-06-09', 'email': 'deo@gmail.com', 'name': 'demo client', 'phone': '6523589562', 'preferredContact': 'phone', 'time': '14:00', 'zipCode': '895623'}, 'offer_id': None, 'receipt': 'bk_65235895_0608_011250', 'status': 'created'}
+2025-06-08 01:12:50,268 - INFO - 127.0.0.1 - - [08/Jun/2025 01:12:50] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:12:50,642 - INFO - 127.0.0.1 - - [08/Jun/2025 01:12:50] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-08 01:12:50,649 - INFO - 127.0.0.1 - - [08/Jun/2025 01:12:50] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:13:21,431 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:13:21,432 - ERROR - Customer: demo client
+2025-06-08 01:13:21,432 - ERROR - Phone: 6523589562
+2025-06-08 01:13:21,432 - ERROR - Email: deo@gmail.com
+2025-06-08 01:13:21,432 - ERROR - Timestamp: 2025-06-07T19:43:21.422Z
+2025-06-08 01:13:21,433 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:13:21,433 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:13:21,433 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:13:21,433 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:13:21,433 - ERROR - Error Source: gateway
+2025-06-08 01:13:21,434 - ERROR - Error Step: payment_authorization
+2025-06-08 01:13:21,434 - ERROR - Error Reason: Unknown
+2025-06-08 01:13:21,434 - ERROR - Error Metadata: {'order_id': 'order_QeQRMw8TePqJoZ', 'payment_id': 'pay_QeQRpSEsLXWjxz'}
+2025-06-08 01:13:21,434 - ERROR - Error Field: Unknown
+2025-06-08 01:13:21,434 - ERROR - ===============================
+2025-06-08 01:13:22,016 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:13:22,018 - INFO - Payment failure recorded: {'id': 23, 'created_at': '2025-06-07T19:43:22.74271+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-09', 'selected_time': '14:00', 'payment_status': 'failed'}
+2025-06-08 01:13:22,019 - INFO - 127.0.0.1 - - [08/Jun/2025 01:13:22] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:14:10,656 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:14:12,434 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:14:12,435 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-08 01:14:12,435 - INFO - Environment: TEST
+2025-06-08 01:14:12,435 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:14:12,436 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:14:12,436 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:14:12,436 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:14:12,436 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:14:12,437 - INFO - 5. Check account activation status
+2025-06-08 01:14:12,437 - INFO - =========================================
+2025-06-08 01:14:12,451 - WARNING -  * Debugger is active!
+2025-06-08 01:14:12,456 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:14:12,519 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "GET / HTTP/1.1" 200 -
+2025-06-08 01:14:12,805 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,809 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,818 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,822 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,831 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,832 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,843 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,845 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,854 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,859 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,866 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,870 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,878 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,880 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,891 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,893 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,903 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,906 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,916 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,925 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,925 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,939 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:12,941 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:12] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:13,068 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:13] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:13,080 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:13] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:13,086 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:13] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:13,093 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:13] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:14:32,718 - INFO - Creating order for customer: Demo
+2025-06-08 01:14:32,718 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:14:32,719 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_90642928_0608_011432', 'notes': {'name': 'Demo', 'email': 'demoi@gmail.com', 'phone': '9064292887', 'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'zipCode': '722102', 'preferredContact': 'email', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:14:33,327 - INFO - Order created successfully: order_QeQTBRS31N1ssT
+2025-06-08 01:14:33,327 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325474, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQTBRS31N1ssT', 'notes': {'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'booking_type': 'dental_appointment', 'date': '2025-06-08', 'email': 'demoi@gmail.com', 'name': 'Demo', 'phone': '9064292887', 'preferredContact': 'email', 'time': '11:00', 'zipCode': '722102'}, 'offer_id': None, 'receipt': 'bk_90642928_0608_011432', 'status': 'created'}
+2025-06-08 01:14:33,328 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:33] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:14:54,655 - INFO - Payment verification started
+2025-06-08 01:14:54,656 - INFO - Received data: {'razorpay_order_id': 'order_QeQTBRS31N1ssT', 'razorpay_payment_id': 'pay_QeQTHIisA0iqCt', 'razorpay_signature': '1b5027d16b397dcbae7fc4c1dbf949fae1ad88d9204ad59d696ff248904ea7e0', 'booking_data': {'name': 'Demo', 'email': 'demoi@gmail.com', 'phone': '9064292887', 'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'zipCode': '722102', 'preferredContact': 'email', 'date': '2025-06-08', 'time': '11:00'}}
+2025-06-08 01:14:54,656 - INFO - Order ID: order_QeQTBRS31N1ssT
+2025-06-08 01:14:54,657 - INFO - Payment ID: pay_QeQTHIisA0iqCt
+2025-06-08 01:14:54,657 - INFO - Signature: 1b5027d16b397dcbae7fc4c1dbf949fae1ad88d9204ad59d696ff248904ea7e0
+2025-06-08 01:14:54,657 - INFO - Expected signature: 1b5027d16b397dcbae7fc4c1dbf949fae1ad88d9204ad59d696ff248904ea7e0
+2025-06-08 01:14:54,657 - INFO - Received signature: 1b5027d16b397dcbae7fc4c1dbf949fae1ad88d9204ad59d696ff248904ea7e0
+2025-06-08 01:14:54,658 - INFO - Payment signature verified successfully
+2025-06-08 01:14:55,606 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:14:55,609 - INFO - Booking saved to database: {'id': 24, 'created_at': '2025-06-07T19:44:56.333104+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'email', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'success'}
+2025-06-08 01:14:55,609 - INFO - 192.168.29.98 - - [08/Jun/2025 01:14:55] "POST /verify-payment HTTP/1.1" 200 -
+2025-06-08 01:15:32,478 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:15:34,256 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:15:34,257 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:15:34,257 - INFO - Environment: LIVE
+2025-06-08 01:15:34,257 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:15:34,258 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:15:34,258 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:15:34,258 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:15:34,259 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:15:34,259 - INFO - 5. Check account activation status
+2025-06-08 01:15:34,259 - INFO - =========================================
+2025-06-08 01:15:34,274 - WARNING -  * Debugger is active!
+2025-06-08 01:15:34,279 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:16:01,375 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:16:03,048 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:16:03,049 - INFO - Razorpay Key ID: rzp_live_nk5TusXDwjy8pV
+2025-06-08 01:16:03,049 - INFO - Environment: LIVE
+2025-06-08 01:16:03,049 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:16:03,049 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:16:03,050 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:16:03,050 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:16:03,050 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:16:03,051 - INFO - 5. Check account activation status
+2025-06-08 01:16:03,051 - INFO - =========================================
+2025-06-08 01:16:03,065 - WARNING -  * Debugger is active!
+2025-06-08 01:16:03,070 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:16:28,400 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:16:28,400 - ERROR - Customer: demo client
+2025-06-08 01:16:28,400 - ERROR - Phone: 6523589562
+2025-06-08 01:16:28,400 - ERROR - Email: deo@gmail.com
+2025-06-08 01:16:28,401 - ERROR - Timestamp: 2025-06-07T19:46:28.385Z
+2025-06-08 01:16:28,401 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:16:28,401 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:16:28,402 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:16:28,402 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:16:28,402 - ERROR - Error Source: gateway
+2025-06-08 01:16:28,403 - ERROR - Error Step: payment_authorization
+2025-06-08 01:16:28,403 - ERROR - Error Reason: Unknown
+2025-06-08 01:16:28,403 - ERROR - Error Metadata: {'order_id': 'order_QeQRMw8TePqJoZ', 'payment_id': 'pay_QeQRpSEsLXWjxz'}
+2025-06-08 01:16:28,404 - ERROR - Error Field: Unknown
+2025-06-08 01:16:28,404 - ERROR - ===============================
+2025-06-08 01:16:29,284 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:16:29,287 - INFO - Payment failure recorded: {'id': 25, 'created_at': '2025-06-07T19:46:30.009522+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-09', 'selected_time': '14:00', 'payment_status': 'failed'}
+2025-06-08 01:16:29,287 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:29] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:16:37,116 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:16:37,116 - ERROR - Customer: demo client
+2025-06-08 01:16:37,117 - ERROR - Phone: 6523589562
+2025-06-08 01:16:37,117 - ERROR - Email: deo@gmail.com
+2025-06-08 01:16:37,117 - ERROR - Timestamp: 2025-06-07T19:46:37.107Z
+2025-06-08 01:16:37,117 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:16:37,118 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:16:37,118 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:16:37,118 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:16:37,118 - ERROR - Error Source: gateway
+2025-06-08 01:16:37,118 - ERROR - Error Step: payment_authorization
+2025-06-08 01:16:37,119 - ERROR - Error Reason: Unknown
+2025-06-08 01:16:37,119 - ERROR - Error Metadata: {'order_id': 'order_QeQRMw8TePqJoZ', 'payment_id': 'pay_QeQVGVf5WyIHxB'}
+2025-06-08 01:16:37,119 - ERROR - Error Field: Unknown
+2025-06-08 01:16:37,119 - ERROR - ===============================
+2025-06-08 01:16:37,475 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:16:37,477 - INFO - Payment failure recorded: {'id': 26, 'created_at': '2025-06-07T19:46:38.206601+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-09', 'selected_time': '14:00', 'payment_status': 'failed'}
+2025-06-08 01:16:37,478 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:37] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:16:44,297 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:16:44,297 - ERROR - Customer: demo client
+2025-06-08 01:16:44,298 - ERROR - Phone: 6523589562
+2025-06-08 01:16:44,298 - ERROR - Email: deo@gmail.com
+2025-06-08 01:16:44,298 - ERROR - Timestamp: 2025-06-07T19:46:44.282Z
+2025-06-08 01:16:44,299 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:16:44,299 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:16:44,299 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:16:44,300 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:16:44,300 - ERROR - Error Source: gateway
+2025-06-08 01:16:44,300 - ERROR - Error Step: payment_authorization
+2025-06-08 01:16:44,301 - ERROR - Error Reason: Unknown
+2025-06-08 01:16:44,301 - ERROR - Error Metadata: {'order_id': 'order_QeQRMw8TePqJoZ', 'payment_id': 'pay_QeQVGVf5WyIHxB'}
+2025-06-08 01:16:44,301 - ERROR - Error Field: Unknown
+2025-06-08 01:16:44,302 - ERROR - ===============================
+2025-06-08 01:16:45,302 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:16:45,305 - INFO - Payment failure recorded: {'id': 27, 'created_at': '2025-06-07T19:46:46.036915+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-09', 'selected_time': '14:00', 'payment_status': 'failed'}
+2025-06-08 01:16:45,306 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:45] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:16:51,012 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "GET / HTTP/1.1" 200 -
+2025-06-08 01:16:51,094 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-08 01:16:51,433 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,443 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,467 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,468 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,497 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,506 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,508 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,519 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,521 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,521 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,536 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,544 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,550 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,555 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,556 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,557 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,567 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,572 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,576 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,579 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,588 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,589 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,592 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,603 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,605 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,608 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:51,614 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:51] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:16:57,494 - INFO - Creating order for customer: demo client
+2025-06-08 01:16:57,494 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:16:57,495 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_65235895_0608_011657', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-07', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:16:58,103 - INFO - Order created successfully: order_QeQVjUgEqTk4t7
+2025-06-08 01:16:58,104 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325618, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQVjUgEqTk4t7', 'notes': {'address1': 'checking from ui', 'address2': '', 'booking_type': 'dental_appointment', 'date': '2025-06-07', 'email': 'deo@gmail.com', 'name': 'demo client', 'phone': '6523589562', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '895623'}, 'offer_id': None, 'receipt': 'bk_65235895_0608_011657', 'status': 'created'}
+2025-06-08 01:16:58,104 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:58] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:16:58,487 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:58] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-08 01:16:58,493 - INFO - 127.0.0.1 - - [08/Jun/2025 01:16:58] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,014 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "GET / HTTP/1.1" 200 -
+2025-06-08 01:17:04,099 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,099 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,110 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,113 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,135 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,157 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,168 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,216 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,229 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,230 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,231 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,232 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,232 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,261 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,263 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,263 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,264 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,264 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,265 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,287 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,288 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,288 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,289 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,290 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,292 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,308 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:04,309 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:04] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:06,969 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:06] "GET / HTTP/1.1" 200 -
+2025-06-08 01:17:07,042 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,044 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,052 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,053 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,061 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,070 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,081 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,091 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,121 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,124 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,132 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,132 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,133 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,133 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,138 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,146 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,155 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,158 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,158 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,159 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,159 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,160 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,170 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,171 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,173 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,180 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:07,180 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:07] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-08 01:17:25,061 - INFO - Creating order for customer: Demo
+2025-06-08 01:17:25,061 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:17:25,062 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_90642928_0608_011725', 'notes': {'name': 'Demo', 'email': 'demoi@gmail.com', 'phone': '9064292887', 'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'zipCode': '722102', 'preferredContact': 'phone', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:17:25,261 - INFO - Order created successfully: order_QeQWD7X8aAf2f5
+2025-06-08 01:17:25,261 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325646, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQWD7X8aAf2f5', 'notes': {'address1': 'kendhuadihi', 'address2': 'pranabanandapalli', 'booking_type': 'dental_appointment', 'date': '2025-06-08', 'email': 'demoi@gmail.com', 'name': 'Demo', 'phone': '9064292887', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '722102'}, 'offer_id': None, 'receipt': 'bk_90642928_0608_011725', 'status': 'created'}
+2025-06-08 01:17:25,262 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:25] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:17:34,070 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:17:34,070 - ERROR - Customer: Demo
+2025-06-08 01:17:34,070 - ERROR - Phone: 9064292887
+2025-06-08 01:17:34,071 - ERROR - Email: demoi@gmail.com
+2025-06-08 01:17:34,071 - ERROR - Timestamp: 2025-06-07T19:47:33.997Z
+2025-06-08 01:17:34,071 - ERROR - User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
+2025-06-08 01:17:34,071 - ERROR - URL: http://192.168.29.201:5000/
+2025-06-08 01:17:34,072 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:17:34,072 - ERROR - Error Description: Your payment could not be completed due to a temporary technical issue. To complete the payment, use another payment method.
+2025-06-08 01:17:34,072 - ERROR - Error Source: internal
+2025-06-08 01:17:34,072 - ERROR - Error Step: payment_initiation
+2025-06-08 01:17:34,073 - ERROR - Error Reason: payment_risk_check_failed
+2025-06-08 01:17:34,073 - ERROR - Error Metadata: {'payment_id': 'pay_QeQWHz7fysixkX'}
+2025-06-08 01:17:34,073 - ERROR - Error Field: Unknown
+2025-06-08 01:17:34,073 - ERROR - ===============================
+2025-06-08 01:17:34,667 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:17:34,670 - INFO - Payment failure recorded: {'id': 28, 'created_at': '2025-06-07T19:47:35.394336+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:17:34,670 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:34] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:17:50,962 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:17:50,962 - ERROR - Customer: Demo
+2025-06-08 01:17:50,962 - ERROR - Phone: 9064292887
+2025-06-08 01:17:50,963 - ERROR - Email: demoi@gmail.com
+2025-06-08 01:17:50,963 - ERROR - Timestamp: 2025-06-07T19:47:50.882Z
+2025-06-08 01:17:50,963 - ERROR - User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
+2025-06-08 01:17:50,964 - ERROR - URL: http://192.168.29.201:5000/
+2025-06-08 01:17:50,964 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:17:50,964 - ERROR - Error Description: Your payment could not be completed due to a temporary technical issue. To complete the payment, use another payment method.
+2025-06-08 01:17:50,965 - ERROR - Error Source: internal
+2025-06-08 01:17:50,965 - ERROR - Error Step: payment_initiation
+2025-06-08 01:17:50,965 - ERROR - Error Reason: payment_risk_check_failed
+2025-06-08 01:17:50,965 - ERROR - Error Metadata: {'payment_id': 'pay_QeQWHz7fysixkX'}
+2025-06-08 01:17:50,966 - ERROR - Error Field: Unknown
+2025-06-08 01:17:50,966 - ERROR - ===============================
+2025-06-08 01:17:51,351 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:17:51,354 - INFO - Payment failure recorded: {'id': 29, 'created_at': '2025-06-07T19:47:52.078869+00:00', 'name': 'Demo', 'email': 'demoi@gmail.com', 'phone_number': '9064292887', 'address_line_1': 'kendhuadihi', 'address_line_2': 'pranabanandapalli', 'zip_code': '722102', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:17:51,354 - INFO - 192.168.29.98 - - [08/Jun/2025 01:17:51] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:19:59,319 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:19:59,320 - ERROR - Customer: demo client
+2025-06-08 01:19:59,320 - ERROR - Phone: 6523589562
+2025-06-08 01:19:59,320 - ERROR - Email: deo@gmail.com
+2025-06-08 01:19:59,321 - ERROR - Timestamp: 2025-06-07T19:49:59.300Z
+2025-06-08 01:19:59,321 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:19:59,321 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:19:59,321 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:19:59,322 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:19:59,322 - ERROR - Error Source: gateway
+2025-06-08 01:19:59,322 - ERROR - Error Step: payment_authorization
+2025-06-08 01:19:59,322 - ERROR - Error Reason: Unknown
+2025-06-08 01:19:59,323 - ERROR - Error Metadata: {'order_id': 'order_QeQVjUgEqTk4t7', 'payment_id': 'pay_QeQYpkLCetQjVl'}
+2025-06-08 01:19:59,323 - ERROR - Error Field: Unknown
+2025-06-08 01:19:59,323 - ERROR - ===============================
+2025-06-08 01:20:00,006 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:20:00,008 - INFO - Payment failure recorded: {'id': 30, 'created_at': '2025-06-07T19:50:00.733881+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:20:00,009 - INFO - 127.0.0.1 - - [08/Jun/2025 01:20:00] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:21:27,216 - ERROR - === PAYMENT FAILURE DETAILS ===
+2025-06-08 01:21:27,217 - ERROR - Customer: demo client
+2025-06-08 01:21:27,218 - ERROR - Phone: 6523589562
+2025-06-08 01:21:27,219 - ERROR - Email: deo@gmail.com
+2025-06-08 01:21:27,220 - ERROR - Timestamp: 2025-06-07T19:51:27.194Z
+2025-06-08 01:21:27,221 - ERROR - User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+2025-06-08 01:21:27,222 - ERROR - URL: http://127.0.0.1:5000/
+2025-06-08 01:21:27,222 - ERROR - Error Code: BAD_REQUEST_ERROR
+2025-06-08 01:21:27,222 - ERROR - Error Description: DPA entity data not found for the given clientId or dpaId in getDpaEntityData request.
+2025-06-08 01:21:27,223 - ERROR - Error Source: gateway
+2025-06-08 01:21:27,223 - ERROR - Error Step: payment_authorization
+2025-06-08 01:21:27,223 - ERROR - Error Reason: Unknown
+2025-06-08 01:21:27,224 - ERROR - Error Metadata: {'order_id': 'order_QeQVjUgEqTk4t7', 'payment_id': 'pay_QeQYpkLCetQjVl'}
+2025-06-08 01:21:27,224 - ERROR - Error Field: Unknown
+2025-06-08 01:21:27,224 - ERROR - ===============================
+2025-06-08 01:21:27,766 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:21:27,768 - INFO - Payment failure recorded: {'id': 31, 'created_at': '2025-06-07T19:51:28.493729+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'failed'}
+2025-06-08 01:21:27,769 - INFO - 127.0.0.1 - - [08/Jun/2025 01:21:27] "POST /payment-failed HTTP/1.1" 200 -
+2025-06-08 01:21:35,563 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-08 01:21:37,378 - INFO - Starting Flask app with payment amount: Rs. 1
+2025-06-08 01:21:37,378 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-08 01:21:37,378 - INFO - Environment: TEST
+2025-06-08 01:21:37,379 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-08 01:21:37,379 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-08 01:21:37,379 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-08 01:21:37,379 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-08 01:21:37,380 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-08 01:21:37,380 - INFO - 5. Check account activation status
+2025-06-08 01:21:37,380 - INFO - =========================================
+2025-06-08 01:21:37,395 - WARNING -  * Debugger is active!
+2025-06-08 01:21:37,399 - INFO -  * Debugger PIN: 129-041-506
+2025-06-08 01:21:42,089 - INFO - Payment cancelled for customer: demo client
+2025-06-08 01:21:43,097 - INFO - Payment cancelled for customer: demo client
+2025-06-08 01:21:43,245 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:21:43,249 - INFO - Cancellation recorded: {'id': 32, 'created_at': '2025-06-07T19:51:43.97075+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'cancelled'}
+2025-06-08 01:21:43,250 - INFO - 127.0.0.1 - - [08/Jun/2025 01:21:43] "POST /payment-cancelled HTTP/1.1" 200 -
+2025-06-08 01:21:43,354 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:21:43,357 - INFO - Cancellation recorded: {'id': 33, 'created_at': '2025-06-07T19:51:44.084172+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-07', 'selected_time': '11:00', 'payment_status': 'cancelled'}
+2025-06-08 01:21:43,358 - INFO - 127.0.0.1 - - [08/Jun/2025 01:21:43] "POST /payment-cancelled HTTP/1.1" 200 -
+2025-06-08 01:23:13,246 - INFO - Creating order for customer: demo client
+2025-06-08 01:23:13,247 - INFO - Payment amount: Rs. 1 (100 paise)
+2025-06-08 01:23:13,247 - INFO - Order data: {'amount': 100, 'currency': 'INR', 'receipt': 'bk_65235895_0608_012313', 'notes': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-08', 'time': '11:00', 'booking_type': 'dental_appointment'}}
+2025-06-08 01:23:13,869 - INFO - Order created successfully: order_QeQcLdaNOmCiXJ
+2025-06-08 01:23:13,870 - INFO - Order details: {'amount': 100, 'amount_due': 100, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749325994, 'currency': 'INR', 'entity': 'order', 'id': 'order_QeQcLdaNOmCiXJ', 'notes': {'address1': 'checking from ui', 'address2': '', 'booking_type': 'dental_appointment', 'date': '2025-06-08', 'email': 'deo@gmail.com', 'name': 'demo client', 'phone': '6523589562', 'preferredContact': 'phone', 'time': '11:00', 'zipCode': '895623'}, 'offer_id': None, 'receipt': 'bk_65235895_0608_012313', 'status': 'created'}
+2025-06-08 01:23:13,871 - INFO - 127.0.0.1 - - [08/Jun/2025 01:23:13] "POST /create-order HTTP/1.1" 200 -
+2025-06-08 01:23:14,739 - INFO - 127.0.0.1 - - [08/Jun/2025 01:23:14] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-08 01:23:14,882 - INFO - 127.0.0.1 - - [08/Jun/2025 01:23:14] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-08 01:23:51,755 - INFO - Payment verification started
+2025-06-08 01:23:51,756 - INFO - Received data: {'razorpay_order_id': 'order_QeQcLdaNOmCiXJ', 'razorpay_payment_id': 'pay_QeQcdZWbAAJ57K', 'razorpay_signature': '5467cdddb24dfc5691ccd477a6f38a88cae346e3030ee41be43f6b703326dbda', 'booking_data': {'name': 'demo client', 'email': 'deo@gmail.com', 'phone': '6523589562', 'address1': 'checking from ui', 'address2': '', 'zipCode': '895623', 'preferredContact': 'phone', 'date': '2025-06-08', 'time': '11:00'}}
+2025-06-08 01:23:51,756 - INFO - Order ID: order_QeQcLdaNOmCiXJ
+2025-06-08 01:23:51,757 - INFO - Payment ID: pay_QeQcdZWbAAJ57K
+2025-06-08 01:23:51,757 - INFO - Signature: 5467cdddb24dfc5691ccd477a6f38a88cae346e3030ee41be43f6b703326dbda
+2025-06-08 01:23:51,757 - INFO - Expected signature: 5467cdddb24dfc5691ccd477a6f38a88cae346e3030ee41be43f6b703326dbda
+2025-06-08 01:23:51,758 - INFO - Received signature: 5467cdddb24dfc5691ccd477a6f38a88cae346e3030ee41be43f6b703326dbda
+2025-06-08 01:23:51,758 - INFO - Payment signature verified successfully
+2025-06-08 01:23:52,333 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-08 01:23:52,338 - INFO - Booking saved to database: {'id': 34, 'created_at': '2025-06-07T19:53:53.05801+00:00', 'name': 'demo client', 'email': 'deo@gmail.com', 'phone_number': '6523589562', 'address_line_1': 'checking from ui', 'address_line_2': '', 'zip_code': '895623', 'contact_method': 'phone', 'selected_date': '2025-06-08', 'selected_time': '11:00', 'payment_status': 'success'}
+2025-06-08 01:23:52,340 - INFO - 127.0.0.1 - - [08/Jun/2025 01:23:52] "POST /verify-payment HTTP/1.1" 200 -

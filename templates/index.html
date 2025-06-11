@@ -130,7 +130,6 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-TB4LWF5D');
     </script>
-
     <title>Prudentoe Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -154,18 +153,15 @@
       .google-e {
         color: #ea4335;
       }
-
       @media (min-width: 1024px) {
         body {
           zoom: 1.0; /* Remove zoom to prevent layout issues */
         }
-        
         /* Ensure all sections are constrained to center column on desktop */
         .main-container {
           max-width: 500px; /* Constrain to center column */
           margin: 0 auto;
         }
-        
         /* Additional constraint for specific sections */
         .fade-in-section,
         .py-8,
@@ -176,7 +172,6 @@
           margin-right: auto;
           box-sizing: border-box;
         }
-        
         /* Ensure content within sections doesn't exceed container */
         .fade-in-section > *,
         .py-8 > *,
@@ -185,7 +180,6 @@
           max-width: 100%;
           box-sizing: border-box;
         }
-        
         /* Specifically target the grid layout */
         .grid-cols-3 {
           display: grid;
@@ -194,7 +188,6 @@
           max-width: 100%;
           width: 100%;
         }
-        
         /* Ensure grid items don't overflow */
         .grid-cols-3 > div {
           max-width: 100%;
@@ -230,25 +223,21 @@
       .overflow-x-hidden {
         overflow: clip !important;
       }
-      
       /* Float in animation for grid items */
       .float-in-item {
         opacity: 0;
         transform: translateY(30px) scale(0.9);
         transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      
       .float-in-item.animate-in {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
-      
       /* Staggered delays for sequential animation */
       .float-in-item:nth-child(1) { transition-delay: 0.1s; }
       .float-in-item:nth-child(2) { transition-delay: 0.3s; }
       .float-in-item:nth-child(3) { transition-delay: 0.5s; }
       .float-in-item:nth-child(4) { transition-delay: 0.7s; }
-      
       /* Auto fade-in animation for symptoms grid */
       .symptoms-fade-item {
         opacity: 0;
@@ -256,12 +245,10 @@
         transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                     transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      
       .symptoms-fade-item.fade-in {
         opacity: 1;
         transform: translateY(0);
       }
-      
       /* Sequential delays for auto fade-in */
       .symptoms-fade-item:nth-child(1) { transition-delay: 0.2s; }
       .symptoms-fade-item:nth-child(2) { transition-delay: 0.5s; }
@@ -353,7 +340,6 @@
         color: #1a472a;
         font-size: 16px;
       }
-
       /* Controls for Signs Carousel */
       #signsCarousel .carousel-prev,
       #signsCarousel .carousel-next {
@@ -479,7 +465,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-      
       /* Fade in animation for sections below hero */
       .fade-in-section {
         opacity: 0;
@@ -490,25 +475,21 @@
         opacity: 1;
         transform: translateY(0);
       }
-      
       /* Staggered animation delays */
       .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
       .fade-in-section:nth-child(2) { transition-delay: 0.2s; }
       .fade-in-section:nth-child(3) { transition-delay: 0.3s; }
       .fade-in-section:nth-child(4) { transition-delay: 0.4s; }
       .fade-in-section:nth-child(5) { transition-delay: 0.5s; }
-      
       /* WhatsApp Floating Animations */
       .whatsapp-float {
         animation: whatsappFloat 3s ease-in-out infinite, whatsappPulse 2s ease-in-out infinite alternate;
         transition: transform 0.3s ease;
       }
-      
       .whatsapp-float:hover {
         animation-play-state: paused;
         transform: scale(1.1) translateY(-5px);
       }
-      
       @keyframes whatsappFloat {
         0%, 100% {
           transform: translateY(0px) rotate(0deg);
@@ -523,7 +504,6 @@
           transform: translateY(-8px) rotate(-1deg);
         }
       }
-      
       @keyframes whatsappPulse {
         0% {
           box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
@@ -532,12 +512,10 @@
           box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
         }
       }
-      
       /* Additional glow effect */
       .whatsapp-glow {
         position: relative;
       }
-      
       .whatsapp-glow::before {
         content: '';
         position: absolute;
@@ -551,7 +529,6 @@
         opacity: 0.7;
         animation: whatsappGlow 2s ease-in-out infinite alternate;
       }
-      
       @keyframes whatsappGlow {
         0% {
           opacity: 0.7;
@@ -562,7 +539,6 @@
           transform: scale(1.05);
         }
       }
-      
       /* Enhanced hover effects for all buttons */
       button {
         box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important;
@@ -570,24 +546,20 @@
         position: relative;
         overflow: hidden;
       }
-      
       button:hover {
         transform: translateY(-2px) scale(1.02) !important;
         box-shadow: 0 8px 16px rgba(128, 128, 128, 0.4), 0 4px 8px rgba(128, 128, 128, 0.3) !important;
       }
-      
       /* Specific hover effects for green buttons */
       button.bg-prudentoe-green:hover {
         background-color: #134521 !important;
         box-shadow: 0 8px 20px rgba(26, 71, 42, 0.4), 0 4px 10px rgba(26, 71, 42, 0.3) !important;
       }
-      
       /* Specific hover effects for white buttons */
       button.bg-white:hover {
         background-color: #f8f9fa !important;
         box-shadow: 0 8px 20px rgba(26, 71, 42, 0.3), 0 4px 10px rgba(26, 71, 42, 0.2) !important;
       }
-      
       /* Pulse effect for primary action buttons */
       button.bg-prudentoe-green::before {
         content: '';
@@ -602,23 +574,19 @@
         transition: width 0.6s, height 0.6s;
         z-index: 0;
       }
-      
       button.bg-prudentoe-green:hover::before {
         width: 300px;
         height: 300px;
       }
-      
       /* Ensure button content stays above the pulse effect */
       button.bg-prudentoe-green > * {
         position: relative;
         z-index: 1;
       }
-      
       /* Enhanced hover for rounded buttons with icons */
       button.rounded-full:hover {
         transform: translateY(-3px) scale(1.05) !important;
       }
-      
       /* Glow effect on hover for all buttons */
       button:hover {
         box-shadow:
@@ -626,7 +594,6 @@
           0 4px 8px rgba(128, 128, 128, 0.3),
           0 0 0 2px rgba(26, 71, 42, 0.1) !important;
       }
-      
       /* Desktop-specific constraints for center column layout */
       @media (min-width: 768px) {
         /* Ensure all main content sections stay within center column */
@@ -634,26 +601,22 @@
           max-width: 100%;
           box-sizing: border-box;
         }
-        
         /* Specific constraints for sections that might overflow */
         .text-center {
           max-width: 500px;
         }
-        
         /* Ensure grid layouts don't exceed container */
         .grid {
           max-width: 100%;
           margin-left: auto;
           margin-right: auto;
         }
-        
         /* Specific constraint for the grid-cols-3 layout */
         .grid-cols-3 {
           max-width: 100%;
           width: 100%;
           box-sizing: border-box;
         }
-        
         /* Constrain the specific section with py-8 px-5 */
         .py-8.px-5.text-center {
           max-width: 100%;
@@ -662,41 +625,35 @@
           margin-left: auto;
           margin-right: auto;
         }
-        
         /* Ensure all content within py-8 sections is constrained */
         .py-8 > * {
           max-width: 100%;
           box-sizing: border-box;
         }
-        
         /* Constrain carousel and other wide elements */
         .carousel-container,
         .relative {
           max-width: 100%;
           box-sizing: border-box;
         }
-        
         /* Ensure images and content don't break out */
         img {
           max-width: 100%;
           height: auto;
         }
       }
-      
       /* Additional desktop constraints for larger screens */
       @media (min-width: 1200px) {
         /* Further constrain the main container on very large screens */
         .main-container {
           max-width: 500px;
         }
-        
         /* Ensure the problematic section stays centered */
         .py-8.px-5.text-center.fade-in-section {
           max-width: 500px;
           margin-left: auto;
           margin-right: auto;
         }
-        
         /* Constrain the "Small Changes" section */
         .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
           max-width: 500px;
@@ -704,7 +661,6 @@
           margin-right: auto;
         }
       }
-      
       /* Specific constraints for the "Small Changes" section */
       @media (min-width: 768px) {
         .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section {
@@ -713,7 +669,6 @@
           margin-right: auto;
           box-sizing: border-box;
         }
-        
         /* Ensure content within this section is properly constrained */
         .relative.bg-white.shadow-custom-box.rounded-20px.fade-in-section > div {
           max-width: 100%;
@@ -766,7 +721,6 @@
               "custom-box": "0px 0px 3px 3px rgba(0, 0, 0, 0.25)",
               "custom-card": "0px 4px 4px rgba(0, 0, 0, 0.25)",
               "custom-image": "3px 5px 4.9px rgba(0, 0, 0, 0.25)",
-
               "custom-medical": "0px 0px 4.3px 3px rgba(0, 0, 0, 0.25)",
               "custom-gentle": "0px 0px 2.5px 3px rgba(0, 0, 0, 0.25)",
             },
@@ -775,7 +729,8 @@
         },
       };
     </script>
-    
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -793,20 +748,17 @@
     src="https://www.facebook.com/tr?id=702888875747515&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SNK97ECN2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-2SNK97ECN2');
     </script>
   </head>
   <body class="bg-white">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB4LWF5D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
     <div class="main-container font-helvetica">
       <div class="bg-white">
         <div
@@ -834,7 +786,6 @@
                 />
             </svg> 
             </button> -->
-            
             <!-- <a href="https://api.whatsapp.com/send/?phone=918309832854&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-glow">
               <img
                 src="https://img.freepik.com/premium-photo/whatsapp-logo_1080029-96.jpg?ga=GA1.1.1160482311.1748263993&semt=ais_hybrid&w=740"
@@ -890,7 +841,7 @@
                   alt="card icon"
                   class="w-[16px] h-[12px] mr-[11px] ml-[1px]"
                 />
-                <span>Pay the rest after service</span>
+                <span>Testing payment with Rs.99</span>
               </div>
             </div>
           </div>
@@ -1015,7 +966,7 @@
               class="text-prudentoe-dark text-dynamic-s leading-1.37 animate-on-scroll"
               style="animation-delay: 0.7s; text-align: center;"
             >
-              Book a slot for just Rs.99 - pay the rest after service
+              Book a slot for just Rs.99 - testing payment
             </p>
           </div>
         </div>
@@ -1512,7 +1463,6 @@
                     class="w-16 h-16 rounded-full object-cover border border-gray-200"
                   />
                 </div>
-
                 <!-- Text Info -->
                 <div class="flex-1">
                   <h2
@@ -1521,7 +1471,6 @@
                     Prudentoe Dental | Best Dental Clinic In Hyderabad | Home
                     Dental Services
                   </h2>
-
                   <!-- Rating -->
                   <div class="flex items-center mt-1">
                     <span class="text-4xl font-bold text-orange-500 mr-1.5"
@@ -1591,11 +1540,9 @@
                       </svg>
                     </div>
                   </div>
-
                   <p class="text-xs text-left text-gray-500 mt-0.5">
                     Based on 61 reviews
                   </p>
-
                   <p class="text-xs text-left text-gray-500 mt-2">
                     powered by
                     <span class="font-semibold">
@@ -1609,7 +1556,6 @@
                   </p>
                 </div>
               </div>
-
               <!-- Button Section -->
               <div class="mt-4">
                 <a
@@ -1822,15 +1768,11 @@
           const nextButton = carousel.querySelector(".carousel-next");
           let currentIndex = 0;
           let autoSlideTimer;
-          
-          // Touch/swipe variables
           let startX = 0;
           let startY = 0;
           let isDragging = false;
           let startTime = 0;
-          
           console.log(`[${carouselId}] Initializing carousel with ${slides.length} slides, auto-interval: ${autoSlideInterval}ms`);
-          
           if (slides.length === 0) return;
           if (dotsContainer) {
             dotsContainer.innerHTML = "";
@@ -1899,7 +1841,6 @@
             carousel.addEventListener("mouseenter", stopAutoSlide);
             carousel.addEventListener("mouseleave", startAutoSlide);
           }
-          // Add touch/swipe support for manual horizontal scrolling
           function handleTouchStart(e) {
             startX = e.touches[0].clientX;
             startY = e.touches[0].clientY;
@@ -1907,36 +1848,26 @@
             isDragging = true;
             console.log(`[${carouselId}] Touch start at X: ${startX}, Y: ${startY}`);
           }
-          
           function handleTouchMove(e) {
             if (!isDragging) return;
-            
             const currentX = e.touches[0].clientX;
             const currentY = e.touches[0].clientY;
             const deltaX = currentX - startX;
             const deltaY = currentY - startY;
-            
-            // Only prevent default if this is clearly a horizontal swipe
-            // Allow vertical scrolling by not preventing default for vertical movements
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
-              e.preventDefault(); // Only prevent horizontal scrolling when it's clearly horizontal
+              e.preventDefault();
               stopAutoSlide();
               console.log(`[${carouselId}] Horizontal swipe detected, preventing default`);
             }
           }
-          
           function handleTouchEnd(e) {
             if (!isDragging) return;
-            
             const endX = e.changedTouches[0].clientX;
             const endY = e.changedTouches[0].clientY;
             const deltaX = endX - startX;
             const deltaY = endY - startY;
             const deltaTime = Date.now() - startTime;
-            
             console.log(`[${carouselId}] Touch end - deltaX: ${deltaX}, deltaY: ${deltaY}, time: ${deltaTime}ms`);
-            
-            // Check if it's a horizontal swipe (not vertical scroll)
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50 && deltaTime < 500) {
               if (deltaX > 0) {
                 console.log(`[${carouselId}] Swipe right - going to previous slide`);
@@ -1946,12 +1877,9 @@
                 nextSlide();
               }
             }
-            
             isDragging = false;
             resetAutoSlide();
           }
-          
-          // Add mouse drag support for desktop
           function handleMouseDown(e) {
             startX = e.clientX;
             startY = e.clientY;
@@ -1961,24 +1889,18 @@
             console.log(`[${carouselId}] Mouse down at X: ${startX}`);
             e.preventDefault();
           }
-          
           function handleMouseMove(e) {
             if (!isDragging) return;
             e.preventDefault();
           }
-          
           function handleMouseUp(e) {
             if (!isDragging) return;
-            
             const endX = e.clientX;
             const endY = e.clientY;
             const deltaX = endX - startX;
             const deltaY = endY - startY;
             const deltaTime = Date.now() - startTime;
-            
             console.log(`[${carouselId}] Mouse up - deltaX: ${deltaX}, deltaY: ${deltaY}, time: ${deltaTime}ms`);
-            
-            // Check if it's a horizontal drag (not vertical)
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 30 && deltaTime < 500) {
               if (deltaX > 0) {
                 console.log(`[${carouselId}] Drag right - going to previous slide`);
@@ -1988,37 +1910,27 @@
                 nextSlide();
               }
             }
-            
             isDragging = false;
             resetAutoSlide();
           }
-          
-          // Add event listeners for touch and mouse events
           slidesContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
           slidesContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
           slidesContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
-          
           slidesContainer.addEventListener('mousedown', handleMouseDown);
           document.addEventListener('mousemove', handleMouseMove);
           document.addEventListener('mouseup', handleMouseUp);
-          
-          // Prevent context menu on long press
           slidesContainer.addEventListener('contextmenu', (e) => {
             if (isDragging) e.preventDefault();
           });
-          
           goToSlide(0);
         }
         setupCarousel("heroCarousel", 3000);
         setupCarousel("reviewsCarousel", 7000);
-        setupCarousel("signsCarousel", 4000); // Initialize the new carousel
-        
-        // Fade-in animation observer for sections below hero
+        setupCarousel("signsCarousel", 4000);
         const observerOptions = {
           threshold: 0.1,
           rootMargin: '0px 0px -50px 0px'
         };
-        
         const fadeInObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -2026,19 +1938,13 @@
             }
           });
         }, observerOptions);
-        
-        // Observe all fade-in sections
         document.querySelectorAll('.fade-in-section').forEach(section => {
           fadeInObserver.observe(section);
         });
-        
-        // Keep existing scroll animations active for immediate visibility
         const animatedElements = document.querySelectorAll(".animate-on-scroll");
         animatedElements.forEach((el) => {
           el.classList.add("is-visible");
         });
-        
-        // Float in animation for symptoms grid
         const symptomsGrid = document.getElementById('symptomsGrid');
         if (symptomsGrid) {
           const gridObserver = new IntersectionObserver((entries) => {
@@ -2048,120 +1954,88 @@
                 items.forEach((item, index) => {
                   setTimeout(() => {
                     item.classList.add('animate-in');
-                  }, index * 200); // 200ms delay between each item
+                  }, index * 200);
                 });
-                gridObserver.unobserve(entry.target); // Only animate once
+                gridObserver.unobserve(entry.target);
               }
             });
           }, {
             threshold: 0.3,
             rootMargin: '0px 0px -50px 0px'
           });
-          
           gridObserver.observe(symptomsGrid);
         }
-        
-        // Auto fade-in animation for symptoms container (no scroll required)
         const symptomsContainer = document.getElementById('symptomsContainer');
         if (symptomsContainer) {
-          // Trigger animation automatically after page load
           setTimeout(() => {
             const fadeItems = symptomsContainer.querySelectorAll('.symptoms-fade-item');
             fadeItems.forEach((item) => {
               item.classList.add('fade-in');
             });
-          }, 500); // Start animation 500ms after page load
+          }, 500);
         }
       });
     </script>
-
     <!-- URL Parameter Preservation Script -->
     <script>
       (function() {
         'use strict';
-        
-        // Configuration
         const config = {
           preserveInternalLinks: true,
           preserveExternalLinks: true,
           preserveForms: true,
-          excludeParameters: [], // Parameters to exclude from preservation
-          debug: false // Set to true for debugging
+          excludeParameters: [],
+          debug: false
         };
-        
-        // Utility function for debugging
         function debugLog(message, data) {
           if (config.debug) {
             console.log('[URL Parameter Preservation]', message, data || '');
           }
         }
-        
-        // Extract all URL parameters from current page
         function extractCurrentParameters() {
           const params = new URLSearchParams(window.location.search);
           const paramObj = {};
-          
           for (const [key, value] of params.entries()) {
             if (!config.excludeParameters.includes(key)) {
               paramObj[key] = value;
             }
           }
-          
           debugLog('Extracted parameters:', paramObj);
           return paramObj;
         }
-        
-        // Convert parameter object to URL search string
         function parametersToString(params) {
           const searchParams = new URLSearchParams();
-          
           for (const [key, value] of Object.entries(params)) {
             searchParams.append(key, value);
           }
-          
           return searchParams.toString();
         }
-        
-        // Append parameters to URL
         function appendParametersToUrl(url, params) {
           if (!url || Object.keys(params).length === 0) {
             return url;
           }
-          
           try {
             const urlObj = new URL(url, window.location.origin);
-            
-            // Preserve existing parameters and add new ones
             for (const [key, value] of Object.entries(params)) {
               if (!urlObj.searchParams.has(key)) {
                 urlObj.searchParams.append(key, value);
               }
             }
-            
             return urlObj.toString();
           } catch (error) {
             debugLog('Error processing URL:', { url, error: error.message });
-            
-            // Fallback for relative URLs or malformed URLs
             const separator = url.includes('?') ? '&' : '?';
             const paramString = parametersToString(params);
-            
             if (paramString) {
               return url + separator + paramString;
             }
-            
             return url;
           }
         }
-        
-        // Process anchor tags
         function processAnchorTags(params) {
           const anchors = document.querySelectorAll('a[href]');
-          
           anchors.forEach(anchor => {
             const originalHref = anchor.getAttribute('href');
-            
-            // Skip if href is empty, just a hash, javascript:, mailto:, tel:, etc.
             if (!originalHref ||
                 originalHref === '#' ||
                 originalHref.startsWith('javascript:') ||
@@ -2170,65 +2044,45 @@
                 originalHref.startsWith('sms:')) {
               return;
             }
-            
-            // Determine if it's an internal or external link
             let isExternal = false;
             try {
               const linkUrl = new URL(originalHref, window.location.origin);
               isExternal = linkUrl.hostname !== window.location.hostname;
             } catch (error) {
-              // Assume relative URLs are internal
               isExternal = false;
             }
-            
-            // Apply configuration settings
             if ((isExternal && !config.preserveExternalLinks) ||
                 (!isExternal && !config.preserveInternalLinks)) {
               return;
             }
-            
             const newHref = appendParametersToUrl(originalHref, params);
-            
             if (newHref !== originalHref) {
               anchor.setAttribute('href', newHref);
               debugLog('Updated anchor:', { original: originalHref, new: newHref });
             }
           });
         }
-        
-        // Process form elements
         function processForms(params) {
           if (!config.preserveForms) return;
-          
           const forms = document.querySelectorAll('form');
-          
           forms.forEach(form => {
-            // Add hidden inputs for each parameter
             for (const [key, value] of Object.entries(params)) {
-              // Check if parameter already exists as form field
               const existingField = form.querySelector(`[name="${key}"]`);
-              
               if (!existingField) {
                 const hiddenInput = document.createElement('input');
                 hiddenInput.type = 'hidden';
                 hiddenInput.name = key;
                 hiddenInput.value = value;
                 hiddenInput.setAttribute('data-url-param-preservation', 'true');
-                
                 form.appendChild(hiddenInput);
                 debugLog('Added hidden input to form:', { key, value });
               }
             }
           });
         }
-        
-        // Handle programmatic navigation
         function interceptProgrammaticNavigation(params) {
-          // Store original methods
           const originalPushState = history.pushState;
           const originalReplaceState = history.replaceState;
-          
-          // Intercept history.pushState
           history.pushState = function(state, title, url) {
             if (url && Object.keys(params).length > 0) {
               url = appendParametersToUrl(url, params);
@@ -2236,8 +2090,6 @@
             }
             return originalPushState.call(this, state, title, url);
           };
-          
-          // Intercept history.replaceState
           history.replaceState = function(state, title, url) {
             if (url && Object.keys(params).length > 0) {
               url = appendParametersToUrl(url, params);
@@ -2245,23 +2097,14 @@
             }
             return originalReplaceState.call(this, state, title, url);
           };
-          
-          // Note: window.location.assign and window.location.replace are read-only properties
-          // in many browsers and cannot be intercepted directly. URL parameters are preserved
-          // through link processing for most navigation scenarios.
-          
           debugLog('Programmatic navigation interception setup complete (history API only)');
         }
-        
-        // Handle dynamically added content
         function observeNewContent(params) {
           const observer = new MutationObserver(function(mutations) {
             let shouldProcess = false;
-            
             mutations.forEach(function(mutation) {
               mutation.addedNodes.forEach(function(node) {
                 if (node.nodeType === Node.ELEMENT_NODE) {
-                  // Check if new anchors or forms were added
                   if (node.tagName === 'A' ||
                       node.tagName === 'FORM' ||
                       node.querySelector('a[href], form')) {
@@ -2270,72 +2113,785 @@
                 }
               });
             });
-            
             if (shouldProcess) {
               debugLog('Processing newly added content');
               processAnchorTags(params);
               processForms(params);
             }
           });
-          
           observer.observe(document.body, {
             childList: true,
             subtree: true
           });
-          
           return observer;
         }
-        
-        // Initialize the parameter preservation system
         function initializeParameterPreservation() {
           debugLog('Initializing URL parameter preservation system');
-          
           const currentParams = extractCurrentParameters();
-          
-          // Only proceed if we have parameters to preserve
           if (Object.keys(currentParams).length === 0) {
             debugLog('No URL parameters found to preserve');
             return;
           }
-          
           debugLog('Found parameters to preserve:', currentParams);
-          
-          // Process existing content
           processAnchorTags(currentParams);
           processForms(currentParams);
-          
-          // Set up interception for programmatic navigation
           interceptProgrammaticNavigation(currentParams);
-          
-          // Observe for dynamically added content
           observeNewContent(currentParams);
-          
           debugLog('URL parameter preservation system initialized successfully');
         }
-        
-        // Wait for DOM to be ready and initialize
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', initializeParameterPreservation);
         } else {
           initializeParameterPreservation();
         }
-        
-        // Also re-initialize when the page becomes visible (handles some edge cases)
         document.addEventListener('visibilitychange', function() {
           if (!document.hidden) {
             setTimeout(initializeParameterPreservation, 100);
           }
         });
-        
-        // Expose utility functions for manual use if needed
         window.urlParameterPreservation = {
           extractCurrentParameters: extractCurrentParameters,
           appendParametersToUrl: appendParametersToUrl,
           reinitialize: initializeParameterPreservation,
           config: config
         };
-        
       })();
+    </script>
+    <!-- Booking Popup Modal HTML -->
+    <div id="bookingPopupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
+      <div class="bg-white rounded-20px shadow-custom-box p-6 mx-4 w-full max-w-2xl relative my-8 max-h-[90vh] overflow-y-auto">
+        <!-- Header -->
+        <div class="text-center mb-6 ml-[0px] md:ml-[4rem]">
+          <div class="w-16 h-16 bg-prudentoe-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg width="32" height="32" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2 class="text-prudentoe-green font-bold text-xl mb-2">Book Your Appointment</h2>
+          <p class="text-prudentoe-dark text-sm">Enter your details to schedule your dental checkup</p>
+        </div>
+        <!-- Form -->
+        <form id="bookingForm" class="space-y-4">
+          <!-- Personal Information Section -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="customerName" class="block text-prudentoe-dark font-medium text-sm mb-2">Full Name *</label>
+              <input
+                type="text"
+                id="customerName"
+                name="customerName"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-prudentoe-dark font-medium text-sm mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+                placeholder="Enter your email address"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="phoneNumber" class="block text-prudentoe-dark font-medium text-sm mb-2">Phone Number *</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              required
+              pattern="[0-9]{10}"
+              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+              placeholder="Enter your 10-digit phone number"
+            />
+          </div>
+          <div>
+            <label for="address1" class="block text-prudentoe-dark font-medium text-sm mb-2">Address Line 1 *</label>
+            <input
+              type="text"
+              id="address1"
+              name="address1"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+              placeholder="Enter your address"
+            />
+          </div>
+          <div>
+            <label for="address2" class="block text-prudentoe-dark font-medium text-sm mb-2">Address Line 2 (Optional)</label>
+            <input
+              type="text"
+              id="address2"
+              name="address2"
+              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+              placeholder="Apartment, suite, etc. (optional)"
+            />
+          </div>
+          <div>
+            <label for="zipCode" class="block text-prudentoe-dark font-medium text-sm mb-2">Zip Code *</label>
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              required
+              pattern="[0-9]{6}"
+              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
+              placeholder="Enter 6-digit zip code"
+            />
+          </div>
+          <!-- Preferred Contact Method -->
+          <div>
+            <label class="block text-prudentoe-dark font-medium text-sm mb-3">Preferred Contact Method *</label>
+            <div class="grid grid-cols-3 gap-3">
+              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
+                <input type="radio" name="preferredContact" value="phone" required class="mr-2 text-prudentoe-green">
+                <span class="text-sm">Phone</span>
+              </label>
+              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
+                <input type="radio" name="preferredContact" value="email" required class="mr-2 text-prudentoe-green">
+                <span class="text-sm">E-Mail</span>
+              </label>
+              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
+                <input type="radio" name="preferredContact" value="whatsapp" required class="mr-2 text-prudentoe-green">
+                <span class="text-sm">WhatsApp</span>
+              </label>
+            </div>
+          </div>
+          <!-- Date Selection -->
+          <div class="mt-6">
+            <h3 class="text-prudentoe-dark font-medium text-sm mb-3">Select Date</h3>
+            <div id="dateSelector" class="grid grid-cols-5 gap-2 mb-4">
+              <!-- Date options will be populated by JavaScript -->
+            </div>
+          </div>
+          <!-- Time Selection -->
+          <div class="mt-4">
+            <h3 class="text-prudentoe-dark font-medium text-sm mb-3">Select time for the service</h3>
+            <div id="timeSelector" class="grid grid-cols-3 gap-3">
+              <!-- Time slots will be populated by JavaScript -->
+            </div>
+          </div>
+          <!-- Action buttons -->
+          <div class="flex gap-3 mt-6">
+            <button
+              type="button"
+              id="cancelBookingBtn"
+              class="flex-1 bg-gray-200 text-gray-700 py-3 px-4 rounded-10px font-medium text-sm hover:bg-gray-300 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-10px font-medium text-sm hover:bg-opacity-90 transition-colors shadow-sm"
+            >
+              Book Appointment
+            </button>
+          </div>
+        </form>
+        <!-- Additional info -->
+        <div class="mt-4 text-center ml-[0px] md:ml-[4rem]">
+          <p class="text-xs text-gray-500">
+            Book a slot for just Rs.99
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Popup Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const targetUrl = 'https://book.prudentoe.com/#/279761000000042044';
+        const modal = document.getElementById('bookingPopupModal');
+        const cancelBtn = document.getElementById('cancelBookingBtn');
+        const bookingForm = document.getElementById('bookingForm');
+        const nameInput = document.getElementById('customerName');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phoneNumber');
+        const address1Input = document.getElementById('address1');
+        const address2Input = document.getElementById('address2');
+        const zipCodeInput = document.getElementById('zipCode');
+        const dateSelector = document.getElementById('dateSelector');
+        const timeSelector = document.getElementById('timeSelector');
+        let selectedDate = null;
+        let selectedTime = null;
+        let bookedSlots = {};
+        function generateTimeSlots() {
+          const slots = [];
+          const startHour = 10;
+          const endHour = 20;
+          const slotDuration = 45;
+          const bufferTime = 90;
+          for (let hour = startHour; hour < endHour; hour++) {
+            for (let minute = 0; minute < 60; minute += (slotDuration + bufferTime)) {
+              if (hour * 60 + minute + slotDuration <= endHour * 60) {
+                const timeString = formatTime(hour, minute);
+                slots.push({
+                  time: timeString,
+                  value: `${hour}:${minute.toString().padStart(2, '0')}`
+                });
+              }
+            }
+          }
+          return slots;
+        }
+        function formatTime(hour, minute) {
+          const period = hour >= 12 ? 'PM' : 'AM';
+          const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
+          const displayMinute = minute.toString().padStart(2, '0');
+          return `${displayHour.toString().padStart(2, '0')}:${displayMinute} ${period}`;
+        }
+        function generateDateOptions() {
+          const dates = [];
+          const today = new Date();
+          for (let i = 0; i < 5; i++) {
+            const date = new Date(today);
+            date.setDate(today.getDate() + i);
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const dayName = dayNames[date.getDay()];
+            const day = date.getDate();
+            const month = monthNames[date.getMonth()];
+            const availableSlots = Math.floor(Math.random() * 6) + 5;
+            dates.push({
+              date: date,
+              dayName: dayName,
+              day: day,
+              month: month,
+              availableSlots: availableSlots,
+              dateString: date.toISOString().split('T')[0]
+            });
+          }
+          return dates;
+        }
+        function renderDateOptions() {
+          const dates = generateDateOptions();
+          dateSelector.innerHTML = '';
+          dates.forEach((dateOption, index) => {
+            const dateButton = document.createElement('button');
+            dateButton.type = 'button';
+            dateButton.className = `p-3 border-2 rounded-10px text-center cursor-pointer transition-colors ${
+              index === 0 ? 'border-prudentoe-green bg-prudentoe-light-green' : 'border-gray-300 hover:border-prudentoe-green'
+            }`;
+            dateButton.innerHTML = `
+              <div class="text-xs font-medium text-prudentoe-dark">${dateOption.dayName}</div>
+              <div class="text-sm font-bold text-prudentoe-dark">${dateOption.day} ${dateOption.month}</div>
+              <div class="text-xs text-prudentoe-green">${dateOption.availableSlots} slots</div>
+            `;
+            dateButton.addEventListener('click', function() {
+              dateSelector.querySelectorAll('button').forEach(btn => {
+                btn.className = btn.className.replace('border-prudentoe-green bg-prudentoe-light-green', 'border-gray-300');
+              });
+              dateButton.className = dateButton.className.replace('border-gray-300', 'border-prudentoe-green bg-prudentoe-light-green');
+              selectedDate = dateOption.dateString;
+              renderTimeSlots();
+            });
+            dateSelector.appendChild(dateButton);
+          });
+          if (dates.length > 0) {
+            selectedDate = dates[0].dateString;
+            renderTimeSlots();
+          }
+        }
+        function renderTimeSlots() {
+          const timeSlots = generateTimeSlots();
+          timeSelector.innerHTML = '';
+          timeSlots.forEach(slot => {
+            const isBooked = bookedSlots[selectedDate] && bookedSlots[selectedDate].includes(slot.value);
+            const timeButton = document.createElement('button');
+            timeButton.type = 'button';
+            timeButton.className = `p-3 border rounded-10px text-center cursor-pointer transition-colors ${
+              isBooked
+                ? 'border-gray-300 bg-gray-100 text-gray-400 cursor-not-allowed'
+                : 'border-gray-300 hover:border-prudentoe-green hover:bg-prudentoe-light-green'
+            }`;
+            timeButton.textContent = slot.time;
+            timeButton.disabled = isBooked;
+            if (!isBooked) {
+              timeButton.addEventListener('click', function() {
+                timeSelector.querySelectorAll('button').forEach(btn => {
+                  if (!btn.disabled) {
+                    btn.className = btn.className.replace('border-prudentoe-green bg-prudentoe-green text-white', 'border-gray-300 hover:border-prudentoe-green hover:bg-prudentoe-light-green');
+                  }
+                });
+                timeButton.className = 'p-3 border border-prudentoe-green bg-prudentoe-green text-white rounded-10px text-center cursor-pointer transition-colors';
+                selectedTime = slot.value;
+              });
+            }
+            timeSelector.appendChild(timeButton);
+          });
+        }
+        function showBookingPopup(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          modal.classList.remove('hidden');
+          renderDateOptions();
+          setTimeout(() => {
+            nameInput.focus();
+          }, 100);
+          return false;
+        }
+        function hideBookingPopup() {
+          modal.classList.add('hidden');
+          bookingForm.reset();
+          selectedDate = null;
+          selectedTime = null;
+        }
+        cancelBtn.addEventListener('click', function() {
+          const name = nameInput.value.trim();
+          const email = emailInput.value.trim();
+          const phone = phoneInput.value.trim();
+          const address1 = address1Input.value.trim();
+          const address2 = address2Input.value.trim();
+          const zipCode = zipCodeInput.value.trim();
+          const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
+          const bookingData = {
+            name,
+            email,
+            phone,
+            address1,
+            address2,
+            zipCode,
+            preferredContact: preferredContact ? preferredContact.value : null,
+            date: selectedDate,
+            time: selectedTime
+          };
+          handlePaymentCancellation(bookingData);
+          hideBookingPopup();
+        });
+        modal.addEventListener('click', function(event) {
+          if (event.target === modal) {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const address1 = address1Input.value.trim();
+            const address2 = address2Input.value.trim();
+            const zipCode = zipCodeInput.value.trim();
+            const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
+            const bookingData = {
+              name,
+              email,
+              phone,
+              address1,
+              address2,
+              zipCode,
+              preferredContact: preferredContact ? preferredContact.value : null,
+              date: selectedDate,
+              time: selectedTime
+            };
+            handlePaymentCancellation(bookingData);
+            hideBookingPopup();
+          }
+        });
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const address1 = address1Input.value.trim();
+            const address2 = address2Input.value.trim();
+            const zipCode = zipCodeInput.value.trim();
+            const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
+            const bookingData = {
+              name,
+              email,
+              phone,
+              address1,
+              address2,
+              zipCode,
+              preferredContact: preferredContact ? preferredContact.value : null,
+              date: selectedDate,
+              time: selectedTime
+            };
+            handlePaymentCancellation(bookingData);
+            hideBookingPopup();
+          }
+        });
+        bookingForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const name = nameInput.value.trim();
+          const email = emailInput.value.trim();
+          const phone = phoneInput.value.trim();
+          const address1 = address1Input.value.trim();
+          const address2 = address2Input.value.trim();
+          const zipCode = zipCodeInput.value.trim();
+          const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
+          if (!name) {
+            alert('Please enter your name');
+            nameInput.focus();
+            return;
+          }
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert('Please enter a valid email address');
+            emailInput.focus();
+            return;
+          }
+          if (!phone || phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+            alert('Please enter a valid 10-digit phone number');
+            phoneInput.focus();
+            return;
+          }
+          if (!address1) {
+            alert('Please enter your address');
+            address1Input.focus();
+            return;
+          }
+          if (!zipCode || zipCode.length !== 6 || !/^\d{6}$/.test(zipCode)) {
+            alert('Please enter a valid 6-digit zip code');
+            zipCodeInput.focus();
+            return;
+          }
+          if (!preferredContact) {
+            alert('Please select your preferred contact method');
+            return;
+          }
+          if (!selectedDate) {
+            alert('Please select a date for your appointment');
+            return;
+          }
+          if (!selectedTime) {
+            alert('Please select a time slot for your appointment');
+            return;
+          }
+          const bookingData = {
+            name,
+            email,
+            phone,
+            address1,
+            address2,
+            zipCode,
+            preferredContact: preferredContact.value,
+            date: selectedDate,
+            time: selectedTime
+          };
+          initializeRazorpayPayment(bookingData);
+        });
+        function initializeRazorpayPayment(bookingData) {
+          console.log('=== PAYMENT INITIALIZATION DEBUG ===');
+          console.log('Booking data:', bookingData);
+          console.log('Razorpay script loaded:', typeof Razorpay !== 'undefined');
+          console.log('Current URL:', window.location.href);
+          console.log('User agent:', navigator.userAgent);
+          console.log('=====================================');
+          
+          fetch('/create-order', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(bookingData)
+          })
+          .then(response => {
+            console.log('Create order response status:', response.status);
+            console.log('Create order response headers:', response.headers);
+            return response.json();
+          })
+          .then(data => {
+            console.log('=== ORDER CREATION RESPONSE ===');
+            console.log('Full response:', data);
+            console.log('Success:', data.success);
+            console.log('Order ID:', data.order_id);
+            console.log('Amount:', data.amount);
+            console.log('Currency:', data.currency);
+            console.log('Key ID:', data.key_id);
+            console.log('===============================');
+            
+            if (data.success) {
+              // Validate required fields
+              if (!data.key_id || !data.order_id || !data.amount) {
+                console.error('Missing required fields in response:', data);
+                alert('Invalid order response. Missing required fields.');
+                return;
+              }
+              
+              const options = {
+                "key": data.key_id,
+                "amount": data.amount,
+                "currency": data.currency,
+                "name": "Prudentoe Dental",
+                "description": "Dental Appointment Booking (Testing Rs. 1)",
+                "image": "static/images/prudentoe-logo1.png",
+                "order_id": data.order_id,
+                "handler": function (response) {
+                  console.log('=== PAYMENT SUCCESS ===');
+                  console.log('Payment response:', response);
+                  console.log('Payment ID:', response.razorpay_payment_id);
+                  console.log('Order ID:', response.razorpay_order_id);
+                  console.log('Signature:', response.razorpay_signature);
+                  console.log('=======================');
+                  verifyPayment(response, bookingData);
+                },
+                "prefill": {
+                  "name": bookingData.name,
+                  "email": bookingData.email,
+                  "contact": bookingData.phone
+                },
+                "theme": {
+                  "color": "#1A472A"
+                },
+                "modal": {
+                  "ondismiss": function() {
+                    console.log('=== PAYMENT MODAL DISMISSED ===');
+                    console.log('User closed payment modal');
+                    console.log('===============================');
+                    handlePaymentCancellation(bookingData);
+                  }
+                },
+                "retry": {
+                  "enabled": true,
+                  "max_count": 3
+                },
+                "timeout": 300,
+                "remember_customer": false
+              };
+              
+              console.log('=== RAZORPAY OPTIONS ===');
+              console.log('Full options object:', options);
+              console.log('========================');
+              
+              // Validate Razorpay is loaded
+              if (typeof Razorpay === 'undefined') {
+                console.error('Razorpay script not loaded!');
+                alert('Payment system not loaded. Please refresh the page.');
+                return;
+              }
+              
+              const rzp = new Razorpay(options);
+              
+              // Add all possible event listeners for debugging
+              rzp.on('payment.failed', function (response) {
+                console.error('=== PAYMENT FAILED EVENT ===');
+                console.error('Timestamp:', new Date().toISOString());
+                console.error('Full response object:', response);
+                console.error('Error object:', response.error);
+                
+                if (response.error) {
+                  console.error('Error code:', response.error.code);
+                  console.error('Error description:', response.error.description);
+                  console.error('Error source:', response.error.source);
+                  console.error('Error step:', response.error.step);
+                  console.error('Error reason:', response.error.reason);
+                  console.error('Error metadata:', response.error.metadata);
+                  console.error('Error field:', response.error.field);
+                }
+                console.error('============================');
+                
+                // Send detailed error to server
+                fetch('/payment-failed', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    booking_data: bookingData,
+                    error_details: response.error,
+                    timestamp: new Date().toISOString(),
+                    user_agent: navigator.userAgent,
+                    url: window.location.href
+                  })
+                })
+                .then(res => res.json())
+                .then(result => {
+                  console.log('Failed payment recorded with ID:', result.booking_id);
+                })
+                .catch(err => {
+                  console.error('Error recording failed payment:', err);
+                });
+                
+                // Check for specific DPA compliance error
+                if (response.error && response.error.description &&
+                    response.error.description.includes('DPA entity data not found')) {
+                  
+                  let dpaErrorMsg = '🚨 LIVE ACCOUNT SETUP REQUIRED 🚨\n\n';
+                  dpaErrorMsg += 'Your Razorpay live account needs DPA compliance setup.\n\n';
+                  dpaErrorMsg += 'SOLUTION:\n';
+                  dpaErrorMsg += '1. Login to Razorpay Dashboard\n';
+                  dpaErrorMsg += '2. Go to Account & Settings → Compliance\n';
+                  dpaErrorMsg += '3. Complete DPA registration\n';
+                  dpaErrorMsg += '4. Submit required documents\n';
+                  dpaErrorMsg += '5. Wait for approval (2-3 days)\n\n';
+                  dpaErrorMsg += 'Contact: support@razorpay.com\n';
+                  dpaErrorMsg += 'Phone: +91-80-61606161\n\n';
+                  dpaErrorMsg += 'Use test mode while waiting for approval.';
+                  
+                  alert(dpaErrorMsg);
+                  
+                  // Also show in console for easy copy-paste
+                  console.error('=== DPA COMPLIANCE REQUIRED ===');
+                  console.error('Visit: /dpa-compliance-guide for detailed steps');
+                  console.error('===============================');
+                  
+                } else {
+                  // Show detailed error to user for other errors
+                  let errorMsg = 'Payment failed. Please try again.\n\n';
+                  if (response.error) {
+                    errorMsg += 'Error: ' + (response.error.description || 'Unknown error') + '\n';
+                    errorMsg += 'Code: ' + (response.error.code || 'Unknown') + '\n';
+                    errorMsg += 'Step: ' + (response.error.step || 'Unknown') + '\n';
+                    if (response.error.reason) {
+                      errorMsg += 'Reason: ' + response.error.reason + '\n';
+                    }
+                  }
+                  alert(errorMsg);
+                }
+              });
+              
+              // Add modal events for debugging
+              rzp.on('payment.submit', function(response) {
+                console.log('=== PAYMENT SUBMITTED ===');
+                console.log('Payment submitted:', response);
+                console.log('=========================');
+              });
+              
+              rzp.on('payment.cancel', function(response) {
+                console.log('=== PAYMENT CANCELLED ===');
+                console.log('Payment cancelled:', response);
+                console.log('=========================');
+              });
+              
+              console.log('=== OPENING RAZORPAY CHECKOUT ===');
+              console.log('About to call rzp.open()');
+              console.log('=================================');
+              
+              try {
+                rzp.open();
+                console.log('Razorpay checkout opened successfully');
+              } catch (error) {
+                console.error('Error opening Razorpay checkout:', error);
+                alert('Error opening payment gateway: ' + error.message);
+              }
+              
+            } else {
+              console.error('Order creation failed:', data.error);
+              alert('Error creating order: ' + data.error);
+            }
+          })
+          .catch(error => {
+            console.error('Network error creating order:', error);
+            console.error('Error stack:', error.stack);
+            alert('Network error creating order. Please check your connection and try again.');
+          });
+        }
+        function verifyPayment(response, bookingData) {
+          fetch('/verify-payment', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+              booking_data: bookingData
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              console.log('Payment verified:', response);
+              console.log('Booking saved with ID:', data.booking_id);
+              if (!bookedSlots[bookingData.date]) {
+                bookedSlots[bookingData.date] = [];
+              }
+              bookedSlots[bookingData.date].push(bookingData.time);
+              showThankYouMessage(bookingData, response.razorpay_payment_id);
+              hideBookingPopup();
+            } else {
+              alert('Payment verification failed: ' + data.error);
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Error verifying payment. Please contact support.');
+          });
+        }
+        function handlePaymentCancellation(bookingData) {
+          if (!bookingData.phone && !bookingData.email) {
+            return;
+          }
+          fetch('/payment-cancelled', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              booking_data: bookingData
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              console.log('Payment cancellation recorded with ID:', data.booking_id);
+            }
+          })
+          .catch(error => {
+            console.error('Error recording cancellation:', error);
+          });
+        }
+        function showThankYouMessage(bookingData, paymentId) {
+          const thankYouOverlay = document.createElement('div');
+          thankYouOverlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+          thankYouOverlay.innerHTML = `
+            <div class="bg-white rounded-20px shadow-custom-box p-8 mx-4 w-full max-w-md text-center">
+              <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h2 class="text-prudentoe-green font-bold text-xl mb-2">Payment Successful!</h2>
+              <p class="text-prudentoe-dark text-sm mb-4">
+                Thank you ${bookingData.name}! Your appointment has been booked for ${bookingData.date} at ${bookingData.time}.
+              </p>
+              <p class="text-gray-600 text-xs mb-4">
+                Payment ID: ${paymentId}<br>
+                We'll contact you via ${bookingData.preferredContact} shortly.
+              </p>
+              <button class="bg-prudentoe-green text-white py-2 px-6 rounded-10px font-medium text-sm hover:bg-opacity-90 transition-colors" onclick="this.parentElement.parentElement.remove()">
+                Close
+              </button>
+            </div>
+          `;
+          document.body.appendChild(thankYouOverlay);
+          setTimeout(() => {
+            if (thankYouOverlay.parentElement) {
+              thankYouOverlay.remove();
+            }
+          }, 5000);
+        }
+        const bookingLinks = document.querySelectorAll(`a[href="${targetUrl}"]`);
+        bookingLinks.forEach(function(link) {
+          link.addEventListener('click', showBookingPopup);
+          const buttonsInLink = link.querySelectorAll('button');
+          buttonsInLink.forEach(function(button) {
+            button.addEventListener('click', showBookingPopup);
+          });
+        });
+        const allButtons = document.querySelectorAll('button');
+        allButtons.forEach(function(button) {
+          const parentLink = button.closest(`a[href="${targetUrl}"]`);
+          if (parentLink) {
+            button.addEventListener('click', showBookingPopup);
+          }
+        });
+        const originalOpen = window.open;
+        window.open = function(url, target, features) {
+          if (url && url.includes('book.prudentoe.com/#/279761000000042044')) {
+            showBookingPopup({ preventDefault: function() {}, stopPropagation: function() {} });
+            return null;
+          }
+          return originalOpen.call(this, url, target, features);
+        };
+        const originalAssign = window.location.assign;
+        window.location.assign = function(url) {
+          if (url && url.includes('book.prudentoe.com/#/279761000000042044')) {
+            showBookingPopup({ preventDefault: function() {}, stopPropagation: function() {} });
+            return;
+          }
+          return originalAssign.call(this, url);
+        };
+        console.log(`Found and intercepted ${bookingLinks.length} booking links`);
+      });
     </script>
   </body>
 </html>
