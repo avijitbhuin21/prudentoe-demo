@@ -3190,3 +3190,16 @@ razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
 2025-06-13 02:47:59,677 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
 2025-06-13 02:55:34,189 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
 2025-06-13 02:55:34,280 - INFO -  * Restarting with stat
+2025-06-13 02:55:37,988 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:55:37,995 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-13 02:55:37,996 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-13 02:55:37,996 - INFO - Environment: TEST
+2025-06-13 02:55:37,996 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-13 02:55:37,997 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-13 02:55:37,997 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-13 02:55:37,997 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-13 02:55:37,998 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-13 02:55:37,998 - INFO - 5. Check account activation status
+2025-06-13 02:55:37,998 - INFO - =========================================
+2025-06-13 02:55:38,014 - WARNING -  * Debugger is active!
+2025-06-13 02:55:38,018 - INFO -  * Debugger PIN: 100-776-674

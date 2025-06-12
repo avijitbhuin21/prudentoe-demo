@@ -9,6 +9,7 @@ import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
 import json
+import pytz
 
 load_dotenv()
 
@@ -47,14 +48,20 @@ def generate_time_slots(
     end_time_str: str = "20:00",
     slot_duration_mins: int = 45
 ) -> list[dict]:
-    today = datetime.date.today()
+    # Use Hyderabad timezone (IST)
+    hyderabad_tz = pytz.timezone('Asia/Kolkata')
+    
+    # Get current date in Hyderabad timezone
+    today = datetime.datetime.now(hyderabad_tz).date()
     start_date = today + datetime.timedelta(days=1)
     day_names = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    
     try:
         start_time = datetime.datetime.strptime(start_time_str, '%H:%M').time()
         end_time = datetime.datetime.strptime(end_time_str, '%H:%M').time()
     except ValueError:
         raise ValueError("Invalid time format. Please use 'HH:MM'.")
+    
     all_days_slots = []
     for i in range(num_days):
         current_date = start_date + datetime.timedelta(days=i)
@@ -62,15 +69,18 @@ def generate_time_slots(
         time_slots_for_day = []
         current_slot_time = datetime.datetime.combine(current_date, start_time)
         end_datetime = datetime.datetime.combine(current_date, end_time)
+        
         while current_slot_time < end_datetime:
             time_slots_for_day.append(current_slot_time.strftime('%H:%M'))
             current_slot_time += datetime.timedelta(minutes=slot_duration_mins)
+        
         day_data = {
             "date": current_date.strftime('%Y-%m-%d'), 
             "day": day_of_week,
             "time_slots": time_slots_for_day
         }
         all_days_slots.append(day_data)
+    
     return all_days_slots
 
 def get_formatted_booked_slots(supabase_client: Client) -> list[dict]:
