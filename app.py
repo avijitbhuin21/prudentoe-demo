@@ -8,6 +8,7 @@ import datetime
 import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
@@ -140,6 +141,7 @@ def get_available_slots(generated_slots: list[dict] = generate_time_slots(), boo
                 "day": day_name,
                 "time_slots": current_available_slots
             })
+    print(json.dumps(available_slots_result, indent=2))  # Debug output
     return available_slots_result
 
 
