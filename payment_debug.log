@@ -3053,3 +3053,75 @@ razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
 2025-06-13 02:32:12,225 - INFO - 127.0.0.1 - - [13/Jun/2025 02:32:12] "GET /get-available-slots HTTP/1.1" 200 -
 2025-06-13 02:36:20,177 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
 2025-06-13 02:36:20,335 - INFO -  * Restarting with stat
+2025-06-13 02:36:23,924 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:36:23,930 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-13 02:36:23,930 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-13 02:36:23,931 - INFO - Environment: TEST
+2025-06-13 02:36:23,931 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-13 02:36:23,931 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-13 02:36:23,931 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-13 02:36:23,932 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-13 02:36:23,932 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-13 02:36:23,932 - INFO - 5. Check account activation status
+2025-06-13 02:36:23,932 - INFO - =========================================
+2025-06-13 02:36:23,950 - WARNING -  * Debugger is active!
+2025-06-13 02:36:23,956 - INFO -  * Debugger PIN: 100-776-674
+2025-06-13 02:36:51,995 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:51] "GET /?utm_city=bankura&random_str=abcd HTTP/1.1" 200 -
+2025-06-13 02:36:52,067 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-13 02:36:52,415 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,419 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,440 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,447 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,450 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,452 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,459 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,463 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,468 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,468 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,476 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,478 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,479 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,493 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,494 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,497 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,500 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,505 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,512 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,520 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,524 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,525 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,528 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,536 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,537 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,545 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-13 02:36:52,546 - INFO - 127.0.0.1 - - [13/Jun/2025 02:36:52] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:37:03,048 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:37:03,050 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:03] "GET /get-available-slots HTTP/1.1" 200 -
+2025-06-13 02:37:06,213 - INFO - Creating order for customer: avijit Bhuin
+2025-06-13 02:37:06,213 - INFO - Payment amount: Rs. 99 (9900 paise)
+2025-06-13 02:37:06,213 - INFO - Order data: {'amount': 9900, 'currency': 'INR', 'receipt': 'bk_09064292_0613_023706', 'notes': {'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'phone': '09064292887', 'address': 'ss', 'zipcode': '500001', 'contact_method': 'phone', 'selected_date': '2025-06-15', 'selected_time': '10:00', 'booking_type': 'dental_appointment'}}
+2025-06-13 02:37:07,230 - INFO - Order created successfully: order_QgQXzcscNjYO66
+2025-06-13 02:37:07,231 - INFO - Order details: {'amount': 9900, 'amount_due': 9900, 'amount_paid': 0, 'attempts': 0, 'created_at': 1749762427, 'currency': 'INR', 'entity': 'order', 'id': 'order_QgQXzcscNjYO66', 'notes': {'address': 'ss', 'booking_type': 'dental_appointment', 'contact_method': 'phone', 'email': 'avijitbhuin21@gmail.com', 'name': 'avijit Bhuin', 'phone': '09064292887', 'selected_date': '2025-06-15', 'selected_time': '10:00', 'zipcode': '500001'}, 'offer_id': None, 'receipt': 'bk_09064292_0613_023706', 'status': 'created'}
+2025-06-13 02:37:07,231 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:07] "POST /create-order HTTP/1.1" 200 -
+2025-06-13 02:37:08,141 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:08] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-13 02:37:08,146 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:08] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:37:17,717 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:17] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-13 02:37:17,731 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:17] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:37:38,297 - INFO - Payment verification started
+2025-06-13 02:37:38,297 - INFO - Received data: {'razorpay_order_id': 'order_QgQXzcscNjYO66', 'razorpay_payment_id': 'pay_QgQYBoM0DNkSbG', 'razorpay_signature': 'bf6b9ba196bfc635bc0cb4abdcb868715651df010c19c1d6b1157942c28a1013', 'booking_data': {'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'phone': '09064292887', 'address1': 'ss', 'zipCode': '500001', 'preferredContact': 'phone', 'date': '2025-06-15', 'time': '10:00', 'utm_data': {'utm_city': 'bankura', 'random_str': 'abcd'}}}
+2025-06-13 02:37:38,298 - INFO - Order ID: order_QgQXzcscNjYO66
+2025-06-13 02:37:38,298 - INFO - Payment ID: pay_QgQYBoM0DNkSbG
+2025-06-13 02:37:38,299 - INFO - Signature: bf6b9ba196bfc635bc0cb4abdcb868715651df010c19c1d6b1157942c28a1013
+2025-06-13 02:37:38,299 - INFO - Expected signature: bf6b9ba196bfc635bc0cb4abdcb868715651df010c19c1d6b1157942c28a1013
+2025-06-13 02:37:38,299 - INFO - Received signature: bf6b9ba196bfc635bc0cb4abdcb868715651df010c19c1d6b1157942c28a1013
+2025-06-13 02:37:38,300 - INFO - Payment signature verified successfully
+2025-06-13 02:37:39,482 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-13 02:37:39,485 - INFO - Booking saved to database: {'id': '7a3702cf-8985-4411-8bb3-97d7bad63083', 'created_at': '2025-06-12T21:07:39.370413+00:00', 'phone_number': '09064292887', 'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'address': 'ss', 'zipcode': '500001', 'contact_method': 'phone', 'selected_date': '2025-06-15', 'selected_time': '10:00', 'payment_status': 'success', 'utm_data': {'utm_city': 'bankura', 'random_str': 'abcd'}}
+2025-06-13 02:37:39,486 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:39] "POST /verify-payment HTTP/1.1" 200 -
+2025-06-13 02:37:39,515 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:39] "GET /thank-you?name=avijit+Bhuin&date=2025-06-15&time=10:00&phone=09064292887&booking_id=7a3702cf-8985-4411-8bb3-97d7bad63083 HTTP/1.1" 200 -
+2025-06-13 02:37:39,571 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-13 02:37:39,799 - INFO - 127.0.0.1 - - [13/Jun/2025 02:37:39] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:39:48,029 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:48] "GET /thank-you?name=avijit+Bhuin&date=2025-06-15&time=10:00&phone=09064292887&booking_id=7a3702cf-8985-4411-8bb3-97d7bad63083 HTTP/1.1" 200 -
+2025-06-13 02:39:48,126 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-13 02:39:48,648 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:48] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:39:49,368 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:49] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
