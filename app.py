@@ -141,7 +141,6 @@ def get_available_slots(generated_slots: list[dict] = generate_time_slots(), boo
                 "day": day_name,
                 "time_slots": current_available_slots
             })
-    print(json.dumps(available_slots_result, indent=2))  # Debug output
     return available_slots_result
 
 
@@ -505,12 +504,15 @@ def get_available_slots_endpoint():
     try:
         # Generate time slots
         generated_slots = generate_time_slots()
+        print(f"Generated Slots: {json.dumps(generated_slots, indent=2)}")
         
         # Get booked slots from database
         booked_slots = get_formatted_booked_slots(supabase)
+        print(f"Booked Slots: {json.dumps(booked_slots, indent=2)}")
         
         # Get available slots by comparing generated and booked slots
         available_slots = get_available_slots(generated_slots, booked_slots)
+        print(f"Available Slots: {json.dumps(available_slots, indent=2)}")
         
         return jsonify({
             'success': True,

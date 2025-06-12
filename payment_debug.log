@@ -3125,3 +3125,68 @@ razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
 2025-06-13 02:39:48,126 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-06-13 02:39:48,648 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:48] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
 2025-06-13 02:39:49,368 - INFO - 127.0.0.1 - - [13/Jun/2025 02:39:49] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:48,876 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:47:48,881 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-13 02:47:48,882 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-13 02:47:48,882 - INFO - Environment: TEST
+2025-06-13 02:47:48,882 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-13 02:47:48,882 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-13 02:47:48,882 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-13 02:47:48,883 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-13 02:47:48,883 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-13 02:47:48,883 - INFO - 5. Check account activation status
+2025-06-13 02:47:48,883 - INFO - =========================================
+2025-06-13 02:47:48,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.184.162:5000
+2025-06-13 02:47:48,905 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 02:47:48,906 - INFO -  * Restarting with stat
+2025-06-13 02:47:52,220 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:47:52,229 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-13 02:47:52,229 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-13 02:47:52,230 - INFO - Environment: TEST
+2025-06-13 02:47:52,230 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-13 02:47:52,231 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-13 02:47:52,231 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-13 02:47:52,231 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-13 02:47:52,232 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-13 02:47:52,232 - INFO - 5. Check account activation status
+2025-06-13 02:47:52,232 - INFO - =========================================
+2025-06-13 02:47:52,261 - WARNING -  * Debugger is active!
+2025-06-13 02:47:52,266 - INFO -  * Debugger PIN: 100-776-674
+2025-06-13 02:47:52,341 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-13 02:47:52,349 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:52] "GET /thank-you?name=avijit+Bhuin&date=2025-06-15&time=10:00&phone=09064292887&booking_id=7a3702cf-8985-4411-8bb3-97d7bad63083 HTTP/1.1" 200 -
+2025-06-13 02:47:56,492 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-13 02:47:56,511 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:56] "GET /get-available-slots HTTP/1.1" 200 -
+2025-06-13 02:47:59,079 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "GET /?utm_city=bankura&random_str=abcd HTTP/1.1" 200 -
+2025-06-13 02:47:59,127 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-13 02:47:59,457 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,462 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,469 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,477 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,483 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,498 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,532 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,534 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,562 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,563 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,586 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,593 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,597 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,597 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,603 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,606 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,612 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,617 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,632 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,639 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,640 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,642 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,646 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,649 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,663 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,675 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-13 02:47:59,677 - INFO - 127.0.0.1 - - [13/Jun/2025 02:47:59] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-13 02:55:34,189 - INFO -  * Detected change in 'C:\\Users\\user\\Desktop\\Suhas-frontEnd-POC\\app.py', reloading
+2025-06-13 02:55:34,280 - INFO -  * Restarting with stat
