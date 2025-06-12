@@ -541,24 +541,33 @@
       }
       /* Enhanced hover effects for all buttons */
       button {
-        box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important;
+        /* box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3), 0 2px 4px rgba(128, 128, 128, 0.2) !important; */
         transition: all 0.3s ease !important;
         position: relative;
         overflow: hidden;
       }
-      button:hover {
-        transform: translateY(-2px) scale(1.02) !important;
-        box-shadow: 0 8px 16px rgba(128, 128, 128, 0.4), 0 4px 8px rgba(128, 128, 128, 0.3) !important;
-      }
+    button:hover:not(.date-slot):not(.time-slot) {
+      transform: translateY(-2px) scale(1.02) !important;
+    }
+
+    /* Rotate the close button (X) on hover */
+    #closeModal:hover {
+      transform: rotate(90deg) !important;
+      transition: transform 0.3s ease-in-out !important;
+    }
+
+    #closeModal {
+      transition: transform 0.3s ease-in-out !important;
+    }
       /* Specific hover effects for green buttons */
       button.bg-prudentoe-green:hover {
         background-color: #134521 !important;
-        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.4), 0 4px 10px rgba(26, 71, 42, 0.3) !important;
+        /* box-shadow: 0 8px 20px rgba(26, 71, 42, 0.4), 0 4px 10px rgba(26, 71, 42, 0.3) !important; */
       }
       /* Specific hover effects for white buttons */
       button.bg-white:hover {
         background-color: #f8f9fa !important;
-        box-shadow: 0 8px 20px rgba(26, 71, 42, 0.3), 0 4px 10px rgba(26, 71, 42, 0.2) !important;
+        /* box-shadow: 0 8px 20px rgba(26, 71, 42, 0.3), 0 4px 10px rgba(26, 71, 42, 0.2) !important; */
       }
       /* Pulse effect for primary action buttons */
       button.bg-prudentoe-green::before {
@@ -586,13 +595,6 @@
       /* Enhanced hover for rounded buttons with icons */
       button.rounded-full:hover {
         transform: translateY(-3px) scale(1.05) !important;
-      }
-      /* Glow effect on hover for all buttons */
-      button:hover {
-        box-shadow:
-          0 8px 16px rgba(128, 128, 128, 0.4),
-          0 4px 8px rgba(128, 128, 128, 0.3),
-          0 0 0 2px rgba(26, 71, 42, 0.1) !important;
       }
       /* Desktop-specific constraints for center column layout */
       @media (min-width: 768px) {
@@ -674,6 +676,69 @@
           max-width: 100%;
           box-sizing: border-box;
         }
+      }
+      
+      /* Booking Modal Styles */
+      .booking-step {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .time-slot.bg-prudentoe-green {
+        background-color: #1A472A !important;
+        color: white !important;
+        border-color: #1A472A !important;
+      }
+      
+      .time-slot:hover:not(.bg-prudentoe-green) {
+        background-color: #1A472A;
+        color: white;
+        border-color: #1A472A;
+      }
+      
+      .date-slot.bg-prudentoe-green {
+        background-color: #1A472A !important;
+        color: white !important;
+        border-color: #1A472A !important;
+      }
+      
+      .date-slot:hover:not(.bg-prudentoe-green) {
+        background-color: #1A472A;
+        color: white;
+        border-color: #1A472A;
+      }
+      
+      /* Horizontal scroll styling for date buttons */
+      #dateButtons {
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      #dateButtons::-webkit-scrollbar {
+        height: 4px;
+      }
+      
+      #dateButtons::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 2px;
+      }
+      
+      #dateButtons::-webkit-scrollbar-thumb {
+        background: #1A472A;
+        border-radius: 2px;
+      }
+      
+      #dateButtons::-webkit-scrollbar-thumb:hover {
+        background: #134521;
+      }
+      
+      #bookingModal input:focus,
+      #bookingModal textarea:focus {
+        border-color: #1A472A;
+        box-shadow: 0 0 0 3px rgba(26, 71, 42, 0.1);
       }
     </style>
     <script>
@@ -811,18 +876,12 @@
                 to your home!
               </p>
             </div>
-            <a
-              href="https://book.prudentoe.com/#/279761000000042044"
-              target="_blank"
-              class="inline-block animate-on-scroll"
+            <button
+              class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px mb-5 shadow-sm inline-block animate-on-scroll booking-btn"
               style="animation-delay: 0.2s"
             >
-              <button
-                class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px mb-5 shadow-sm"
-              >
-                Book An Appointment
-              </button>
-            </a>
+              Book An Appointment
+            </button>
             <div
               class="space-y-1.5 text-prudentoe-dark text-dynamic-xxs animate-on-scroll"
               style="animation-delay: 0.4s"
@@ -943,25 +1002,19 @@
               We don't call those "urgent." We call it normal life quietly
               warning you.
             </p>
-            <a
-              href="https://book.prudentoe.com/#/279761000000042044"
-              target="_blank"
-              class="block animate-on-scroll mx-auto w-fit"
+            <button
+              class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-2 px-3 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px] block animate-on-scroll booking-btn"
               style="animation-delay: 0.6s"
             >
-              <button
-                class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-2 px-3 rounded-full flex items-center mx-auto mb-2.5 shadow-sm h-[60px] w-[250px]"
+              <span
+                class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center flex-shrink-0" style="margin-left: -7px;"
               >
-                <span
-                  class="bg-white border border-prudentoe-green rounded-full p-1 mr-2 w-[50px] h-[50px] flex items-center justify-center flex-shrink-0" style="margin-left: -7px;"
-                >
-                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
-                  </svg>
-                </span>
-                <span class="text-center">Let a Dentist take a<br/>quick look - At home</span>
-              </button>
-            </a>
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="#1A472A" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="text-center">Let a Dentist take a<br/>quick look - At home</span>
+            </button>
             <p
               class="text-prudentoe-dark text-dynamic-s leading-1.37 animate-on-scroll"
               style="animation-delay: 0.7s; text-align: center;"
@@ -1131,16 +1184,11 @@
               reason you need someone trained to decode those whispers.
             </p>
             <div class="flex justify-center mt-[2rem]">
-              <a
-                href="https://book.prudentoe.com/#/279761000000042044"
-                target="_blank"
+              <button
+                class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px shadow-sm booking-btn"
               >
-                <button
-                  class="bg-prudentoe-green text-white text-dynamic-button py-2.5 px-4 rounded-5px shadow-sm"
-                >
-                  Book An Appointment
-                </button>
-              </a>
+                Book An Appointment
+              </button>
             </div>
               </div>
             </div>
@@ -1205,46 +1253,34 @@
             And yes, it's true care. Prudentoe invests wisely in full sterilized
             equipment and genuine qualifications.
           </p>
-          <a
-            href="https://book.prudentoe.com/#/279761000000042044"
-            target="_blank"
-            class="animate-on-scroll"
+          <button
+            class="text-prudentoe-dark font-bold text-dynamic-base leading-1.2 mb-2.5 hover:text-prudentoe-green transition-colors animate-on-scroll booking-btn bg-transparent border-none cursor-pointer"
             style="animation-delay: 0.6s"
           >
-            <p
-              class="text-prudentoe-dark font-bold text-dynamic-base leading-1.2 mb-2.5 hover:text-prudentoe-green transition-colors"
-            >
-              I Want To Check Available Slots in My Area
-            </p>
-          </a>
-          <a
-            href="https://book.prudentoe.com/#/279761000000042044"
-            target="_blank"
-            class="inline-block animate-on-scroll"
+            I Want To Check Available Slots in My Area
+          </button>
+          <button
+            class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center mx-auto shadow-sm h-[45px] inline-block animate-on-scroll booking-btn"
             style="animation-delay: 0.7s"
           >
-            <button
-              class="bg-prudentoe-green text-white text-dynamic-button leading-1.37 py-0.5 pl-0.5 pr-4 rounded-full flex items-center mx-auto shadow-sm h-[45px]"
+            <span
+              class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
             >
-              <span
-                class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center"
+              <svg
+                width="19"
+                height="23"
+                viewBox="0 0 19 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  width="19"
-                  height="23"
-                  viewBox="0 0 19 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.5 18.5L9.20938 18.9069C9.38323 19.031 9.61677 19.031 9.79062 18.9069L9.5 18.5ZM6.41509 15.711L6.78196 15.3713L6.41509 15.711ZM12.5849 15.711L12.218 15.3713L12.5849 15.711ZM12.5 7.5H12C12 8.88071 10.8807 10 9.5 10V10.5V11C11.433 11 13 9.433 13 7.5H12.5ZM9.5 10.5V10C8.11929 10 7 8.88071 7 7.5H6.5H6C6 9.433 7.567 11 9.5 11V10.5ZM6.5 7.5H7C7 6.11929 8.11929 5 9.5 5V4.5V4C7.567 4 6 5.567 6 7.5H6.5ZM9.5 4.5V5C10.8807 5 12 6.11929 12 7.5H12.5H13C13 5.567 11.433 4 9.5 4V4.5ZM18.5 19H18C18 19.2961 17.8477 19.6326 17.4543 19.9943C17.0605 20.3563 16.4631 20.7054 15.6827 21.0089C14.1252 21.6146 11.9394 22 9.5 22V22.5V23C12.0312 23 14.3454 22.6019 16.0452 21.9409C16.8935 21.611 17.6141 21.2058 18.1312 20.7304C18.6486 20.2546 19 19.6704 19 19H18.5ZM9.5 22.5V22C7.0606 22 4.87484 21.6146 3.31726 21.0089C2.53688 20.7054 1.93947 20.3563 1.54568 19.9943C1.15232 19.6326 1 19.2961 1 19H0.5H0C0 19.6704 0.35136 20.2546 0.868849 20.7304C1.38591 21.2058 2.10651 21.611 2.95482 21.9409C4.6546 22.6019 6.96884 23 9.5 23V22.5ZM2.5 7.5H3C3 3.91015 5.91015 1 9.5 1V0.5V0C5.35786 0 2 3.35786 2 7.5H2.5ZM9.5 0.5V1C13.0899 1 16 3.91015 16 7.5H16.5H17C17 3.35786 13.6421 0 9.5 0V0.5ZM9.5 18.5C9.79062 18.0931 9.79067 18.0932 9.79071 18.0932C9.79071 18.0932 9.79075 18.0932 9.79076 18.0932C9.79078 18.0933 9.79078 18.0933 9.79076 18.0932C9.79072 18.0932 9.79059 18.0931 9.79037 18.093C9.78993 18.0926 9.78914 18.0921 9.78799 18.0912C9.7857 18.0896 9.78201 18.0869 9.77696 18.0833C9.76685 18.0759 9.75131 18.0645 9.73066 18.0493C9.68936 18.0187 9.62766 17.9724 9.54821 17.9112C9.38927 17.7888 9.15953 17.6069 8.88015 17.3716C8.3209 16.9004 7.56544 16.2174 6.78196 15.3713L6.41509 15.711L6.04822 16.0507C6.86597 16.9338 7.65297 17.6453 8.23587 18.1364C8.52756 18.3821 8.76881 18.5732 8.9381 18.7036C9.02277 18.7687 9.08949 18.8188 9.13558 18.8529C9.15863 18.87 9.17653 18.8831 9.18894 18.8921C9.19514 18.8966 9.19998 18.9001 9.2034 18.9026C9.20511 18.9038 9.20647 18.9048 9.20746 18.9055C9.20796 18.9059 9.20837 18.9061 9.20869 18.9064C9.20885 18.9065 9.20899 18.9066 9.20911 18.9067C9.20916 18.9067 9.20923 18.9068 9.20926 18.9068C9.20932 18.9068 9.20938 18.9069 9.5 18.5ZM6.41509 15.711L6.78196 15.3713C4.92569 13.3667 3 10.5408 3 7.5H2.5H2C2 10.9346 4.1509 14.0018 6.04822 16.0507L6.41509 15.711ZM0.5 19H1C1 18.5343 1.39254 17.9631 2.40305 17.4111C3.38085 16.877 4.79647 16.4457 6.48533 16.2061L6.41509 15.711L6.34485 15.216C4.58256 15.466 3.04064 15.9234 1.92368 16.5335C0.839434 17.1257 0 17.9542 0 19H0.5ZM16.5 7.5H16C16 10.5408 14.0743 13.3667 12.218 15.3713L12.5849 15.711L12.9518 16.0507C14.8491 14.0018 17 10.9346 17 7.5H16.5ZM12.5849 15.711L12.218 15.3713C11.4346 16.2174 10.6791 16.9004 10.1198 17.3716C9.84047 17.6069 9.61073 17.7888 9.45179 17.9112C9.37234 17.9724 9.31064 18.0187 9.26934 18.0493C9.24869 18.0645 9.23315 18.0759 9.22304 18.0833C9.21799 18.0869 9.2143 18.0896 9.21201 18.0912C9.21086 18.0921 9.21007 18.0926 9.20963 18.093C9.20941 18.0931 9.20928 18.0932 9.20924 18.0932C9.20922 18.0933 9.20922 18.0933 9.20924 18.0932C9.20925 18.0932 9.20929 18.0932 9.20929 18.0932C9.20933 18.0932 9.20938 18.0931 9.5 18.5C9.79062 18.9069 9.79068 18.9068 9.79074 18.9068C9.79077 18.9068 9.79084 18.9067 9.79089 18.9067C9.79101 18.9066 9.79115 18.9065 9.79131 18.9064C9.79163 18.9061 9.79204 18.9059 9.79254 18.9055C9.79353 18.9048 9.79489 18.9038 9.7966 18.9026C9.80002 18.9001 9.80486 18.8966 9.81106 18.8921C9.82347 18.8831 9.84137 18.87 9.86442 18.8529C9.91051 18.8188 9.97723 18.7687 10.0619 18.7036C10.2312 18.5732 10.4724 18.3821 10.7641 18.1364C11.347 17.6453 12.134 16.9338 12.9518 16.0507L12.5849 15.711ZM12.5849 15.711L12.5147 16.2061C14.2035 16.4457 15.6192 16.877 16.597 17.4111C17.6075 17.9631 18 18.5343 18 19H18.5H19C19 17.9542 18.1606 17.1257 17.0763 16.5335C15.9594 15.9234 14.4174 15.466 12.6551 15.216L12.5849 15.711Z"
-                    fill="#383B41"
-                  />
-                </svg>
-              </span>
-              Book An Appointment
-            </button>
-          </a>
+                <path
+                  d="M9.5 18.5L9.20938 18.9069C9.38323 19.031 9.61677 19.031 9.79062 18.9069L9.5 18.5ZM6.41509 15.711L6.78196 15.3713L6.41509 15.711ZM12.5849 15.711L12.218 15.3713L12.5849 15.711ZM12.5 7.5H12C12 8.88071 10.8807 10 9.5 10V10.5V11C11.433 11 13 9.433 13 7.5H12.5ZM9.5 10.5V10C8.11929 10 7 8.88071 7 7.5H6.5H6C6 9.433 7.567 11 9.5 11V10.5ZM6.5 7.5H7C7 6.11929 8.11929 5 9.5 5V4.5V4C7.567 4 6 5.567 6 7.5H6.5ZM9.5 4.5V5C10.8807 5 12 6.11929 12 7.5H12.5H13C13 5.567 11.433 4 9.5 4V4.5ZM18.5 19H18C18 19.2961 17.8477 19.6326 17.4543 19.9943C17.0605 20.3563 16.4631 20.7054 15.6827 21.0089C14.1252 21.6146 11.9394 22 9.5 22V22.5V23C12.0312 23 14.3454 22.6019 16.0452 21.9409C16.8935 21.611 17.6141 21.2058 18.1312 20.7304C18.6486 20.2546 19 19.6704 19 19H18.5ZM9.5 22.5V22C7.0606 22 4.87484 21.6146 3.31726 21.0089C2.53688 20.7054 1.93947 20.3563 1.54568 19.9943C1.15232 19.6326 1 19.2961 1 19H0.5H0C0 19.6704 0.35136 20.2546 0.868849 20.7304C1.38591 21.2058 2.10651 21.611 2.95482 21.9409C4.6546 22.6019 6.96884 23 9.5 23V22.5ZM2.5 7.5H3C3 3.91015 5.91015 1 9.5 1V0.5V0C5.35786 0 2 3.35786 2 7.5H2.5ZM9.5 0.5V1C13.0899 1 16 3.91015 16 7.5H16.5H17C17 3.35786 13.6421 0 9.5 0V0.5ZM9.5 18.5C9.79062 18.0931 9.79067 18.0932 9.79071 18.0932C9.79071 18.0932 9.79075 18.0932 9.79076 18.0932C9.79078 18.0933 9.79078 18.0933 9.79076 18.0932C9.79072 18.0932 9.79059 18.0931 9.79037 18.093C9.78993 18.0926 9.78914 18.0921 9.78799 18.0912C9.7857 18.0896 9.78201 18.0869 9.77696 18.0833C9.76685 18.0759 9.75131 18.0645 9.73066 18.0493C9.68936 18.0187 9.62766 17.9724 9.54821 17.9112C9.38927 17.7888 9.15953 17.6069 8.88015 17.3716C8.3209 16.9004 7.56544 16.2174 6.78196 15.3713L6.41509 15.711L6.04822 16.0507C6.86597 16.9338 7.65297 17.6453 8.23587 18.1364C8.52756 18.3821 8.76881 18.5732 8.9381 18.7036C9.02277 18.7687 9.08949 18.8188 9.13558 18.8529C9.15863 18.87 9.17653 18.8831 9.18894 18.8921C9.19514 18.8966 9.19998 18.9001 9.2034 18.9026C9.20511 18.9038 9.20647 18.9048 9.20746 18.9055C9.20796 18.9059 9.20837 18.9061 9.20869 18.9064C9.20885 18.9065 9.20899 18.9066 9.20911 18.9067C9.20916 18.9067 9.20923 18.9068 9.20926 18.9068C9.20932 18.9068 9.20938 18.9069 9.5 18.5ZM6.41509 15.711L6.78196 15.3713C4.92569 13.3667 3 10.5408 3 7.5H2.5H2C2 10.9346 4.1509 14.0018 6.04822 16.0507L6.41509 15.711ZM0.5 19H1C1 18.5343 1.39254 17.9631 2.40305 17.4111C3.38085 16.877 4.79647 16.4457 6.48533 16.2061L6.41509 15.711L6.34485 15.216C4.58256 15.466 3.04064 15.9234 1.92368 16.5335C0.839434 17.1257 0 17.9542 0 19H0.5ZM16.5 7.5H16C16 10.5408 14.0743 13.3667 12.218 15.3713L12.5849 15.711L12.9518 16.0507C14.8491 14.0018 17 10.9346 17 7.5H16.5ZM12.5849 15.711L12.218 15.3713C11.4346 16.2174 10.6791 16.9004 10.1198 17.3716C9.84047 17.6069 9.61073 17.7888 9.45179 17.9112C9.37234 17.9724 9.31064 18.0187 9.26934 18.0493C9.24869 18.0645 9.23315 18.0759 9.22304 18.0833C9.21799 18.0869 9.2143 18.0896 9.21201 18.0912C9.21086 18.0921 9.21007 18.0926 9.20963 18.093C9.20941 18.0931 9.20928 18.0932 9.20924 18.0932C9.20922 18.0933 9.20922 18.0933 9.20924 18.0932C9.20925 18.0932 9.20929 18.0932 9.20929 18.0932C9.20933 18.0932 9.20938 18.0931 9.5 18.5C9.79062 18.9069 9.79068 18.9068 9.79074 18.9068C9.79077 18.9068 9.79084 18.9067 9.79089 18.9067C9.79101 18.9066 9.79115 18.9065 9.79131 18.9064C9.79163 18.9061 9.79204 18.9059 9.79254 18.9055C9.79353 18.9048 9.79489 18.9038 9.7966 18.9026C9.80002 18.9001 9.80486 18.8966 9.81106 18.8921C9.82347 18.8831 9.84137 18.87 9.86442 18.8529C9.91051 18.8188 9.97723 18.7687 10.0619 18.7036C10.2312 18.5732 10.4724 18.3821 10.7641 18.1364C11.347 17.6453 12.134 16.9338 12.9518 16.0507L12.5849 15.711ZM12.5849 15.711L12.5147 16.2061C14.2035 16.4457 15.6192 16.877 16.597 17.4111C17.6075 17.9631 18 18.5343 18 19H18.5H19C19 17.9542 18.1606 17.1257 17.0763 16.5335C15.9594 15.9234 14.4174 15.466 12.6551 15.216L12.5849 15.711Z"
+                  fill="#383B41"
+                />
+              </svg>
+            </span>
+            Book An Appointment
+          </button>
         </div>
         <div
           class="relative bg-white shadow-custom-box rounded-20px my-5 min-h-[285px] animate-on-scroll fade-in-section overflow-x-hidden"
@@ -1274,17 +1310,11 @@
                 Let's make this easier.<br />
                 Match your moments...
               </p>
-              <a
-                href="https://book.prudentoe.com/#/279761000000042044"
-                target="_blank"
-                class="inline-block mt-2.5 ml-[3.5rem]"
+              <button
+                class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3 inline-block mt-2.5 ml-[3.5rem] booking-btn"
               >
-                <button
-                  class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3"
-                >
-                  Book An Appointment
-                </button>
-              </a>
+                Book An Appointment
+              </button>
             </div>
           </div>
         </div>
@@ -1413,17 +1443,11 @@
                     >Clarity, comfort, and care</span
                   >
                 </div>
-                <a
-                  href="https://book.prudentoe.com/#/279761000000042044"
-                  target="_blank"
-                  class="inline-block"
+                <button
+                  class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[51px] inline-block booking-btn"
                 >
-                  <button
-                    class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[51px]"
-                  >
-                    Book An Appointment
-                  </button>
-                </a>
+                  Book An Appointment
+                </button>
               </div>
               <div class="flex-1 mt-[-11rem] ml-auto sm:mt-0 relative">
                 <img
@@ -1732,26 +1756,20 @@
             <p class="text-dynamic-base leading-1.2 mb-3.5">
               Let a professional listen.
             </p>
-            <a
-              href="https://book.prudentoe.com/#/279761000000042044"
-              target="_blank"
-              class="inline-block"
+            <button
+              class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-2 px-4 rounded-full flex items-center shadow-sm min-h-[48px] inline-block booking-btn"
             >
-              <button
-                class="bg-white text-prudentoe-green text-dynamic-button leading-1.37 py-2 px-4 rounded-full flex items-center shadow-sm min-h-[48px]"
+              <span
+                class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center flex-shrink-0"
               >
-                <span
-                  class="bg-white border border-prudentoe-green rounded-full p-2.5 mr-2 w-[41px] h-[41px] flex items-center justify-center flex-shrink-0"
-                >
-                  <img
-                    src="static/images/megaphone-icon.png"
-                    alt="megaphone icon"
-                    class="w-[22px] h-[22px]"
-                  />
-                </span>
-                Book An Appointment
-              </button>
-            </a>
+                <img
+                  src="static/images/megaphone-icon.png"
+                  alt="megaphone icon"
+                  class="w-[22px] h-[22px]"
+                />
+              </span>
+              Book An Appointment
+            </button>
           </div>
         </div>
       </div>
@@ -2207,424 +2225,592 @@
         };
       })();
     </script>
-    <!-- Booking Popup Modal HTML -->
-    <div id="bookingPopupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
-      <div class="bg-white rounded-20px shadow-custom-box p-6 mx-4 w-full max-w-2xl relative my-8 max-h-[90vh] overflow-y-auto">
-        <!-- Header -->
-        <div class="text-center mb-6 ml-[0px] md:ml-[4rem]">
-          <div class="w-16 h-16 bg-prudentoe-green rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg width="32" height="32" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.875 4.5H4.5C3.25736 4.5 2.25 5.50736 2.25 6.75V10.125M7.875 4.5H19.125M7.875 4.5V2.25M19.125 4.5H22.5C23.7426 4.5 24.75 5.50736 24.75 6.75V10.125M19.125 4.5V2.25M2.25 10.125V22.5C2.25 23.7426 3.25736 24.75 4.5 24.75H22.5C23.7426 24.75 24.75 23.7426 24.75 22.5V10.125M2.25 10.125H24.75" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+      <div class="bg-white rounded-20px p-6 w-full max-w-md mx-4 relative">
+        <!-- Close button -->
+        <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <!-- Step 1: Phone Number -->
+        <div id="step1" class="booking-step">
+          <h2 class="text-2xl font-bold text-prudentoe-green mb-4">Book Your Appointment</h2>
+          <p class="text-gray-600 mb-6">Let's start with your phone number</p>
+          <div class="mb-4">
+            <label for="phoneNumber" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" id="phoneNumber" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your phone number" required>
+            <div id="phoneError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid phone number</div>
           </div>
-          <h2 class="text-prudentoe-green font-bold text-xl mb-2">Book Your Appointment</h2>
-          <p class="text-prudentoe-dark text-sm">Enter your details to schedule your dental checkup</p>
+          <button id="step1Next" class="w-full bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+            Next
+          </button>
         </div>
-        <!-- Form -->
-        <form id="bookingForm" class="space-y-4">
-          <!-- Personal Information Section -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- Step 2: Personal Details -->
+        <div id="step2" class="booking-step hidden">
+          <h2 class="text-2xl font-bold text-prudentoe-green mb-4">Personal Details</h2>
+          <p class="text-gray-600 mb-6">Please provide your details</p>
+          <div class="space-y-4">
             <div>
-              <label for="customerName" class="block text-prudentoe-dark font-medium text-sm mb-2">Full Name *</label>
-              <input
-                type="text"
-                id="customerName"
-                name="customerName"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-                placeholder="Enter your full name"
-              />
+              <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="fullName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your full name" required>
             </div>
             <div>
-              <label for="email" class="block text-prudentoe-dark font-medium text-sm mb-2">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-                placeholder="Enter your email address"
-              />
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your email" required>
+            </div>
+            <div>
+              <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+              <textarea id="address" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your address" required></textarea>
+            </div>
+            <div>
+              <label for="zipcode" class="block text-sm font-medium text-gray-700 mb-2">Zipcode</label>
+              <input type="text" id="zipcode" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your zipcode" required>
             </div>
           </div>
-          <div>
-            <label for="phoneNumber" class="block text-prudentoe-dark font-medium text-sm mb-2">Phone Number *</label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              required
-              pattern="[0-9]{10}"
-              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-              placeholder="Enter your 10-digit phone number"
-            />
-          </div>
-          <div>
-            <label for="address1" class="block text-prudentoe-dark font-medium text-sm mb-2">Address Line 1 *</label>
-            <input
-              type="text"
-              id="address1"
-              name="address1"
-              required
-              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-              placeholder="Enter your address"
-            />
-          </div>
-          <div>
-            <label for="address2" class="block text-prudentoe-dark font-medium text-sm mb-2">Address Line 2 (Optional)</label>
-            <input
-              type="text"
-              id="address2"
-              name="address2"
-              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-              placeholder="Apartment, suite, etc. (optional)"
-            />
-          </div>
-          <div>
-            <label for="zipCode" class="block text-prudentoe-dark font-medium text-sm mb-2">Zip Code *</label>
-            <input
-              type="text"
-              id="zipCode"
-              name="zipCode"
-              required
-              pattern="[0-9]{6}"
-              class="w-full px-4 py-3 border border-gray-300 rounded-10px focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent text-sm"
-              placeholder="Enter 6-digit zip code"
-            />
-          </div>
-          <!-- Preferred Contact Method -->
-          <div>
-            <label class="block text-prudentoe-dark font-medium text-sm mb-3">Preferred Contact Method *</label>
-            <div class="grid grid-cols-3 gap-3">
-              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
-                <input type="radio" name="preferredContact" value="phone" required class="mr-2 text-prudentoe-green">
-                <span class="text-sm">Phone</span>
-              </label>
-              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
-                <input type="radio" name="preferredContact" value="email" required class="mr-2 text-prudentoe-green">
-                <span class="text-sm">E-Mail</span>
-              </label>
-              <label class="flex items-center p-3 border border-gray-300 rounded-10px cursor-pointer hover:bg-gray-50">
-                <input type="radio" name="preferredContact" value="whatsapp" required class="mr-2 text-prudentoe-green">
-                <span class="text-sm">WhatsApp</span>
-              </label>
-            </div>
-          </div>
-          <!-- Date Selection -->
-          <div class="mt-6">
-            <h3 class="text-prudentoe-dark font-medium text-sm mb-3">Select Date</h3>
-            <div id="dateSelector" class="grid grid-cols-5 gap-2 mb-4">
-              <!-- Date options will be populated by JavaScript -->
-            </div>
-          </div>
-          <!-- Time Selection -->
-          <div class="mt-4">
-            <h3 class="text-prudentoe-dark font-medium text-sm mb-3">Select time for the service</h3>
-            <div id="timeSelector" class="grid grid-cols-3 gap-3">
-              <!-- Time slots will be populated by JavaScript -->
-            </div>
-          </div>
-          <!-- Action buttons -->
-          <div class="flex gap-3 mt-6">
-            <button
-              type="button"
-              id="cancelBookingBtn"
-              class="flex-1 bg-gray-200 text-gray-700 py-3 px-4 rounded-10px font-medium text-sm hover:bg-gray-300 transition-colors"
-            >
-              Cancel
+          <div id="step2Error" class="text-red-500 text-sm mt-2 hidden">Please fill in all fields</div>
+          <div class="flex space-x-3 mt-6">
+            <button id="step2Back" class="flex-1 bg-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-400 transition-colors">
+              Back
             </button>
-            <button
-              type="submit"
-              class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-10px font-medium text-sm hover:bg-opacity-90 transition-colors shadow-sm"
-            >
-              Book Appointment
+            <button id="step2Next" class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+              Next
             </button>
           </div>
-        </form>
-        <!-- Additional info -->
-        <div class="mt-4 text-center ml-[0px] md:ml-[4rem]">
-          <p class="text-xs text-gray-500">
-            Book a slot for just Rs.99
-          </p>
+        </div>
+
+        <!-- Step 3: Service Area Check -->
+        <div id="step3" class="booking-step hidden">
+          <div id="serviceAvailable" class="text-center hidden">
+            <div class="mb-4">
+              <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h2 class="text-2xl font-bold text-prudentoe-green mb-2">Great News!</h2>
+              <p class="text-gray-600 mb-6">We provide services in your area. Let's schedule your appointment.</p>
+            </div>
+            <div class="flex space-x-3">
+              <button id="step3Back" class="flex-1 bg-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-400 transition-colors">
+                Back
+              </button>
+              <button id="step3Next" class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+                Schedule Appointment
+              </button>
+            </div>
+          </div>
+          
+          <div id="serviceNotAvailable" class="text-center hidden">
+            <div class="mb-4">
+              <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <h2 class="text-2xl font-bold text-red-500 mb-2">Service Not Available</h2>
+              <p class="text-gray-600 mb-6">Sorry, our service is not available in your area yet. We're working to expand our coverage soon!</p>
+            </div>
+            <button id="step3BackUnavailable" class="w-full bg-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-400 transition-colors">
+              Back
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Date and Time Selection -->
+        <div id="step4" class="booking-step hidden">
+          <h2 class="text-2xl font-bold text-prudentoe-green mb-4">Select Date & Time</h2>
+          <p class="text-gray-600 mb-6">Choose a date to see the available slots</p>
+          
+          <!-- Loading state -->
+          <div id="slotsLoading" class="text-center py-8 hidden">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-prudentoe-green"></div>
+            <p class="mt-2 text-gray-600">Loading available slots...</p>
+          </div>
+          
+          <!-- Error state -->
+          <div id="slotsError" class="text-center py-8 hidden">
+            <div class="text-red-500 mb-4">
+              <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <p class="font-medium">Unable to load available slots</p>
+            </div>
+            <button id="reloadSlots" class="bg-prudentoe-green text-white px-4 py-2 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+              Try Again
+            </button>
+          </div>
+          
+          <!-- Slots content -->
+          <div id="slotsContent" class="hidden">
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+              <div id="dateButtons" class="flex gap-2 overflow-x-auto pb-2" style="scrollbar-width: thin;">
+                <!-- Date buttons will be generated by JavaScript -->
+              </div>
+              <input type="hidden" id="selectedDate" required>
+            </div>
+            
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Time</label>
+              <div id="timeSlots" class="grid grid-cols-2 gap-2">
+                <!-- Time slots will be generated by JavaScript -->
+              </div>
+              <input type="hidden" id="selectedTime" required>
+            </div>
+            
+            <div id="step4Error" class="text-red-500 text-sm mt-2 hidden">Please select both date and time</div>
+            
+            <div class="flex space-x-3 mt-6">
+              <button id="step4Back" class="flex-1 bg-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-400 transition-colors">
+                Back
+              </button>
+              <button id="payButton" class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+                Pay ₹99
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Booking Popup Script -->
+
     <script>
+      // Booking Modal JavaScript
       document.addEventListener('DOMContentLoaded', function() {
-        const targetUrl = 'https://book.prudentoe.com/#/279761000000042044';
-        const modal = document.getElementById('bookingPopupModal');
-        const cancelBtn = document.getElementById('cancelBookingBtn');
-        const bookingForm = document.getElementById('bookingForm');
-        const nameInput = document.getElementById('customerName');
-        const emailInput = document.getElementById('email');
-        const phoneInput = document.getElementById('phoneNumber');
-        const address1Input = document.getElementById('address1');
-        const address2Input = document.getElementById('address2');
-        const zipCodeInput = document.getElementById('zipCode');
-        const dateSelector = document.getElementById('dateSelector');
-        const timeSelector = document.getElementById('timeSelector');
-        let selectedDate = null;
-        let selectedTime = null;
-        let bookedSlots = {};
-        function generateTimeSlots() {
-          const slots = [];
-          const startHour = 10;
-          const endHour = 20;
-          const slotDuration = 45;
-          const bufferTime = 90;
-          for (let hour = startHour; hour < endHour; hour++) {
-            for (let minute = 0; minute < 60; minute += (slotDuration + bufferTime)) {
-              if (hour * 60 + minute + slotDuration <= endHour * 60) {
-                const timeString = formatTime(hour, minute);
-                slots.push({
-                  time: timeString,
-                  value: `${hour}:${minute.toString().padStart(2, '0')}`
-                });
-              }
-            }
-          }
-          return slots;
-        }
-        function formatTime(hour, minute) {
-          const period = hour >= 12 ? 'PM' : 'AM';
-          const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-          const displayMinute = minute.toString().padStart(2, '0');
-          return `${displayHour.toString().padStart(2, '0')}:${displayMinute} ${period}`;
-        }
-        function generateDateOptions() {
-          const dates = [];
-          const today = new Date();
-          for (let i = 0; i < 5; i++) {
-            const date = new Date(today);
-            date.setDate(today.getDate() + i);
-            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const dayName = dayNames[date.getDay()];
-            const day = date.getDate();
-            const month = monthNames[date.getMonth()];
-            const availableSlots = Math.floor(Math.random() * 6) + 5;
-            dates.push({
-              date: date,
-              dayName: dayName,
-              day: day,
-              month: month,
-              availableSlots: availableSlots,
-              dateString: date.toISOString().split('T')[0]
+        const modal = document.getElementById('bookingModal');
+        const closeModal = document.getElementById('closeModal');
+        // This line is removed as we handle button initialization in the initializeBookingButtons function
+        
+        // Hyderabad zip codes (sample list - you can expand this)
+        const hyderabadZipCodes = [
+          '500001', '500002', '500003', '500004', '500005', '500006', '500007', '500008', '500009', '500010',
+          '500011', '500012', '500013', '500014', '500015', '500016', '500017', '500018', '500019', '500020',
+          '500021', '500022', '500023', '500024', '500025', '500026', '500027', '500028', '500029', '500030',
+          '500031', '500032', '500033', '500034', '500035', '500036', '500037', '500038', '500039', '500040',
+          '500041', '500042', '500043', '500044', '500045', '500046', '500047', '500048', '500049', '500050',
+          '500051', '500052', '500053', '500054', '500055', '500056', '500057', '500058', '500059', '500060',
+          '500061', '500062', '500063', '500064', '500065', '500066', '500067', '500068', '500069', '500070',
+          '500071', '500072', '500073', '500074', '500075', '500076', '500077', '500078', '500079', '500080',
+          '500081', '500082', '500083', '500084', '500085', '500086', '500087', '500088', '500089', '500090',
+          '500091', '500092', '500093', '500094', '500095', '500096', '500097', '500098', '500099', '500100'
+        ];
+
+        // Find all booking buttons and add event listeners
+        function initializeBookingButtons() {
+          // Find buttons with booking-btn class or "Book An Appointment" text
+          const bookingButtons = document.querySelectorAll('.booking-btn');
+          const allButtons = document.querySelectorAll('button');
+          const allLinks = document.querySelectorAll('a');
+          
+          // Handle buttons with booking-btn class
+          bookingButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              openModal();
             });
-          }
-          return dates;
+          });
+          
+          // Handle any remaining buttons with "Book An Appointment" text
+          allButtons.forEach(button => {
+            if (button.textContent.includes('Book An Appointment') && !button.classList.contains('booking-btn')) {
+              button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal();
+              });
+            }
+          });
+          
+          // Handle any remaining links to booking site
+          allLinks.forEach(link => {
+            if (link.href && link.href.includes('book.prudentoe.com')) {
+              link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal();
+              });
+            }
+          });
         }
-        function renderDateOptions() {
-          const dates = generateDateOptions();
-          dateSelector.innerHTML = '';
-          dates.forEach((dateOption, index) => {
+
+        function openModal() {
+          modal.classList.remove('hidden');
+          // Prevent background scrolling
+          document.body.style.overflow = 'hidden';
+          showStep(1);
+        }
+
+        function closeModalFunc() {
+          modal.classList.add('hidden');
+          // Restore background scrolling
+          document.body.style.overflow = '';
+          resetForm();
+        }
+
+        function showStep(stepNumber) {
+          // Hide all steps
+          document.querySelectorAll('.booking-step').forEach(step => {
+            step.classList.add('hidden');
+          });
+          
+          // Show current step
+          document.getElementById(`step${stepNumber}`).classList.remove('hidden');
+        }
+
+        function resetForm() {
+          // Clear all form fields
+          document.getElementById('phoneNumber').value = '';
+          document.getElementById('fullName').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('address').value = '';
+          document.getElementById('zipcode').value = '';
+          document.getElementById('selectedDate').value = '';
+          document.getElementById('selectedTime').value = '';
+          
+          // Reset date slot selections
+          document.querySelectorAll('.date-slot').forEach(slot => {
+            slot.classList.remove('bg-prudentoe-green', 'text-white');
+            slot.classList.add('border-gray-300');
+          });
+          
+          // Reset time slot selections
+          document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.classList.remove('bg-prudentoe-green', 'text-white');
+            slot.classList.add('border-gray-300');
+          });
+          
+          // Hide error messages
+          document.querySelectorAll('[id$="Error"]').forEach(error => {
+            error.classList.add('hidden');
+          });
+        }
+
+        function validatePhone(phone) {
+          const phoneRegex = /^[+]?[\d\s\-\(\)]{10,}$/;
+          return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        function validateEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function isHyderabadZipCode(zipcode) {
+          return hyderabadZipCodes.includes(zipcode.trim());
+        }
+
+        // Store available slots data
+        let availableSlotsData = [];
+        
+        // Fetch available slots from API
+        async function fetchAvailableSlots() {
+          try {
+            const response = await fetch('/get-available-slots');
+            const data = await response.json();
+            
+            if (data.success) {
+              availableSlotsData = data.available_slots;
+              return availableSlotsData;
+            } else {
+              throw new Error(data.error || 'Failed to fetch available slots');
+            }
+          } catch (error) {
+            console.error('Error fetching available slots:', error);
+            throw error;
+          }
+        }
+        
+        // Generate date buttons from available slots
+        function generateDateButtons(slotsData) {
+          const dateButtonsContainer = document.getElementById('dateButtons');
+          dateButtonsContainer.innerHTML = ''; // Clear existing buttons
+          
+          if (!slotsData || slotsData.length === 0) {
+            dateButtonsContainer.innerHTML = '<p class="text-gray-500 text-sm">No available dates found</p>';
+            return;
+          }
+          
+          slotsData.forEach(dayData => {
             const dateButton = document.createElement('button');
             dateButton.type = 'button';
-            dateButton.className = `p-3 border-2 rounded-10px text-center cursor-pointer transition-colors ${
-              index === 0 ? 'border-prudentoe-green bg-prudentoe-light-green' : 'border-gray-300 hover:border-prudentoe-green'
-            }`;
-            dateButton.innerHTML = `
-              <div class="text-xs font-medium text-prudentoe-dark">${dateOption.dayName}</div>
-              <div class="text-sm font-bold text-prudentoe-dark">${dateOption.day} ${dateOption.month}</div>
-              <div class="text-xs text-prudentoe-green">${dateOption.availableSlots} slots</div>
-            `;
+            dateButton.className = 'date-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-prudentoe-green hover:text-white transition-colors text-sm flex-shrink-0 min-w-[70px]';
+            
+            const date = new Date(dayData.date);
+            const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+            const dayNumber = date.getDate();
+            const monthName = date.toLocaleDateString('en-US', { month: 'short' });
+            
+            dateButton.innerHTML = `<div class="text-center"><div class="text-xs">${dayName}</div><div class="font-bold">${dayNumber}</div><div class="text-xs">${monthName}</div></div>`;
+            dateButton.dataset.date = dayData.date;
+            dateButton.dataset.timeSlots = JSON.stringify(dayData.time_slots);
+            
             dateButton.addEventListener('click', function() {
-              dateSelector.querySelectorAll('button').forEach(btn => {
-                btn.className = btn.className.replace('border-prudentoe-green bg-prudentoe-light-green', 'border-gray-300');
+              // Remove selection from all date buttons
+              document.querySelectorAll('.date-slot').forEach(btn => {
+                btn.classList.remove('bg-prudentoe-green', 'text-white');
+                btn.classList.add('border-gray-300');
               });
-              dateButton.className = dateButton.className.replace('border-gray-300', 'border-prudentoe-green bg-prudentoe-light-green');
-              selectedDate = dateOption.dateString;
-              renderTimeSlots();
+              
+              // Add selection to clicked button
+              this.classList.add('bg-prudentoe-green', 'text-white');
+              this.classList.remove('border-gray-300');
+              
+              // Set hidden input value
+              document.getElementById('selectedDate').value = this.dataset.date;
+              
+              // Generate time slots for selected date
+              const timeSlots = JSON.parse(this.dataset.timeSlots);
+              generateTimeSlots(timeSlots);
+              
+              // Clear selected time
+              document.getElementById('selectedTime').value = '';
             });
-            dateSelector.appendChild(dateButton);
+            
+            dateButtonsContainer.appendChild(dateButton);
           });
-          if (dates.length > 0) {
-            selectedDate = dates[0].dateString;
-            renderTimeSlots();
-          }
         }
-        function renderTimeSlots() {
-          const timeSlots = generateTimeSlots();
-          timeSelector.innerHTML = '';
-          timeSlots.forEach(slot => {
-            const isBooked = bookedSlots[selectedDate] && bookedSlots[selectedDate].includes(slot.value);
+        
+        // Generate time slots for selected date
+        function generateTimeSlots(timeSlots) {
+          const timeSlotsContainer = document.getElementById('timeSlots');
+          timeSlotsContainer.innerHTML = ''; // Clear existing slots
+          
+          if (!timeSlots || timeSlots.length === 0) {
+            timeSlotsContainer.innerHTML = '<p class="text-gray-500 text-sm col-span-2">No available time slots for this date</p>';
+            return;
+          }
+          
+          timeSlots.forEach(timeSlot => {
             const timeButton = document.createElement('button');
             timeButton.type = 'button';
-            timeButton.className = `p-3 border rounded-10px text-center cursor-pointer transition-colors ${
-              isBooked
-                ? 'border-gray-300 bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'border-gray-300 hover:border-prudentoe-green hover:bg-prudentoe-light-green'
-            }`;
-            timeButton.textContent = slot.time;
-            timeButton.disabled = isBooked;
-            if (!isBooked) {
-              timeButton.addEventListener('click', function() {
-                timeSelector.querySelectorAll('button').forEach(btn => {
-                  if (!btn.disabled) {
-                    btn.className = btn.className.replace('border-prudentoe-green bg-prudentoe-green text-white', 'border-gray-300 hover:border-prudentoe-green hover:bg-prudentoe-light-green');
-                  }
-                });
-                timeButton.className = 'p-3 border border-prudentoe-green bg-prudentoe-green text-white rounded-10px text-center cursor-pointer transition-colors';
-                selectedTime = slot.value;
+            timeButton.className = 'time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-prudentoe-green hover:text-white transition-colors';
+            timeButton.dataset.time = timeSlot;
+            
+            // Format time for display (convert 24h to 12h format)
+            const time24 = timeSlot;
+            const [hours, minutes] = time24.split(':');
+            const hour12 = parseInt(hours) > 12 ? parseInt(hours) - 12 : parseInt(hours);
+            const ampm = parseInt(hours) >= 12 ? 'PM' : 'AM';
+            const displayHour = hour12 === 0 ? 12 : hour12;
+            
+            timeButton.textContent = `${displayHour}:${minutes} ${ampm}`;
+            
+            timeButton.addEventListener('click', function() {
+              // Remove selection from all time slots
+              document.querySelectorAll('.time-slot').forEach(btn => {
+                btn.classList.remove('bg-prudentoe-green', 'text-white');
+                btn.classList.add('border-gray-300');
               });
-            }
-            timeSelector.appendChild(timeButton);
+              
+              // Add selection to clicked slot
+              this.classList.add('bg-prudentoe-green', 'text-white');
+              this.classList.remove('border-gray-300');
+              
+              // Set hidden input value
+              document.getElementById('selectedTime').value = this.dataset.time;
+            });
+            
+            timeSlotsContainer.appendChild(timeButton);
           });
         }
-        function showBookingPopup(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          modal.classList.remove('hidden');
-          renderDateOptions();
-          setTimeout(() => {
-            nameInput.focus();
-          }, 100);
-          return false;
-        }
-        function hideBookingPopup() {
-          modal.classList.add('hidden');
-          bookingForm.reset();
-          selectedDate = null;
-          selectedTime = null;
-        }
-        cancelBtn.addEventListener('click', function() {
-          const name = nameInput.value.trim();
-          const email = emailInput.value.trim();
-          const phone = phoneInput.value.trim();
-          const address1 = address1Input.value.trim();
-          const address2 = address2Input.value.trim();
-          const zipCode = zipCodeInput.value.trim();
-          const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
-          const bookingData = {
-            name,
-            email,
-            phone,
-            address1,
-            address2,
-            zipCode,
-            preferredContact: preferredContact ? preferredContact.value : null,
-            date: selectedDate,
-            time: selectedTime
-          };
-          handlePaymentCancellation(bookingData);
-          hideBookingPopup();
-        });
-        modal.addEventListener('click', function(event) {
-          if (event.target === modal) {
-            const name = nameInput.value.trim();
-            const email = emailInput.value.trim();
-            const phone = phoneInput.value.trim();
-            const address1 = address1Input.value.trim();
-            const address2 = address2Input.value.trim();
-            const zipCode = zipCodeInput.value.trim();
-            const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
-            const bookingData = {
-              name,
-              email,
-              phone,
-              address1,
-              address2,
-              zipCode,
-              preferredContact: preferredContact ? preferredContact.value : null,
-              date: selectedDate,
-              time: selectedTime
-            };
-            handlePaymentCancellation(bookingData);
-            hideBookingPopup();
-          }
-        });
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-            const name = nameInput.value.trim();
-            const email = emailInput.value.trim();
-            const phone = phoneInput.value.trim();
-            const address1 = address1Input.value.trim();
-            const address2 = address2Input.value.trim();
-            const zipCode = zipCodeInput.value.trim();
-            const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
-            const bookingData = {
-              name,
-              email,
-              phone,
-              address1,
-              address2,
-              zipCode,
-              preferredContact: preferredContact ? preferredContact.value : null,
-              date: selectedDate,
-              time: selectedTime
-            };
-            handlePaymentCancellation(bookingData);
-            hideBookingPopup();
-          }
-        });
-        bookingForm.addEventListener('submit', function(event) {
-          event.preventDefault();
-          const name = nameInput.value.trim();
-          const email = emailInput.value.trim();
-          const phone = phoneInput.value.trim();
-          const address1 = address1Input.value.trim();
-          const address2 = address2Input.value.trim();
-          const zipCode = zipCodeInput.value.trim();
-          const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
-          if (!name) {
-            alert('Please enter your name');
-            nameInput.focus();
-            return;
-          }
-          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            alert('Please enter a valid email address');
-            emailInput.focus();
-            return;
-          }
-          if (!phone || phone.length !== 10 || !/^\d{10}$/.test(phone)) {
-            alert('Please enter a valid 10-digit phone number');
-            phoneInput.focus();
-            return;
-          }
-          if (!address1) {
-            alert('Please enter your address');
-            address1Input.focus();
-            return;
-          }
-          if (!zipCode || zipCode.length !== 6 || !/^\d{6}$/.test(zipCode)) {
-            alert('Please enter a valid 6-digit zip code');
-            zipCodeInput.focus();
-            return;
-          }
-          if (!preferredContact) {
-            alert('Please select your preferred contact method');
-            return;
-          }
-          if (!selectedDate) {
-            alert('Please select a date for your appointment');
-            return;
-          }
-          if (!selectedTime) {
-            alert('Please select a time slot for your appointment');
-            return;
-          }
-          const bookingData = {
-            name,
-            email,
-            phone,
-            address1,
-            address2,
-            zipCode,
-            preferredContact: preferredContact.value,
-            date: selectedDate,
-            time: selectedTime
-          };
-          initializeRazorpayPayment(bookingData);
-        });
-        function initializeRazorpayPayment(bookingData) {
-          console.log('=== PAYMENT INITIALIZATION DEBUG ===');
-          console.log('Booking data:', bookingData);
-          console.log('Razorpay script loaded:', typeof Razorpay !== 'undefined');
-          console.log('Current URL:', window.location.href);
-          console.log('User agent:', navigator.userAgent);
-          console.log('=====================================');
+        
+        // Load available slots and show step 4
+        async function loadSlotsAndShowStep4() {
+          // First show step 4
+          showStep(4);
           
+          const loadingEl = document.getElementById('slotsLoading');
+          const errorEl = document.getElementById('slotsError');
+          const contentEl = document.getElementById('slotsContent');
+          
+          // Show loading state
+          loadingEl.classList.remove('hidden');
+          errorEl.classList.add('hidden');
+          contentEl.classList.add('hidden');
+          
+          try {
+            const slotsData = await fetchAvailableSlots();
+            
+            // Hide loading, show content
+            loadingEl.classList.add('hidden');
+            contentEl.classList.remove('hidden');
+            
+            // Generate date buttons
+            generateDateButtons(slotsData);
+            
+            // Clear time slots initially
+            document.getElementById('timeSlots').innerHTML = '<p class="text-gray-500 text-sm col-span-2">Please select a date first</p>';
+            
+          } catch (error) {
+            // Hide loading, show error
+            loadingEl.classList.add('hidden');
+            errorEl.classList.remove('hidden');
+            
+            console.error('Failed to load available slots:', error);
+          }
+        }
+        
+        // Reload slots function
+        document.getElementById('reloadSlots').addEventListener('click', function() {
+          loadSlotsAndShowStep4();
+        });
+
+        // Function to extract URL parameters and convert to JSON
+        function getUrlParameters() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const params = {};
+          
+          for (const [key, value] of urlParams.entries()) {
+            params[key] = value;
+          }
+          
+          return params;
+        }
+
+        // Get URL parameters once when page loads
+        const urlParameters = getUrlParameters();
+        console.log('URL Parameters captured:', urlParameters);
+
+        // Event listeners
+        closeModal.addEventListener('click', closeModalFunc);
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModalFunc();
+          }
+        });
+
+        // Step 1: Phone validation and next
+        document.getElementById('step1Next').addEventListener('click', function() {
+          const phone = document.getElementById('phoneNumber').value.trim();
+          const phoneError = document.getElementById('phoneError');
+          
+          if (!phone || !validatePhone(phone)) {
+            phoneError.classList.remove('hidden');
+            return;
+          }
+          
+          phoneError.classList.add('hidden');
+          showStep(2);
+        });
+
+        // Step 2: Personal details validation and next
+        document.getElementById('step2Next').addEventListener('click', function() {
+          const name = document.getElementById('fullName').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const address = document.getElementById('address').value.trim();
+          const zipcode = document.getElementById('zipcode').value.trim();
+          const error = document.getElementById('step2Error');
+          
+          if (!name || !email || !address || !zipcode) {
+            error.textContent = 'Please fill in all fields';
+            error.classList.remove('hidden');
+            return;
+          }
+          
+          if (!validateEmail(email)) {
+            error.textContent = 'Please enter a valid email address';
+            error.classList.remove('hidden');
+            return;
+          }
+          
+          error.classList.add('hidden');
+          
+          // Check if zipcode is from Hyderabad
+          if (isHyderabadZipCode(zipcode)) {
+            // Skip step 3 and go directly to step 4 for valid zipcodes
+            loadSlotsAndShowStep4();
+          } else {
+            // Save data for non-serviceable area
+            const bookingData = {
+              name: name || null,
+              email: email || null,
+              phone: document.getElementById('phoneNumber').value.trim() || null,
+              address1: address || null,
+              zipCode: zipcode || null,
+              preferredContact: 'phone',
+              date: null,
+              time: null,
+              utm_data: urlParameters // Include URL parameters as JSON
+            };
+            
+            // Save to database with area_not_serviceable status
+            saveNonServiceableBooking(bookingData);
+            
+            // Show service not available message for invalid zipcodes
+            document.getElementById('serviceAvailable').classList.add('hidden');
+            document.getElementById('serviceNotAvailable').classList.remove('hidden');
+            showStep(3);
+          }
+        });
+
+        // Step 2: Back button
+        document.getElementById('step2Back').addEventListener('click', function() {
+          showStep(1);
+        });
+
+        // Step 3: Service available - next button
+        document.getElementById('step3Next').addEventListener('click', function() {
+          loadSlotsAndShowStep4();
+        });
+
+        // Step 3: Back buttons
+        document.getElementById('step3Back').addEventListener('click', function() {
+          showStep(2);
+        });
+        
+        document.getElementById('step3BackUnavailable').addEventListener('click', function() {
+          showStep(2);
+        });
+
+        // Time slot selection is now handled dynamically in generateTimeSlots function
+
+        // Step 4: Back button
+        document.getElementById('step4Back').addEventListener('click', function() {
+          showStep(2);
+        });
+
+        // Payment functionality
+        document.getElementById('payButton').addEventListener('click', function() {
+          const selectedDate = document.getElementById('selectedDate').value;
+          const selectedTime = document.getElementById('selectedTime').value;
+          const step4Error = document.getElementById('step4Error');
+          
+          // Validate that both date and time are selected
+          if (!selectedDate || !selectedTime) {
+            step4Error.classList.remove('hidden');
+            return;
+          }
+          
+          step4Error.classList.add('hidden');
+          
+          // Collect all booking data
+          const bookingData = {
+            name: document.getElementById('fullName').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phoneNumber').value.trim(),
+            address1: document.getElementById('address').value.trim(),
+            zipCode: document.getElementById('zipcode').value.trim(),
+            preferredContact: 'phone', // Default to phone
+            date: selectedDate,
+            time: selectedTime,
+            utm_data: urlParameters // Include URL parameters as JSON
+          };
+          
+          // Initiate payment
+          initiatePayment(bookingData);
+        });
+
+        // Payment processing functions
+        function initiatePayment(bookingData) {
+          // Show loading state
+          const payButton = document.getElementById('payButton');
+          const originalText = payButton.textContent;
+          payButton.textContent = 'Processing...';
+          payButton.disabled = true;
+          
+          // Create order on backend
           fetch('/create-order', {
             method: 'POST',
             headers: {
@@ -2632,234 +2818,130 @@
             },
             body: JSON.stringify(bookingData)
           })
-          .then(response => {
-            console.log('Create order response status:', response.status);
-            console.log('Create order response headers:', response.headers);
-            return response.json();
-          })
+          .then(response => response.json())
           .then(data => {
-            console.log('=== ORDER CREATION RESPONSE ===');
-            console.log('Full response:', data);
-            console.log('Success:', data.success);
-            console.log('Order ID:', data.order_id);
-            console.log('Amount:', data.amount);
-            console.log('Currency:', data.currency);
-            console.log('Key ID:', data.key_id);
-            console.log('===============================');
-            
             if (data.success) {
-              // Validate required fields
-              if (!data.key_id || !data.order_id || !data.amount) {
-                console.error('Missing required fields in response:', data);
-                alert('Invalid order response. Missing required fields.');
-                return;
-              }
-              
-              const options = {
-                "key": data.key_id,
-                "amount": data.amount,
-                "currency": data.currency,
-                "name": "Prudentoe Dental",
-                "description": "Dental Appointment Booking (Testing Rs. 1)",
-                "image": "static/images/prudentoe-logo1.png",
-                "order_id": data.order_id,
-                "handler": function (response) {
-                  console.log('=== PAYMENT SUCCESS ===');
-                  console.log('Payment response:', response);
-                  console.log('Payment ID:', response.razorpay_payment_id);
-                  console.log('Order ID:', response.razorpay_order_id);
-                  console.log('Signature:', response.razorpay_signature);
-                  console.log('=======================');
-                  verifyPayment(response, bookingData);
-                },
-                "prefill": {
-                  "name": bookingData.name,
-                  "email": bookingData.email,
-                  "contact": bookingData.phone
-                },
-                "theme": {
-                  "color": "#1A472A"
-                },
-                "modal": {
-                  "ondismiss": function() {
-                    console.log('=== PAYMENT MODAL DISMISSED ===');
-                    console.log('User closed payment modal');
-                    console.log('===============================');
-                    handlePaymentCancellation(bookingData);
-                  }
-                },
-                "retry": {
-                  "enabled": true,
-                  "max_count": 3
-                },
-                "timeout": 300,
-                "remember_customer": false
-              };
-              
-              console.log('=== RAZORPAY OPTIONS ===');
-              console.log('Full options object:', options);
-              console.log('========================');
-              
-              // Validate Razorpay is loaded
-              if (typeof Razorpay === 'undefined') {
-                console.error('Razorpay script not loaded!');
-                alert('Payment system not loaded. Please refresh the page.');
-                return;
-              }
-              
-              const rzp = new Razorpay(options);
-              
-              // Add all possible event listeners for debugging
-              rzp.on('payment.failed', function (response) {
-                console.error('=== PAYMENT FAILED EVENT ===');
-                console.error('Timestamp:', new Date().toISOString());
-                console.error('Full response object:', response);
-                console.error('Error object:', response.error);
-                
-                if (response.error) {
-                  console.error('Error code:', response.error.code);
-                  console.error('Error description:', response.error.description);
-                  console.error('Error source:', response.error.source);
-                  console.error('Error step:', response.error.step);
-                  console.error('Error reason:', response.error.reason);
-                  console.error('Error metadata:', response.error.metadata);
-                  console.error('Error field:', response.error.field);
-                }
-                console.error('============================');
-                
-                // Send detailed error to server
-                fetch('/payment-failed', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    booking_data: bookingData,
-                    error_details: response.error,
-                    timestamp: new Date().toISOString(),
-                    user_agent: navigator.userAgent,
-                    url: window.location.href
-                  })
-                })
-                .then(res => res.json())
-                .then(result => {
-                  console.log('Failed payment recorded with ID:', result.booking_id);
-                })
-                .catch(err => {
-                  console.error('Error recording failed payment:', err);
-                });
-                
-                // Check for specific DPA compliance error
-                if (response.error && response.error.description &&
-                    response.error.description.includes('DPA entity data not found')) {
-                  
-                  let dpaErrorMsg = '🚨 LIVE ACCOUNT SETUP REQUIRED 🚨\n\n';
-                  dpaErrorMsg += 'Your Razorpay live account needs DPA compliance setup.\n\n';
-                  dpaErrorMsg += 'SOLUTION:\n';
-                  dpaErrorMsg += '1. Login to Razorpay Dashboard\n';
-                  dpaErrorMsg += '2. Go to Account & Settings → Compliance\n';
-                  dpaErrorMsg += '3. Complete DPA registration\n';
-                  dpaErrorMsg += '4. Submit required documents\n';
-                  dpaErrorMsg += '5. Wait for approval (2-3 days)\n\n';
-                  dpaErrorMsg += 'Contact: support@razorpay.com\n';
-                  dpaErrorMsg += 'Phone: +91-80-61606161\n\n';
-                  dpaErrorMsg += 'Use test mode while waiting for approval.';
-                  
-                  alert(dpaErrorMsg);
-                  
-                  // Also show in console for easy copy-paste
-                  console.error('=== DPA COMPLIANCE REQUIRED ===');
-                  console.error('Visit: /dpa-compliance-guide for detailed steps');
-                  console.error('===============================');
-                  
-                } else {
-                  // Show detailed error to user for other errors
-                  let errorMsg = 'Payment failed. Please try again.\n\n';
-                  if (response.error) {
-                    errorMsg += 'Error: ' + (response.error.description || 'Unknown error') + '\n';
-                    errorMsg += 'Code: ' + (response.error.code || 'Unknown') + '\n';
-                    errorMsg += 'Step: ' + (response.error.step || 'Unknown') + '\n';
-                    if (response.error.reason) {
-                      errorMsg += 'Reason: ' + response.error.reason + '\n';
-                    }
-                  }
-                  alert(errorMsg);
-                }
-              });
-              
-              // Add modal events for debugging
-              rzp.on('payment.submit', function(response) {
-                console.log('=== PAYMENT SUBMITTED ===');
-                console.log('Payment submitted:', response);
-                console.log('=========================');
-              });
-              
-              rzp.on('payment.cancel', function(response) {
-                console.log('=== PAYMENT CANCELLED ===');
-                console.log('Payment cancelled:', response);
-                console.log('=========================');
-              });
-              
-              console.log('=== OPENING RAZORPAY CHECKOUT ===');
-              console.log('About to call rzp.open()');
-              console.log('=================================');
-              
-              try {
-                rzp.open();
-                console.log('Razorpay checkout opened successfully');
-              } catch (error) {
-                console.error('Error opening Razorpay checkout:', error);
-                alert('Error opening payment gateway: ' + error.message);
-              }
-              
+              // Open Razorpay checkout
+              openRazorpayCheckout(data, bookingData);
             } else {
-              console.error('Order creation failed:', data.error);
-              alert('Error creating order: ' + data.error);
+              throw new Error(data.error || 'Failed to create order');
             }
           })
           .catch(error => {
-            console.error('Network error creating order:', error);
-            console.error('Error stack:', error.stack);
-            alert('Network error creating order. Please check your connection and try again.');
+            console.error('Error creating order:', error);
+            alert('Failed to initiate payment. Please try again.');
+            
+            // Reset button
+            payButton.textContent = originalText;
+            payButton.disabled = false;
+            
+            // Log payment failure
+            logPaymentFailure(bookingData, {
+              code: 'ORDER_CREATION_FAILED',
+              description: error.message,
+              source: 'frontend',
+              step: 'order_creation'
+            });
           });
         }
-        function verifyPayment(response, bookingData) {
+
+        function openRazorpayCheckout(orderData, bookingData) {
+          const options = {
+            key: orderData.key_id,
+            amount: orderData.amount,
+            currency: orderData.currency,
+            name: 'Prudentoe Dental',
+            description: 'Dental Appointment Booking',
+            image: '/static/images/prudentoe-logo1.png',
+            order_id: orderData.order_id,
+            handler: function(response) {
+              // Payment successful
+              verifyPayment(response, bookingData);
+            },
+            prefill: {
+              name: bookingData.name,
+              email: bookingData.email,
+              contact: bookingData.phone
+            },
+            notes: {
+              address: bookingData.address1,
+              zipcode: bookingData.zipCode,
+              appointment_date: bookingData.date,
+              appointment_time: bookingData.time
+            },
+            theme: {
+              color: '#1A472A'
+            },
+            modal: {
+              ondismiss: function() {
+                // Payment cancelled
+                logPaymentCancellation(bookingData);
+                resetPayButton();
+              }
+            }
+          };
+
+          const rzp = new Razorpay(options);
+          
+          rzp.on('payment.failed', function(response) {
+            // Payment failed
+            logPaymentFailure(bookingData, response.error);
+            resetPayButton();
+            alert('Payment failed. Please try again.');
+          });
+
+          rzp.open();
+        }
+
+        function verifyPayment(paymentResponse, bookingData) {
           fetch('/verify-payment', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              razorpay_order_id: response.razorpay_order_id,
-              razorpay_payment_id: response.razorpay_payment_id,
-              razorpay_signature: response.razorpay_signature,
+              razorpay_order_id: paymentResponse.razorpay_order_id,
+              razorpay_payment_id: paymentResponse.razorpay_payment_id,
+              razorpay_signature: paymentResponse.razorpay_signature,
               booking_data: bookingData
             })
           })
           .then(response => response.json())
           .then(data => {
             if (data.success) {
-              console.log('Payment verified:', response);
-              console.log('Booking saved with ID:', data.booking_id);
-              if (!bookedSlots[bookingData.date]) {
-                bookedSlots[bookingData.date] = [];
-              }
-              bookedSlots[bookingData.date].push(bookingData.time);
-              showThankYouMessage(bookingData, response.razorpay_payment_id);
-              hideBookingPopup();
+              // Payment verified successfully
+              showPaymentSuccess(bookingData, data.booking_id);
             } else {
-              alert('Payment verification failed: ' + data.error);
+              throw new Error(data.error || 'Payment verification failed');
             }
           })
           .catch(error => {
-            console.error('Error:', error);
-            alert('Error verifying payment. Please contact support.');
+            console.error('Error verifying payment:', error);
+            alert('Payment verification failed. Please contact support.');
+            resetPayButton();
           });
         }
-        function handlePaymentCancellation(bookingData) {
-          if (!bookingData.phone && !bookingData.email) {
-            return;
-          }
+
+        function logPaymentFailure(bookingData, errorDetails) {
+          fetch('/payment-failed', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              booking_data: bookingData,
+              error_details: errorDetails,
+              timestamp: new Date().toISOString(),
+              user_agent: navigator.userAgent,
+              url: window.location.href
+            })
+          })
+          .catch(error => {
+            console.error('Error logging payment failure:', error);
+          });
+        }
+
+        function logPaymentCancellation(bookingData) {
           fetch('/payment-cancelled', {
             method: 'POST',
             headers: {
@@ -2869,78 +2951,68 @@
               booking_data: bookingData
             })
           })
+          .catch(error => {
+            console.error('Error logging payment cancellation:', error);
+          });
+        }
+
+        function showPaymentSuccess(bookingData, bookingId) {
+          // Create URL parameters for the thank you page
+          const params = new URLSearchParams();
+          
+          if (bookingData.name) params.append('name', bookingData.name);
+          if (bookingData.date) params.append('date', bookingData.date);
+          if (bookingData.time) params.append('time', bookingData.time);
+          if (bookingData.phone) params.append('phone', bookingData.phone);
+          if (bookingId) params.append('booking_id', bookingId);
+          
+          // Redirect to thank you page with booking details
+          const thankYouUrl = `/thank-you?${params.toString()}`;
+          window.location.href = thankYouUrl;
+        }
+
+        function resetPayButton() {
+          const payButton = document.getElementById('payButton');
+          payButton.textContent = 'Pay ₹99';
+          payButton.disabled = false;
+        }
+
+        // Function to save booking data for non-serviceable areas
+        function saveNonServiceableBooking(bookingData) {
+          fetch('/save-non-serviceable', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              booking_data: bookingData
+            })
+          })
           .then(response => response.json())
           .then(data => {
-            if (data.success) {
-              console.log('Payment cancellation recorded with ID:', data.booking_id);
-            }
+            console.log('Non-serviceable booking saved:', data);
           })
           .catch(error => {
-            console.error('Error recording cancellation:', error);
+            console.error('Error saving non-serviceable booking:', error);
           });
         }
-        function showThankYouMessage(bookingData, paymentId) {
-          const thankYouOverlay = document.createElement('div');
-          thankYouOverlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
-          thankYouOverlay.innerHTML = `
-            <div class="bg-white rounded-20px shadow-custom-box p-8 mx-4 w-full max-w-md text-center">
-              <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <h2 class="text-prudentoe-green font-bold text-xl mb-2">Payment Successful!</h2>
-              <p class="text-prudentoe-dark text-sm mb-4">
-                Thank you ${bookingData.name}! Your appointment has been booked for ${bookingData.date} at ${bookingData.time}.
-              </p>
-              <p class="text-gray-600 text-xs mb-4">
-                Payment ID: ${paymentId}<br>
-                We'll contact you via ${bookingData.preferredContact} shortly.
-              </p>
-              <button class="bg-prudentoe-green text-white py-2 px-6 rounded-10px font-medium text-sm hover:bg-opacity-90 transition-colors" onclick="this.parentElement.parentElement.remove()">
-                Close
-              </button>
-            </div>
-          `;
-          document.body.appendChild(thankYouOverlay);
-          setTimeout(() => {
-            if (thankYouOverlay.parentElement) {
-              thankYouOverlay.remove();
+
+        // Initialize booking buttons
+        initializeBookingButtons();
+        
+        // Re-initialize when new content is added (for dynamic content)
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+              initializeBookingButtons();
             }
-          }, 5000);
-        }
-        const bookingLinks = document.querySelectorAll(`a[href="${targetUrl}"]`);
-        bookingLinks.forEach(function(link) {
-          link.addEventListener('click', showBookingPopup);
-          const buttonsInLink = link.querySelectorAll('button');
-          buttonsInLink.forEach(function(button) {
-            button.addEventListener('click', showBookingPopup);
           });
         });
-        const allButtons = document.querySelectorAll('button');
-        allButtons.forEach(function(button) {
-          const parentLink = button.closest(`a[href="${targetUrl}"]`);
-          if (parentLink) {
-            button.addEventListener('click', showBookingPopup);
-          }
+        
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
         });
-        const originalOpen = window.open;
-        window.open = function(url, target, features) {
-          if (url && url.includes('book.prudentoe.com/#/279761000000042044')) {
-            showBookingPopup({ preventDefault: function() {}, stopPropagation: function() {} });
-            return null;
-          }
-          return originalOpen.call(this, url, target, features);
-        };
-        const originalAssign = window.location.assign;
-        window.location.assign = function(url) {
-          if (url && url.includes('book.prudentoe.com/#/279761000000042044')) {
-            showBookingPopup({ preventDefault: function() {}, stopPropagation: function() {} });
-            return;
-          }
-          return originalAssign.call(this, url);
-        };
-        console.log(`Found and intercepted ${bookingLinks.length} booking links`);
       });
     </script>
   </body>

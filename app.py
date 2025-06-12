@@ -4,9 +4,13 @@ import hmac
 import hashlib
 import logging
 import traceback
-from datetime import datetime
+import datetime
 import os
 from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 app = Flask(__name__)
 
@@ -22,19 +26,122 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Payment Configuration
-PAYMENT_AMOUNT_RS = 1  # Change this to 99 for production
+PAYMENT_AMOUNT_RS = 99  # Payment amount for dental appointment booking
 PAYMENT_AMOUNT_PAISE = PAYMENT_AMOUNT_RS * 100  # Convert to paise
 
 RAZORPAY_KEY_ID = os.getenv('RAZORPAY_KEY_ID','') if os.getenv('RAZORPAY_KEY_ID','') != '' else 'rzp_test_mTfoYlS40taGLb'
 RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET','') if os.getenv('RAZORPAY_KEY_SECRET','') != '' else '4PNcnzuY2KzAda8ar45Cahwn'
 
 # Supabase credentials
-SUPABASE_URL = 'https://ojslpvgxujrixjwqcvag.supabase.co'
-SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qc2xwdmd4dWpyaXhqd3FjdmFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzMTkyMDIsImV4cCI6MjA2NDg5NTIwMn0.PBcusMoKw1r33gwkZ5RuM98QTUdBM6Zv9gY8WhWOLXg'
+SUPABASE_URL = os.getenv('SUPABASE_URL', 'https://ojslpvgxujrixjwqcvag.supabase.co')
+SUPABASE_KEY = os.getenv('SUPABASE_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qc2xwdmd4dWpyaXhqd3FjdmFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzMTkyMDIsImV4cCI6MjA2NDg5NTIwMn0.PBcusMoKw1r33gwkZ5RuM98QTUdBM6Zv9gY8WhWOLXg')
 
 # Initialize clients
 razorpay_client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+def generate_time_slots(
+    num_days: int = 15,
+    start_time_str: str = "10:00",
+    end_time_str: str = "20:00",
+    slot_duration_mins: int = 45
+) -> list[dict]:
+    today = datetime.date.today()
+    start_date = today + datetime.timedelta(days=1)
+    day_names = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    try:
+        start_time = datetime.datetime.strptime(start_time_str, '%H:%M').time()
+        end_time = datetime.datetime.strptime(end_time_str, '%H:%M').time()
+    except ValueError:
+        raise ValueError("Invalid time format. Please use 'HH:MM'.")
+    all_days_slots = []
+    for i in range(num_days):
+        current_date = start_date + datetime.timedelta(days=i)
+        day_of_week = day_names[current_date.weekday()] 
+        time_slots_for_day = []
+        current_slot_time = datetime.datetime.combine(current_date, start_time)
+        end_datetime = datetime.datetime.combine(current_date, end_time)
+        while current_slot_time < end_datetime:
+            time_slots_for_day.append(current_slot_time.strftime('%H:%M'))
+            current_slot_time += datetime.timedelta(minutes=slot_duration_mins)
+        day_data = {
+            "date": current_date.strftime('%Y-%m-%d'), 
+            "day": day_of_week,
+            "time_slots": time_slots_for_day
+        }
+        all_days_slots.append(day_data)
+    return all_days_slots
+
+def get_formatted_booked_slots(supabase_client: Client) -> list[dict]:
+    try:
+        response = supabase_client.table('booking').select('selected_date, selected_time, payment_status').eq('payment_status', 'success').execute()
+        if not response.data:
+            return []
+        booked_slots_by_date = {}
+        for booking in response.data:
+            date_str = booking.get('selected_date')
+            time_str = booking.get('selected_time')
+            if date_str and time_str:
+                try:
+                    datetime.datetime.strptime(date_str, '%Y-%m-%d')
+                    if date_str not in booked_slots_by_date:
+                        booked_slots_by_date[date_str] = []
+                    booked_slots_by_date[date_str].append(time_str)
+                except ValueError:
+                    print(f"Warning: Invalid date format '{date_str}' in booking data. Skipping entry.")
+                    continue
+        formatted_data = []
+        sorted_dates = sorted(booked_slots_by_date.keys())
+        for date_str in sorted_dates:
+            times = sorted(list(set(booked_slots_by_date[date_str])))
+            try:
+                date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
+                day_name = date_obj.strftime('%A')  
+                formatted_data.append({
+                    "date": date_str,
+                    "day": day_name,
+                    "time_slots": times
+                })
+            except ValueError:
+                print(f"Warning: Could not parse date '{date_str}' during final formatting. Skipping this date.")
+                continue
+        return formatted_data
+    except Exception as e:
+        print(f"An error occurred while fetching or processing booked slots: {e}")
+        return []
+
+def get_available_slots(generated_slots: list[dict] = generate_time_slots(), booked_slots: list[dict] = get_formatted_booked_slots(supabase)) -> list[dict]:
+    available_slots_result = []
+    booked_slots_map = {slot_info['date']: slot_info.get('time_slots', []) for slot_info in booked_slots}
+    for day_data in generated_slots:
+        date_str = day_data['date']
+        day_name = day_data['day']
+        all_time_slots_for_day = day_data.get('time_slots', [])
+        booked_time_slots_for_day = booked_slots_map.get(date_str, [])
+        all_unavailable_slots = set()
+        if booked_time_slots_for_day:
+            for booked_slot in booked_time_slots_for_day:
+                try:
+                    idx = all_time_slots_for_day.index(booked_slot)
+                    start_index = max(0, idx - 2)
+                    end_index = min(len(all_time_slots_for_day), idx + 3)
+                    for i in range(start_index, end_index):
+                        all_unavailable_slots.add(all_time_slots_for_day[i])
+                except ValueError:
+                    print(f"Warning: Booked slot {booked_slot} on {date_str} not found in generated slots. It will be ignored for buffer calculation.")
+                    all_unavailable_slots.add(booked_slot) 
+        current_available_slots = [
+            slot for slot in all_time_slots_for_day 
+            if slot not in all_unavailable_slots
+        ]
+        if current_available_slots:
+            available_slots_result.append({
+                "date": date_str,
+                "day": day_name,
+                "time_slots": current_available_slots
+            })
+    return available_slots_result
+
 
 # Helper function to save booking data to Supabase
 def save_booking_to_db(booking_data, payment_status):
@@ -44,16 +151,16 @@ def save_booking_to_db(booking_data, payment_status):
             return None
             
         data = {
-            'name': booking_data.get('name'),
-            'email': booking_data.get('email'),
-            'phone_number': booking_data.get('phone'),
-            'address_line_1': booking_data.get('address1'),
-            'address_line_2': booking_data.get('address2'),
-            'zip_code': booking_data.get('zipCode'),
-            'contact_method': booking_data.get('preferredContact'),
-            'selected_date': booking_data.get('date'),
-            'selected_time': booking_data.get('time'),
-            'payment_status': payment_status
+            'name': booking_data.get('name') or None,
+            'email': booking_data.get('email') or None,
+            'phone_number': booking_data.get('phone') or None,
+            'address': booking_data.get('address1') or None,
+            'zipcode': booking_data.get('zipCode') or None,
+            'contact_method': booking_data.get('preferredContact') or None,
+            'selected_date': booking_data.get('date') or None,
+            'selected_time': booking_data.get('time') or None,
+            'payment_status': payment_status,
+            'utm_data': booking_data.get('utm_data') or {}
         }
         
         result = supabase.table('booking').insert(data).execute()
@@ -66,6 +173,10 @@ def save_booking_to_db(booking_data, payment_status):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/thank-you')
+def thank_you():
+    return render_template('thank-you.html')
 
 @app.route('/create-order', methods=['POST'])
 def create_order():
@@ -80,17 +191,16 @@ def create_order():
         order_data = {
             'amount': PAYMENT_AMOUNT_PAISE,  # Amount in paise
             'currency': 'INR',
-            'receipt': f"bk_{data.get('phone', 'unk')[:8]}_{datetime.now().strftime('%m%d_%H%M%S')}",
+            'receipt': f"bk_{data.get('phone', 'unk')[:8]}_{datetime.datetime.now().strftime('%m%d_%H%M%S')}",
             'notes': {
                 'name': data.get('name'),
                 'email': data.get('email'),
                 'phone': data.get('phone'),
-                'address1': data.get('address1'),
-                'address2': data.get('address2'),
-                'zipCode': data.get('zipCode'),
-                'preferredContact': data.get('preferredContact'),
-                'date': data.get('date'),
-                'time': data.get('time'),
+                'address': data.get('address1'),  # Updated field name
+                'zipcode': data.get('zipCode'),   # Updated field name
+                'contact_method': data.get('preferredContact'),  # Updated field name
+                'selected_date': data.get('date'),  # Updated field name
+                'selected_time': data.get('time'),  # Updated field name
                 'booking_type': 'dental_appointment'
             }
         }
@@ -253,6 +363,34 @@ def payment_failed():
             'error': str(e)
         }), 500
 
+@app.route('/save-non-serviceable', methods=['POST'])
+def save_non_serviceable():
+    try:
+        # Get booking data from request
+        data = request.get_json()
+        booking_data = data.get('booking_data', {})
+        
+        logger.info(f"Saving non-serviceable booking for: {booking_data.get('name', 'Unknown')}")
+        logger.info(f"Zipcode: {booking_data.get('zipCode', 'Unknown')}")
+        
+        # Save to database with area_not_serviceable status
+        db_result = save_booking_to_db(booking_data, 'area_not_serviceable')
+        
+        logger.info(f"Non-serviceable booking saved: {db_result}")
+        
+        return jsonify({
+            'success': True,
+            'message': 'Non-serviceable booking recorded',
+            'booking_id': db_result.get('id') if db_result else None
+        })
+        
+    except Exception as e:
+        logger.error(f"Error saving non-serviceable booking: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
 @app.route('/config', methods=['GET'])
 def get_config():
     """Endpoint to check current payment configuration"""
@@ -274,7 +412,7 @@ def test_razorpay():
         test_order_data = {
             'amount': 100,  # Rs. 1
             'currency': 'INR',
-            'receipt': f"test_{datetime.now().strftime('%m%d_%H%M%S')}"
+            'receipt': f"test_{datetime.datetime.now().strftime('%m%d_%H%M%S')}"
         }
         
         order = razorpay_client.order.create(data=test_order_data)
@@ -338,7 +476,7 @@ def diagnose_payment():
             test_order = razorpay_client.order.create({
                 'amount': 100,
                 'currency': 'INR',
-                'receipt': f"diag_{datetime.now().strftime('%m%d_%H%M%S')}"
+                'receipt': f"diag_{datetime.datetime.now().strftime('%m%d_%H%M%S')}"
             })
             diagnostics['connection_test'] = 'SUCCESS'
             diagnostics['test_order_id'] = test_order['id']
@@ -358,6 +496,32 @@ def diagnose_payment():
             'error': str(e),
             'message': 'Diagnostic failed'
         }), 500
+
+@app.route('/get-available-slots', methods=['GET'])
+def get_available_slots_endpoint():
+    """Endpoint to get available time slots for booking"""
+    try:
+        # Generate time slots
+        generated_slots = generate_time_slots()
+        
+        # Get booked slots from database
+        booked_slots = get_formatted_booked_slots(supabase)
+        
+        # Get available slots by comparing generated and booked slots
+        available_slots = get_available_slots(generated_slots, booked_slots)
+        
+        return jsonify({
+            'success': True,
+            'available_slots': available_slots
+        })
+        
+    except Exception as e:
+        logger.error(f"Error fetching available slots: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
 
 @app.route('/dpa-compliance-guide', methods=['GET'])
 def dpa_compliance_guide():
