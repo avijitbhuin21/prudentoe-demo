@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
 import razorpay
 import hmac
 import hashlib
@@ -15,6 +15,11 @@ load_dotenv()
 
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key-for-dashboard-sessions'  # Change this in production
+
+# Dashboard credentials
+DASHBOARD_USERNAME = 'admin'
+DASHBOARD_PASSWORD = 'Prudentoe@2025'
 
 # Configure logging
 logging.basicConfig(
@@ -589,6 +594,86 @@ def dpa_compliance_guide():
             'note': 'Switch to test credentials while waiting for DPA approval'
         }
     })
+
+# Dashboard Routes
+@app.route('/dashboard/login', methods=['GET', 'POST'])
+def dashboard_login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        
+        if username == DASHBOARD_USERNAME and password == DASHBOARD_PASSWORD:
+            session['dashboard_logged_in'] = True
+            session['dashboard_user'] = username
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Invalid credentials. Please try again.', 'error')
+    
+    return render_template('dashboard_login.html')
+
+@app.route('/dashboard')
+def dashboard():
+    if not session.get('dashboard_logged_in'):
+        return redirect(url_for('dashboard_login'))
+    
+    try:
+        # Fetch all booking data from Supabase
+        response = supabase.table('booking').select('*').order('created_at', desc=True).execute()
+        bookings = response.data if response.data else []
+        
+        # Process the data for better display
+        for booking in bookings:
+            # Format created_at timestamp
+            if booking.get('created_at'):
+                try:
+                    dt = datetime.datetime.fromisoformat(booking['created_at'].replace('Z', '+00:00'))
+                    booking['formatted_date'] = dt.strftime('%d %b %Y')
+                    booking['formatted_time'] = dt.strftime('%I:%M %p')
+                except:
+                    booking['formatted_date'] = 'N/A'
+                    booking['formatted_time'] = 'N/A'
+            
+            # Format appointment date and time
+            if booking.get('selected_date') and booking.get('selected_time'):
+                try:
+                    apt_dt = datetime.datetime.strptime(f"{booking['selected_date']} {booking['selected_time']}", '%Y-%m-%d %H:%M')
+                    booking['appointment_display'] = apt_dt.strftime('%d %b %Y, %I:%M %p')
+                except:
+                    booking['appointment_display'] = f"{booking.get('selected_date', 'N/A')}, {booking.get('selected_time', 'N/A')}"
+            else:
+                booking['appointment_display'] = 'Not scheduled'
+            
+            # Set status color and display
+            status = booking.get('payment_status', 'unknown')
+            if status == 'success':
+                booking['status_class'] = 'status-completed'
+                booking['status_display'] = 'Completed'
+            elif status == 'failed':
+                booking['status_class'] = 'status-failed'
+                booking['status_display'] = 'Failed'
+            elif status == 'cancelled':
+                booking['status_class'] = 'status-cancelled'
+                booking['status_display'] = 'Cancelled'
+            elif status == 'area_not_serviceable':
+                booking['status_class'] = 'status-not-serviceable'
+                booking['status_display'] = 'Area Not Serviceable'
+            else:
+                booking['status_class'] = 'status-pending'
+                booking['status_display'] = 'Pending'
+        
+        return render_template('dashboard.html', bookings=bookings)
+        
+    except Exception as e:
+        logger.error(f"Error fetching dashboard data: {str(e)}")
+        flash('Error loading dashboard data', 'error')
+        return render_template('dashboard.html', bookings=[])
+
+@app.route('/dashboard/logout')
+def dashboard_logout():
+    session.pop('dashboard_logged_in', None)
+    session.pop('dashboard_user', None)
+    flash('You have been logged out successfully.', 'success')
+    return redirect(url_for('dashboard_login'))
 
 if __name__ == '__main__':
     logger.info(f"Starting Flask app with payment amount: Rs. {PAYMENT_AMOUNT_RS}")
