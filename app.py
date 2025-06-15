@@ -190,9 +190,9 @@ def save_booking_to_db(booking_data, payment_status):
 def index():
     return render_template('index.html')
 
-@app.route('/cancelation-policy')
-def cancelation_policy():
-    return render_template('cancelation-policy.html')
+@app.route('/cancellation-policy')
+def cancellation_policy():
+    return render_template('cancellation-policy.html')
 
 @app.route('/refund-policy')
 def refund_policy():
