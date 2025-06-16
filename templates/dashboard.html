@@ -279,7 +279,7 @@
             border-bottom: 1px solid hsl(var(--border));
             padding: 1rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1.5fr 1.2fr 0.8fr 1fr;
+            grid-template-columns: 1fr 1fr 0.8fr 1fr 2fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
             gap: 1rem;
             align-items: center;
         }
@@ -296,7 +296,7 @@
             border-bottom: 1px solid hsl(var(--border));
             padding: 1rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1.5fr 1.2fr 0.8fr 1fr;
+            grid-template-columns: 1fr 1fr 0.8fr 1fr 2fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
             gap: 1rem;
             align-items: center;
             transition: background-color 0.2s ease;
@@ -350,6 +350,35 @@
         .appointment-info {
             font-size: 0.8125rem;
             color: hsl(var(--foreground));
+        }
+
+        .address-info {
+            font-size: 0.8125rem;
+            color: hsl(var(--muted-foreground));
+            word-break: break-word;
+            line-height: 1.4;
+        }
+
+        .zipcode-info {
+            font-size: 0.8125rem;
+            color: hsl(var(--foreground));
+            font-weight: 500;
+        }
+
+        .contact-method-info {
+            font-size: 0.8125rem;
+            color: hsl(var(--foreground));
+            text-transform: capitalize;
+        }
+
+        .utm-data-info {
+            font-size: 0.75rem;
+            color: hsl(var(--muted-foreground));
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            word-break: break-all;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .amount-cell {
@@ -435,6 +464,24 @@
         }
 
         /* Responsive */
+        @media (max-width: 1400px) {
+            .table-header,
+            .table-row {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 0.5rem;
+            }
+            
+            /* Hide less critical columns on medium screens */
+            .table-header .table-header-cell:nth-child(5), /* Address */
+            .table-row .table-cell:nth-child(5),
+            .table-header .table-header-cell:nth-child(6), /* Zipcode */
+            .table-row .table-cell:nth-child(6),
+            .table-header .table-header-cell:nth-child(11), /* UTM Data */
+            .table-row .table-cell:nth-child(11) {
+                display: none;
+            }
+        }
+
         @media (max-width: 1024px) {
             .table-header,
             .table-row {
@@ -451,6 +498,18 @@
             .table-header-cell:last-child,
             .table-cell:last-child {
                 border-bottom: none;
+            }
+
+            /* Show labels for mobile view */
+            .table-cell::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: hsl(var(--muted-foreground));
+                display: block;
+                margin-bottom: 0.25rem;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
             }
         }
 
@@ -604,46 +663,72 @@
                     <div class="table-header-cell">Customer Name</div>
                     <div class="table-header-cell">Phone Number</div>
                     <div class="table-header-cell">Email Address</div>
+                    <div class="table-header-cell">Address</div>
+                    <div class="table-header-cell">Zipcode</div>
+                    <div class="table-header-cell">Contact Method</div>
                     <div class="table-header-cell">Appointment</div>
                     <div class="table-header-cell">Amount</div>
                     <div class="table-header-cell">Status</div>
+                    <div class="table-header-cell">UTM Data</div>
                 </div>
 
                 {% if bookings %}
                     {% for booking in bookings %}
                     <div class="table-row" data-status="{{ booking.payment_status }}" data-appointment="{{ booking.selected_date or '' }}" data-booking-id="{{ booking.id }}">
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Booking Date">
                             <div class="date-cell">
                                 <div class="date-primary">{{ booking.formatted_date }}</div>
                                 <div class="date-secondary">{{ booking.formatted_time }}</div>
                             </div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Customer Name">
                             <div class="customer-name">{{ booking.name or 'N/A' }}</div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Phone Number">
                             <div class="contact-info">{{ booking.phone_number or 'N/A' }}</div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Email Address">
                             <div class="email-info">{{ booking.email or 'N/A' }}</div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Address">
+                            <div class="address-info">{{ booking.address or 'N/A' }}</div>
+                        </div>
+
+                        <div class="table-cell" data-label="Zipcode">
+                            <div class="zipcode-info">{{ booking.zipcode or 'N/A' }}</div>
+                        </div>
+
+                        <div class="table-cell" data-label="Contact Method">
+                            <div class="contact-method-info">{{ booking.contact_method or 'N/A' }}</div>
+                        </div>
+
+                        <div class="table-cell" data-label="Appointment">
                             <div class="appointment-info">{{ booking.appointment_display }}</div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Amount">
                             <div class="amount-cell">
                                 {% if booking.payment_status == 'success' %}₹99{% else %}₹0{% endif %}
                             </div>
                         </div>
 
-                        <div class="table-cell">
+                        <div class="table-cell" data-label="Status">
                             <div class="status-badge {{ booking.status_class }}">
                                 {{ booking.status_display }}
+                            </div>
+                        </div>
+
+                        <div class="table-cell" data-label="UTM Data">
+                            <div class="utm-data-info">
+                                {% if booking.utm_data and booking.utm_data != '{}' %}
+                                    {{ booking.utm_data | tojson }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
                             </div>
                         </div>
                     </div>

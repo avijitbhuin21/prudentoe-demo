@@ -3479,3 +3479,556 @@ razorpay.errors.BadRequestError: receipt: the length must be no more than 40.
 2025-06-14 02:03:47,726 - INFO - 127.0.0.1 - - [14/Jun/2025 02:03:47] "GET /dashboard HTTP/1.1" 200 -
 2025-06-14 02:03:52,243 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
 2025-06-14 02:03:52,297 - INFO - 127.0.0.1 - - [14/Jun/2025 02:03:52] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:04:23,916 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:04:23,926 - INFO - 127.0.0.1 - - [14/Jun/2025 02:04:23] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:04:54,560 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:04:54,564 - INFO - 127.0.0.1 - - [14/Jun/2025 02:04:54] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:05:25,660 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:05:25,667 - INFO - 127.0.0.1 - - [14/Jun/2025 02:05:25] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:05:57,011 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:05:57,023 - INFO - 127.0.0.1 - - [14/Jun/2025 02:05:57] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:06:27,678 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:06:27,681 - INFO - 127.0.0.1 - - [14/Jun/2025 02:06:27] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:06:59,275 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:06:59,291 - INFO - 127.0.0.1 - - [14/Jun/2025 02:06:59] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:07:23,522 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:07:23,532 - INFO - 127.0.0.1 - - [14/Jun/2025 02:07:23] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:07:39,906 - INFO - 127.0.0.1 - - [14/Jun/2025 02:07:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-14 02:07:54,607 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:07:54,612 - INFO - 127.0.0.1 - - [14/Jun/2025 02:07:54] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:07:54,656 - INFO - 127.0.0.1 - - [14/Jun/2025 02:07:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-14 02:08:25,847 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:08:25,858 - INFO - 127.0.0.1 - - [14/Jun/2025 02:08:25] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:08:25,898 - INFO - 127.0.0.1 - - [14/Jun/2025 02:08:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-14 02:08:57,215 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:08:57,218 - INFO - 127.0.0.1 - - [14/Jun/2025 02:08:57] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:08:57,254 - INFO - 127.0.0.1 - - [14/Jun/2025 02:08:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-14 02:09:28,674 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:09:28,678 - INFO - 127.0.0.1 - - [14/Jun/2025 02:09:28] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:09:28,741 - INFO - 127.0.0.1 - - [14/Jun/2025 02:09:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-14 02:09:59,947 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:09:59,951 - INFO - 127.0.0.1 - - [14/Jun/2025 02:09:59] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:10:31,840 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:10:31,845 - INFO - 127.0.0.1 - - [14/Jun/2025 02:10:31] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:11:03,649 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:11:03,673 - INFO - 127.0.0.1 - - [14/Jun/2025 02:11:03] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:11:35,850 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:11:35,853 - INFO - 127.0.0.1 - - [14/Jun/2025 02:11:35] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:12:06,715 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:12:06,732 - INFO - 127.0.0.1 - - [14/Jun/2025 02:12:06] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:12:37,873 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:12:37,878 - INFO - 127.0.0.1 - - [14/Jun/2025 02:12:37] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:12:45,103 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:12:45,107 - INFO - 127.0.0.1 - - [14/Jun/2025 02:12:45] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:13:17,164 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:13:17,168 - INFO - 127.0.0.1 - - [14/Jun/2025 02:13:17] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:13:48,909 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:13:48,923 - INFO - 127.0.0.1 - - [14/Jun/2025 02:13:48] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:14:21,025 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:14:21,030 - INFO - 127.0.0.1 - - [14/Jun/2025 02:14:21] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:14:51,728 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:14:51,732 - INFO - 127.0.0.1 - - [14/Jun/2025 02:14:51] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:15:23,140 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:15:23,147 - INFO - 127.0.0.1 - - [14/Jun/2025 02:15:23] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:15:55,092 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:15:55,096 - INFO - 127.0.0.1 - - [14/Jun/2025 02:15:55] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:16:26,710 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:16:26,724 - INFO - 127.0.0.1 - - [14/Jun/2025 02:16:26] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:16:59,186 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:16:59,189 - INFO - 127.0.0.1 - - [14/Jun/2025 02:16:59] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:17:31,257 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:17:31,379 - INFO - 127.0.0.1 - - [14/Jun/2025 02:17:31] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:18:16,709 - INFO - 127.0.0.1 - - [14/Jun/2025 02:18:16] "[32mGET /dashboard/logout HTTP/1.1[0m" 302 -
+2025-06-14 02:18:16,724 - INFO - 127.0.0.1 - - [14/Jun/2025 02:18:16] "GET /dashboard/login HTTP/1.1" 200 -
+2025-06-14 02:18:19,037 - INFO - 127.0.0.1 - - [14/Jun/2025 02:18:19] "[32mPOST /dashboard/login HTTP/1.1[0m" 302 -
+2025-06-14 02:18:19,617 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:18:19,622 - INFO - 127.0.0.1 - - [14/Jun/2025 02:18:19] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:18:50,803 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:18:50,814 - INFO - 127.0.0.1 - - [14/Jun/2025 02:18:50] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:19:22,877 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:19:22,882 - INFO - 127.0.0.1 - - [14/Jun/2025 02:19:22] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:19:55,005 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:19:55,012 - INFO - 127.0.0.1 - - [14/Jun/2025 02:19:55] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:20:26,985 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:20:26,991 - INFO - 127.0.0.1 - - [14/Jun/2025 02:20:26] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:20:58,748 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:20:58,754 - INFO - 127.0.0.1 - - [14/Jun/2025 02:20:58] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:21:30,763 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:21:30,767 - INFO - 127.0.0.1 - - [14/Jun/2025 02:21:30] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:22:02,022 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:22:02,026 - INFO - 127.0.0.1 - - [14/Jun/2025 02:22:02] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:22:34,244 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:22:34,248 - INFO - 127.0.0.1 - - [14/Jun/2025 02:22:34] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:23:05,656 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:23:05,660 - INFO - 127.0.0.1 - - [14/Jun/2025 02:23:05] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:23:36,545 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:23:36,550 - INFO - 127.0.0.1 - - [14/Jun/2025 02:23:36] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:24:07,849 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:24:07,852 - INFO - 127.0.0.1 - - [14/Jun/2025 02:24:07] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:24:40,864 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:24:40,870 - INFO - 127.0.0.1 - - [14/Jun/2025 02:24:40] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:25:12,671 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:25:12,675 - INFO - 127.0.0.1 - - [14/Jun/2025 02:25:12] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:25:43,765 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:25:43,772 - INFO - 127.0.0.1 - - [14/Jun/2025 02:25:43] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:26:14,750 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:26:14,754 - INFO - 127.0.0.1 - - [14/Jun/2025 02:26:14] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:26:45,994 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-14 02:26:45,998 - INFO - 127.0.0.1 - - [14/Jun/2025 02:26:45] "GET /dashboard HTTP/1.1" 200 -
+2025-06-14 02:27:05,562 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:05] "GET / HTTP/1.1" 200 -
+2025-06-14 02:27:05,999 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:05] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,003 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,013 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,020 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,029 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,064 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,109 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,114 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,115 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,124 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,129 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,133 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,142 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,149 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,154 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,172 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,174 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,174 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,179 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,192 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,195 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,209 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,211 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,217 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,222 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,228 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-14 02:27:06,230 - INFO - 127.0.0.1 - - [14/Jun/2025 02:27:06] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:34,490 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-16 20:19:34,506 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-16 20:19:34,506 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-16 20:19:34,506 - INFO - Environment: TEST
+2025-06-16 20:19:34,506 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-16 20:19:34,506 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-16 20:19:34,506 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-16 20:19:34,506 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-16 20:19:34,506 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-16 20:19:34,506 - INFO - 5. Check account activation status
+2025-06-16 20:19:34,506 - INFO - =========================================
+2025-06-16 20:19:34,610 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.201:5000
+2025-06-16 20:19:34,610 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 20:19:34,619 - INFO -  * Restarting with stat
+2025-06-16 20:19:37,201 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-16 20:19:37,201 - INFO - Starting Flask app with payment amount: Rs. 99
+2025-06-16 20:19:37,201 - INFO - Razorpay Key ID: rzp_test_mTfoYlS40taGLb
+2025-06-16 20:19:37,201 - INFO - Environment: TEST
+2025-06-16 20:19:37,201 - INFO - === IMPORTANT LIVE ACCOUNT CHECKLIST ===
+2025-06-16 20:19:37,201 - INFO - 1. Ensure KYC is completed in Razorpay Dashboard
+2025-06-16 20:19:37,210 - INFO - 2. Verify settlement bank account is added and verified
+2025-06-16 20:19:37,210 - INFO - 3. Check if payment methods (cards, wallets, UPI) are enabled
+2025-06-16 20:19:37,210 - INFO - 4. Confirm domain is whitelisted in Razorpay settings
+2025-06-16 20:19:37,211 - INFO - 5. Check account activation status
+2025-06-16 20:19:37,211 - INFO - =========================================
+2025-06-16 20:19:37,228 - WARNING -  * Debugger is active!
+2025-06-16 20:19:37,228 - INFO -  * Debugger PIN: 129-041-506
+2025-06-16 20:19:49,498 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "GET / HTTP/1.1" 200 -
+2025-06-16 20:19:49,869 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:49,869 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:49,888 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:49,889 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:49,898 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:49] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,029 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,066 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,108 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,111 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,113 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,121 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,124 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,132 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,139 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,140 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,141 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,143 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,151 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,157 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,158 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,164 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,166 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,168 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,175 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,176 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,179 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:50,180 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:50] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:19:51,917 - INFO - 127.0.0.1 - - [16/Jun/2025 20:19:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-16 20:20:16,583 - INFO - 127.0.0.1 - - [16/Jun/2025 20:20:16] "[33mGET /login/dashboard HTTP/1.1[0m" 404 -
+2025-06-16 20:20:45,716 - INFO - 127.0.0.1 - - [16/Jun/2025 20:20:45] "GET /dashboard/login HTTP/1.1" 200 -
+2025-06-16 20:20:47,370 - INFO - 127.0.0.1 - - [16/Jun/2025 20:20:47] "[32mPOST /dashboard/login HTTP/1.1[0m" 302 -
+2025-06-16 20:20:47,799 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:20:47,849 - INFO - 127.0.0.1 - - [16/Jun/2025 20:20:47] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:21:19,839 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:21:19,839 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:19] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:21:40,132 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=selected_date%2Cselected_time%2Cpayment_status&payment_status=eq.success "HTTP/2 200 OK"
+2025-06-16 20:21:40,148 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:40] "GET /get-available-slots HTTP/1.1" 200 -
+2025-06-16 20:21:45,415 - INFO - Creating order for customer: avijit Bhuin
+2025-06-16 20:21:45,415 - INFO - Payment amount: Rs. 99 (9900 paise)
+2025-06-16 20:21:45,415 - INFO - Order data: {'amount': 9900, 'currency': 'INR', 'receipt': 'bk_09064292_0616_202145', 'notes': {'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'phone': '09064292887', 'address': 'Sapoorji Sukhobristi housing complex, j5 block, 1306', 'zipcode': '500001', 'contact_method': 'phone', 'selected_date': '2025-06-17', 'selected_time': '10:00', 'booking_type': 'dental_appointment'}}
+2025-06-16 20:21:47,013 - INFO - Order created successfully: order_QhuHyoiY7qgnny
+2025-06-16 20:21:47,013 - INFO - Order details: {'amount': 9900, 'amount_due': 9900, 'amount_paid': 0, 'attempts': 0, 'created_at': 1750085506, 'currency': 'INR', 'entity': 'order', 'id': 'order_QhuHyoiY7qgnny', 'notes': {'address': 'Sapoorji Sukhobristi housing complex, j5 block, 1306', 'booking_type': 'dental_appointment', 'contact_method': 'phone', 'email': 'avijitbhuin21@gmail.com', 'name': 'avijit Bhuin', 'phone': '09064292887', 'selected_date': '2025-06-17', 'selected_time': '10:00', 'zipcode': '500001'}, 'offer_id': None, 'receipt': 'bk_09064292_0616_202145', 'status': 'created'}
+2025-06-16 20:21:47,013 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:47] "POST /create-order HTTP/1.1" 200 -
+2025-06-16 20:21:49,925 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:49] "OPTIONS /static/images/prudentoe-logo1.png HTTP/1.1" 200 -
+2025-06-16 20:21:49,949 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:49] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:21:51,927 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:21:51,927 - INFO - 127.0.0.1 - - [16/Jun/2025 20:21:51] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:22:23,696 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:22:23,698 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:23] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:22:47,292 - INFO - Payment verification started
+2025-06-16 20:22:47,292 - INFO - Received data: {'razorpay_order_id': 'order_QhuHyoiY7qgnny', 'razorpay_payment_id': 'pay_QhuId591kIc9Wf', 'razorpay_signature': 'c94c6e6956056252f4268eae03f2c38635be32a938594f4d43fac5e9056d4e58', 'booking_data': {'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'phone': '09064292887', 'address1': 'Sapoorji Sukhobristi housing complex, j5 block, 1306', 'zipCode': '500001', 'preferredContact': 'phone', 'date': '2025-06-17', 'time': '10:00', 'utm_data': {}}}
+2025-06-16 20:22:47,292 - INFO - Order ID: order_QhuHyoiY7qgnny
+2025-06-16 20:22:47,292 - INFO - Payment ID: pay_QhuId591kIc9Wf
+2025-06-16 20:22:47,292 - INFO - Signature: c94c6e6956056252f4268eae03f2c38635be32a938594f4d43fac5e9056d4e58
+2025-06-16 20:22:47,292 - INFO - Expected signature: c94c6e6956056252f4268eae03f2c38635be32a938594f4d43fac5e9056d4e58
+2025-06-16 20:22:47,292 - INFO - Received signature: c94c6e6956056252f4268eae03f2c38635be32a938594f4d43fac5e9056d4e58
+2025-06-16 20:22:47,292 - INFO - Payment signature verified successfully
+2025-06-16 20:22:47,918 - INFO - HTTP Request: POST https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking "HTTP/2 201 Created"
+2025-06-16 20:22:47,918 - INFO - Booking saved to database: {'id': '0aa152ae-92c4-4486-9734-a9c8eb71d7c7', 'created_at': '2025-06-16T14:52:47.40872+00:00', 'phone_number': '09064292887', 'name': 'avijit Bhuin', 'email': 'avijitbhuin21@gmail.com', 'address': 'Sapoorji Sukhobristi housing complex, j5 block, 1306', 'zipcode': '500001', 'contact_method': 'phone', 'selected_date': '2025-06-17', 'selected_time': '10:00', 'payment_status': 'success', 'utm_data': {}}
+2025-06-16 20:22:47,918 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:47] "POST /verify-payment HTTP/1.1" 200 -
+2025-06-16 20:22:47,953 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:47] "GET /thank-you?name=avijit+Bhuin&date=2025-06-17&time=10:00&phone=09064292887&booking_id=0aa152ae-92c4-4486-9734-a9c8eb71d7c7 HTTP/1.1" 200 -
+2025-06-16 20:22:48,195 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:48] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:22:54,854 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:22:54,854 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:54] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:22:55,032 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:22:55,035 - INFO - 127.0.0.1 - - [16/Jun/2025 20:22:55] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:23:26,735 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:23:26,738 - INFO - 127.0.0.1 - - [16/Jun/2025 20:23:26] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:23:57,918 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:23:57,921 - INFO - 127.0.0.1 - - [16/Jun/2025 20:23:57] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:24:28,687 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:24:28,689 - INFO - 127.0.0.1 - - [16/Jun/2025 20:24:28] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:25:00,815 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:25:00,815 - INFO - 127.0.0.1 - - [16/Jun/2025 20:25:00] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:25:31,541 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:25:31,544 - INFO - 127.0.0.1 - - [16/Jun/2025 20:25:31] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:25:47,385 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:25:47,388 - INFO - 127.0.0.1 - - [16/Jun/2025 20:25:47] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:26:18,920 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:26:18,920 - INFO - 127.0.0.1 - - [16/Jun/2025 20:26:18] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:26:49,841 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:26:49,858 - INFO - 127.0.0.1 - - [16/Jun/2025 20:26:49] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:27:20,982 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:27:20,982 - INFO - 127.0.0.1 - - [16/Jun/2025 20:27:20] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:32:31,663 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "GET / HTTP/1.1" 200 -
+2025-06-16 20:32:31,909 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:31,909 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:31,933 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:31,934 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:31,941 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:31] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,003 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,010 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,016 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,027 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,036 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,049 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,055 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,066 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,072 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,079 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,079 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,090 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,121 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,124 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,129 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,132 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,135 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,137 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,143 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,145 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,148 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:32:32,149 - INFO - 127.0.0.1 - - [16/Jun/2025 20:32:32] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,604 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "GET / HTTP/1.1" 200 -
+2025-06-16 20:36:49,852 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,852 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,871 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,873 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,873 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:49,953 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:49] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,009 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,014 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,016 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,019 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,025 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,028 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,029 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,039 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,042 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,054 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,055 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,061 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,062 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,066 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,072 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,081 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,083 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,087 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,091 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,096 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:36:50,098 - INFO - 127.0.0.1 - - [16/Jun/2025 20:36:50] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,650 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:03,903 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,903 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,903 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,914 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,917 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,922 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,925 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,926 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,932 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,935 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,940 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,941 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,945 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,949 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,970 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,971 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,976 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,982 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,983 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,987 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,991 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,993 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:03,995 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:03] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:04,046 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:04] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:04,049 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:04] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:04,052 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:04] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:04,053 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:04] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,598 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:12,848 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,851 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,855 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,856 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,861 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,866 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,870 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,871 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,885 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,891 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,897 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,899 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,907 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,911 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,919 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,925 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,930 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,935 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,944 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,948 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,955 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,956 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,985 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:12,990 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:12] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:13,013 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:13] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:13,015 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:13] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:13,018 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:13] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,378 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:20,640 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,643 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,645 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,653 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,654 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,656 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,663 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,667 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,667 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,669 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,679 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,691 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,698 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,701 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,705 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,710 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,714 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,716 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,721 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,723 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,738 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,745 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,750 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,751 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,776 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,777 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:20,807 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:20] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:29,824 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:29] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:30,077 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,085 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,088 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,089 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,090 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,100 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,102 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,103 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,113 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,113 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,114 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,117 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,121 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,129 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,146 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,149 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,154 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,157 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,162 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,165 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,179 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,180 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,182 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,212 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,223 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,224 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:30,242 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:30] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,750 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:36,954 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,954 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,978 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,979 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,987 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:36,996 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:36] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,006 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,009 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,065 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,068 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,075 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,079 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,082 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,085 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,089 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,095 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,098 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,100 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,102 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,110 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,112 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,114 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,119 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,119 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,123 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,129 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:37,130 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:37] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,503 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:43,717 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,717 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,733 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,735 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,740 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,752 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,766 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,778 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,827 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,827 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,830 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,837 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,840 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,843 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,846 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,848 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,851 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,858 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,867 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,869 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,874 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,876 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,879 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,884 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,891 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,891 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:43,894 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:43] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,483 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "GET / HTTP/1.1" 200 -
+2025-06-16 20:37:59,727 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,727 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,743 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,745 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,749 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,765 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,766 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,785 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,787 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,836 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,839 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,846 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,848 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,851 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,853 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,855 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,861 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,862 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,867 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,870 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,874 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,879 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,883 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,888 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,894 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,896 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:37:59,898 - INFO - 127.0.0.1 - - [16/Jun/2025 20:37:59] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,148 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "GET / HTTP/1.1" 200 -
+2025-06-16 20:38:07,359 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,359 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,377 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,377 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,381 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,394 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,412 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,460 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,463 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,470 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,472 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,472 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,473 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,480 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,484 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,493 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,494 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,499 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,501 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,504 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,510 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,519 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,519 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,522 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,523 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,526 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:07,528 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:07] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,437 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "GET / HTTP/1.1" 200 -
+2025-06-16 20:38:16,656 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/prudentoe-logo1.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,656 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/tooth-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,674 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/card-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,675 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/semi-circle.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,680 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/smiling-nurse.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,693 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/bad-smell-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,703 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/toothache.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,717 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/open-mouth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,718 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/gingivitis-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,744 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/dentist-patient.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,777 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/Post-Care-Treatment.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,782 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/smiling-dentist.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,784 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/Comfort-and-Support-During-Procedures.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,784 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/smile-makeover-consultation.jpg HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,787 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/sedan.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,790 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/stress-relief.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,798 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/rush-time.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,800 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/semi-circle-left.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,809 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/dentist-tools.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,812 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/happy-tooth.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,815 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/no-visiting.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,818 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/dental-service.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,823 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/check-mark.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,825 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/dental-procedure.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,834 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/google-g-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,836 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/blurred-medical-professionals.png HTTP/1.1[0m" 304 -
+2025-06-16 20:38:16,839 - INFO - 127.0.0.1 - - [16/Jun/2025 20:38:16] "[36mGET /static/images/megaphone-icon.png HTTP/1.1[0m" 304 -
+2025-06-16 20:44:51,924 - INFO - 127.0.0.1 - - [16/Jun/2025 20:44:51] "GET /dashboard/login HTTP/1.1" 200 -
+2025-06-16 20:44:53,493 - INFO - 127.0.0.1 - - [16/Jun/2025 20:44:53] "[32mPOST /dashboard/login HTTP/1.1[0m" 302 -
+2025-06-16 20:44:54,148 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:44:54,151 - INFO - 127.0.0.1 - - [16/Jun/2025 20:44:54] "GET /dashboard HTTP/1.1" 200 -
+2025-06-16 20:45:25,866 - INFO - HTTP Request: GET https://ojslpvgxujrixjwqcvag.supabase.co/rest/v1/booking?select=%2A&order=created_at.desc "HTTP/2 200 OK"
+2025-06-16 20:45:25,869 - INFO - 127.0.0.1 - - [16/Jun/2025 20:45:25] "GET /dashboard HTTP/1.1" 200 -
