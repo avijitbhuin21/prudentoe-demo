@@ -271,7 +271,12 @@
             background-color: hsl(var(--card));
             border: 1px solid hsl(var(--border));
             border-radius: var(--radius);
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .table-wrapper {
+            min-width: 1600px;
         }
 
         .table-header {
@@ -279,7 +284,7 @@
             border-bottom: 1px solid hsl(var(--border));
             padding: 1rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 0.8fr 1fr 2fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
+            grid-template-columns: 1fr 1fr 0.8fr 1fr 1.2fr 1.2fr 1fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
             gap: 1rem;
             align-items: center;
         }
@@ -290,13 +295,14 @@
             color: hsl(var(--muted-foreground));
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            white-space: nowrap;
         }
 
         .table-row {
             border-bottom: 1px solid hsl(var(--border));
             padding: 1rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 0.8fr 1fr 2fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
+            grid-template-columns: 1fr 1fr 0.8fr 1fr 1.2fr 1.2fr 1fr 0.6fr 0.8fr 1.2fr 0.8fr 1fr 0.8fr;
             gap: 1rem;
             align-items: center;
             transition: background-color 0.2s ease;
@@ -425,6 +431,14 @@
             color: hsl(199 89% 48%);
         }
 
+        .status-payment-method-not-added {
+            background-color: hsl(39 84% 56% / 0.1);
+            color: hsl(39 84% 56%);
+            white-space: nowrap;
+            font-size: 0.6875rem;
+            padding: 0.25rem 0.5rem;
+        }
+
         /* Empty State */
         .empty-state {
             text-align: center;
@@ -465,24 +479,45 @@
 
         /* Responsive */
         @media (max-width: 1400px) {
-            .table-header,
-            .table-row {
-                grid-template-columns: repeat(6, 1fr);
-                gap: 0.5rem;
-            }
-            
-            /* Hide less critical columns on medium screens */
-            .table-header .table-header-cell:nth-child(5), /* Address */
-            .table-row .table-cell:nth-child(5),
-            .table-header .table-header-cell:nth-child(6), /* Zipcode */
-            .table-row .table-cell:nth-child(6),
-            .table-header .table-header-cell:nth-child(11), /* UTM Data */
-            .table-row .table-cell:nth-child(11) {
-                display: none;
+            .table-wrapper {
+                min-width: 1400px;
             }
         }
 
         @media (max-width: 1024px) {
+            .table-wrapper {
+                min-width: 1200px;
+            }
+            
+            .table-header,
+            .table-row {
+                grid-template-columns: 1fr 1fr 0.8fr 1fr 1fr 1fr 0.8fr 0.6fr 0.8fr 1fr 0.8fr 1fr 0.8fr;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            .table-wrapper {
+                min-width: 1000px;
+            }
+            
+            .table-header,
+            .table-row {
+                padding: 0.75rem;
+                gap: 0.5rem;
+            }
+            
+            .table-header-cell,
+            .table-cell {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
             .table-header,
             .table-row {
                 grid-template-columns: 1fr;
@@ -510,6 +545,10 @@
                 font-size: 0.75rem;
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
+            }
+            
+            .table-wrapper {
+                min-width: auto;
             }
         }
 
@@ -540,6 +579,11 @@
                     <h1>Booking Dashboard</h1>
                 </div>
                 <div class="header-actions">
+                    <button class="theme-toggle" onclick="refreshPage()" title="Refresh page">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </button>
                     <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
                         <svg class="icon sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="5"/>
@@ -608,6 +652,17 @@
                     <div class="stat-value">{{ bookings | selectattr('payment_status', 'equalto', 'area_not_serviceable') | list | length }}</div>
                     <div class="stat-description">Outside service area</div>
                 </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Payment Method Not Added</div>
+                        <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">{{ bookings | selectattr('payment_status', 'equalto', 'payment method not added yet') | list | length }}</div>
+                    <div class="stat-description">Payment method pending</div>
+                </div>
             </div>
         </div>
 
@@ -636,6 +691,7 @@
                             <option value="failed">Failed</option>
                             <option value="cancelled">Cancelled</option>
                             <option value="area_not_serviceable">Area Not Serviceable</option>
+                            <option value="payment_method_not_added_yet">Payment Method Not Added Yet</option>
                         </select>
                     </div>
 
@@ -658,95 +714,113 @@
             </div>
 
             <div class="table-container">
-                <div class="table-header">
-                    <div class="table-header-cell">Booking Date</div>
-                    <div class="table-header-cell">Customer Name</div>
-                    <div class="table-header-cell">Phone Number</div>
-                    <div class="table-header-cell">Email Address</div>
-                    <div class="table-header-cell">Address</div>
-                    <div class="table-header-cell">Zipcode</div>
-                    <div class="table-header-cell">Contact Method</div>
-                    <div class="table-header-cell">Appointment</div>
-                    <div class="table-header-cell">Amount</div>
-                    <div class="table-header-cell">Status</div>
-                    <div class="table-header-cell">UTM Data</div>
+                <div class="table-wrapper">
+                    <div class="table-header">
+                        <div class="table-header-cell">Booking Date</div>
+                        <div class="table-header-cell">Customer Name</div>
+                        <div class="table-header-cell">Phone Number</div>
+                        <div class="table-header-cell">Email Address</div>
+                        <div class="table-header-cell">Address Line 1</div>
+                        <div class="table-header-cell">Address Line 2</div>
+                        <div class="table-header-cell">Landmark</div>
+                        <div class="table-header-cell">Zipcode</div>
+                        <div class="table-header-cell">Contact Method</div>
+                        <div class="table-header-cell">Appointment</div>
+                        <div class="table-header-cell">Amount</div>
+                        <div class="table-header-cell">Status</div>
+                        <div class="table-header-cell">UTM Data</div>
+                    </div>
+
+                    {% if bookings %}
+                        {% for booking in bookings %}
+                        <div class="table-row" data-status="{{ booking.payment_status }}" data-appointment="{{ booking.selected_date or '' }}" data-booking-id="{{ booking.id }}">
+                            <div class="table-cell" data-label="Booking Date">
+                                <div class="date-cell">
+                                    <div class="date-primary">{{ booking.formatted_date }}</div>
+                                    <div class="date-secondary">{{ booking.formatted_time }}</div>
+                                </div>
+                            </div>
+
+                            <div class="table-cell" data-label="Customer Name">
+                                <div class="customer-name">{{ booking.name or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Phone Number">
+                                <div class="contact-info">{{ booking.phone_number or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Email Address">
+                                <div class="email-info">{{ booking.email or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Address Line 1">
+                                <div class="address-info">{{ booking.address_line_1 or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Address Line 2">
+                                <div class="address-info">{{ booking.address_line_2 or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Landmark">
+                                <div class="address-info">{{ booking.landmark or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Zipcode">
+                                <div class="zipcode-info">{{ booking.zipcode or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Contact Method">
+                                <div class="contact-method-info">{{ booking.contact_method or 'N/A' }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Appointment">
+                                <div class="appointment-info">{{ booking.appointment_display }}</div>
+                            </div>
+
+                            <div class="table-cell" data-label="Amount">
+                                <div class="amount-cell">
+                                    <!-- {% if booking.payment_status == 'success' %}₹99{% else %}₹0{% endif %} -->
+                                     {% if booking.payment_status == 'success' %}₹0{% else %}₹0{% endif %}
+                                </div>
+                            </div>
+
+                            <div class="table-cell" data-label="Status">
+                                <div class="status-badge {{ booking.status_class }}">
+                                    {{ booking.status_display }}
+                                </div>
+                            </div>
+
+                            <div class="table-cell" data-label="UTM Data">
+                                <div class="utm-data-info">
+                                    {% if booking.utm_data and booking.utm_data != '{}' %}
+                                        {{ booking.utm_data | tojson }}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-state">
+                            <svg class="icon" style="width: 3rem; height: 3rem; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <h3>No bookings found</h3>
+                            <p>Booking data will appear here once customers start making appointments.</p>
+                        </div>
+                    {% endif %}
                 </div>
-
-                {% if bookings %}
-                    {% for booking in bookings %}
-                    <div class="table-row" data-status="{{ booking.payment_status }}" data-appointment="{{ booking.selected_date or '' }}" data-booking-id="{{ booking.id }}">
-                        <div class="table-cell" data-label="Booking Date">
-                            <div class="date-cell">
-                                <div class="date-primary">{{ booking.formatted_date }}</div>
-                                <div class="date-secondary">{{ booking.formatted_time }}</div>
-                            </div>
-                        </div>
-
-                        <div class="table-cell" data-label="Customer Name">
-                            <div class="customer-name">{{ booking.name or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Phone Number">
-                            <div class="contact-info">{{ booking.phone_number or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Email Address">
-                            <div class="email-info">{{ booking.email or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Address">
-                            <div class="address-info">{{ booking.address or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Zipcode">
-                            <div class="zipcode-info">{{ booking.zipcode or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Contact Method">
-                            <div class="contact-method-info">{{ booking.contact_method or 'N/A' }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Appointment">
-                            <div class="appointment-info">{{ booking.appointment_display }}</div>
-                        </div>
-
-                        <div class="table-cell" data-label="Amount">
-                            <div class="amount-cell">
-                                {% if booking.payment_status == 'success' %}₹99{% else %}₹0{% endif %}
-                            </div>
-                        </div>
-
-                        <div class="table-cell" data-label="Status">
-                            <div class="status-badge {{ booking.status_class }}">
-                                {{ booking.status_display }}
-                            </div>
-                        </div>
-
-                        <div class="table-cell" data-label="UTM Data">
-                            <div class="utm-data-info">
-                                {% if booking.utm_data and booking.utm_data != '{}' %}
-                                    {{ booking.utm_data | tojson }}
-                                {% else %}
-                                    N/A
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                {% else %}
-                    <div class="empty-state">
-                        <svg class="icon" style="width: 3rem; height: 3rem; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                        <h3>No bookings found</h3>
-                        <p>Booking data will appear here once customers start making appointments.</p>
-                    </div>
-                {% endif %}
             </div>
         </div>
     </div>
 
     <script>
+        // Refresh page functionality
+        function refreshPage() {
+            location.reload();
+        }
+
         // Theme toggle functionality
         function toggleTheme() {
             const body = document.body;
@@ -822,11 +896,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             loadTheme();
         });
-
-        // Auto-refresh every 30 seconds
-        setTimeout(function() {
-            location.reload();
-        }, 30000);
     </script>
 </body>
 </html>

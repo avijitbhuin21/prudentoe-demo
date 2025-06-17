@@ -154,9 +154,20 @@
         color: #ea4335;
       }
       @media (min-width: 1024px) {
+        /* Zoom for desktop */
+        .zoom-photo{
+            zoom: 1.4;
+        }
+        #bookingModal{
+            zoom: 0.6;
+        }
+        .ok-img{
+            zoom: 1.2;
+        }
+
         body {
-          /* zoom: 1.42;  */
-          zoom:1.0;
+          zoom: 1.65; 
+          /* zoom:1.0; */
         }
         /* Ensure all sections are constrained to center column on desktop */
         .main-container {
@@ -168,7 +179,7 @@
         .py-8,
         .pt-8,
         .pb-8 {
-          max-width: 24rem;
+          max-width: 90%;
           margin-left: auto;
           margin-right: auto;
           box-sizing: border-box;
@@ -636,7 +647,7 @@
         /* Constrain carousel and other wide elements */
         .carousel-container,
         .relative {
-          max-width: 100%;
+          max-width: 77%;
           box-sizing: border-box;
         }
         /* Ensure images and content don't break out */
@@ -649,7 +660,7 @@
       @media (min-width: 1200px) {
         /* Further constrain the main container on very large screens */
         .main-container {
-          max-width: 500px;
+          max-width: 100%;
         }
         /* Ensure the problematic section stays centered */
         .py-8.px-5.text-center.fade-in-section {
@@ -828,9 +839,9 @@
     <div class="main-container font-helvetica">
       <div class="bg-white">
         <div
-          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px] overflow-x-hidden"
+          class="relative bg-white rounded-b-25px shadow-custom-light pt-4 pb-[1rem] px-[1rem] min-h-[300px] overflow-x-hidden "
         >
-          <div class="flex justify-between items-center mb-[0.5rem]">
+          <div class="flex justify-between items-center mb-[0.5rem] md:ml-[6%]">
             <a href="https://prudentoe.com/" target="_blank">
               <img
                 src="static/images/prudentoe-logo1.png"
@@ -860,7 +871,7 @@
               />
             </a> -->
           </div>
-          <div class="relative z-10">
+          <div class="relative z-10 md:ml-[6%]">
             <div class="animate-on-scroll">
               <h1
                 class="text-prudentoe-green font-bold text-dynamic-hero leading-tight mb-3 w-[80%]"
@@ -908,17 +919,17 @@
           <img
             src="static/images/semi-circle.png"
             alt="semi-circle"
-            class="absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px] md:top-[205px]"
+            class="ok-img absolute right-[-15px] w-[216px] h-[280px] object-fill z-[1] opacity-100 top-[167px] md:top-[66px]"
           />
           <img
             src="static/images/smiling-nurse.png"
             alt="Smiling nurse"
-            class="absolute right-[-55px] bottom-[0px] h-[375px] w-auto z-10"
+            class="ok-img absolute right-[-55px] bottom-[0px] h-[375px] w-auto z-10"
           />
         </div>
         <div class="pt-8 px-5 fade-in-section">
           <div
-            class="bg-[#FCFCFC] shadow-custom-card rounded-15px p-4 text-center animate-on-scroll"
+            class="bg-[#FCFCFC] shadow-custom-card rounded-15px p-4 text-center animate-on-scroll mx-auto max-w-md md:max-w-[100%]"
           >
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-3.5">
               <path d="M19.7963 14.6068C21.1133 15.9237 22.002 17.5857 22.368 19.4127C22.5225 20.1875 23.2095 20.75 24 20.75C24.7905 20.75 25.4775 20.1875 25.6327 19.4113L26.088 17.1327C26.1188 16.979 26.3812 16.9798 26.412 17.132L26.8673 19.412C27.0225 20.1875 27.7095 20.75 28.5 20.75C29.2905 20.75 29.9775 20.1875 30.1327 19.412C30.498 17.585 31.3875 15.9237 32.7045 14.606L33.0375 14.273C33.981 13.3303 34.5 12.0763 34.5 10.742C34.5 7.9895 32.2605 5.75 29.5072 5.75H28.9395L28.2803 6.40925C27.7455 6.94325 27.006 7.25 26.25 7.25C25.494 7.25 24.7545 6.94325 24.2197 6.40925L23.5605 5.75H22.9927C20.2395 5.75 18 7.9895 18 10.7427C18 12.077 18.519 13.331 19.4625 14.273L19.7963 14.6068ZM22.9395 7.25L23.1592 7.469C23.973 8.2835 25.0995 8.75 26.25 8.75C27.4005 8.75 28.527 8.2835 29.3407 7.46975L29.5605 7.25C31.4618 7.27925 33 8.83475 33 10.7427C33 11.6765 32.637 12.5533 31.977 13.2125L31.644 13.5455C30.117 15.0732 29.0857 16.9993 28.662 19.1165C28.6312 19.2703 28.3688 19.2695 28.338 19.1173L27.8827 16.8373C27.7275 16.0625 27.0405 15.5 26.25 15.5C25.4595 15.5 24.7725 16.0625 24.6173 16.8387L24.162 19.1173C24.1312 19.271 23.8688 19.271 23.838 19.1173C23.415 17 22.3838 15.0733 20.856 13.5463L20.523 13.2117C19.863 12.5525 19.5 11.6757 19.5 10.7427C19.5 8.83475 21.0383 7.27925 22.9395 7.25Z" fill="#1A472A"/>
@@ -936,10 +947,10 @@
               people don't. Some signs you're likely to ignore:
             </p>
           </div>
-          <div class="bg-white rounded-15px p-4 text-center mt-[20px]" id="symptomsContainer">
-            <div class="space-y-2.5">
+          <div class="bg-white rounded-15px p-4 text-center mt-[20px]" id="symptomsContainer" style="text-align: center;">
+            <div class="space-y-2.5 md:grid md:grid-cols-2 md:gap-x-[27rem] md:gap-y-2.5 md:space-y-0">
               <div
-                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item md:w-[25rem]"
               >
                 <img
                   src="static/images/bad-smell-tooth.png"
@@ -953,7 +964,7 @@
                 </p>
               </div>
               <div
-                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item md:w-[25rem]"
               >
                 <img
                   src="static/images/toothache.png"
@@ -967,7 +978,7 @@
                 </p>
               </div>
               <div
-                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item md:w-[25rem]"
               >
                 <img
                   src="static/images/open-mouth.png"
@@ -981,7 +992,7 @@
                 </p>
               </div>
               <div
-                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item"
+                class="border-solid-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center symptoms-fade-item md:w-[25rem]"
               >
                 <img
                   src="static/images/gingivitis-icon.png"
@@ -1197,7 +1208,7 @@
         </div>
         <div class="py-8 px-5 text-center fade-in-section">
           <p
-            class="w-[300px] mx-auto mb-3 animate-on-scroll text-center text-prudentoe-dark text-dynamic-large leading-tight font-bold"
+            class="w-[300px] md:w-[1200px] mx-auto mb-3 animate-on-scroll text-center text-prudentoe-dark text-dynamic-large leading-tight font-bold"
             style="font-size: 1.3rem"
           >
             Real Life Doesn’t Pause for Dental Clinics
@@ -1210,7 +1221,7 @@
             who has time to sit in a waiting room? <br /><br />Prudentoe sends
             trained dentists to your home, so<br />you can:
           </p>
-          <div class="grid grid-cols-3 gap-2.5 mb-5">
+          <div class="grid grid-cols-3 gap-2.5 mb-5 md:max-w-full md:gap-8">
             <div
               class="bg-white shadow-custom-card rounded-10px p-3 py-4 flex flex-col items-center justify-start min-h-[120px] animate-on-scroll"
               style="animation-delay: 0.2s"
@@ -1312,22 +1323,22 @@
                 Match your moments...
               </p>
               <button
-                class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3 inline-block mt-2.5 ml-[3.5rem] booking-btn"
+                class="bg-prudentoe-green text-white text-center text-dynamic-button leading-tight rounded-5px shadow-sm hover:bg-prudentoe-green/90 transition-colors w-[120px] h-[40px] flex items-center justify-center py-2 px-3 inline-block mt-2.5 ml-auto booking-btn"
               >
                 Book An Appointment
               </button>
             </div>
           </div>
         </div>
-        <div class="pt-2 pb-8 px-5 text-center fade-in-section">
+        <div class="pt-2 pb-8 px-5 text-center fade-in-section md:px-0 md:mx-auto md:max-w-full">
           <h2
             class="text-prudentoe-dark font-bold text-dynamic-xl leading-1.2 mb-5 animate-on-scroll"
           >
             Why People Love Prudentoe
           </h2>
-          <div class="space-y-2.5">
+          <div class="space-y-2.5 md:grid md:grid-cols-2 md:ml-[5%] md:gap-y-2.5 md:space-y-0">
             <div
-              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll"
+              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll md:w-[25rem]"
               style="animation-delay: 0.1s"
             >
               <img
@@ -1349,7 +1360,7 @@
               </p>
             </div>
             <div
-              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll"
+              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll md:w-[25rem]"
               style="animation-delay: 0.2s"
             >
               <img
@@ -1365,7 +1376,7 @@
               </p>
             </div>
             <div
-              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll"
+              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll md:w-[25rem]"
               style="animation-delay: 0.3s"
             >
               <img
@@ -1381,7 +1392,7 @@
               </p>
             </div>
             <div
-              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll"
+              class="border-dashed-prudentoe-green rounded-20px p-2.5 min-h-[98px] flex flex-col justify-center items-center animate-on-scroll md:w-[25rem]"
               style="animation-delay: 0.4s"
             >
               <img
@@ -1401,19 +1412,19 @@
           <div
             class="bg-white shadow-custom-gentle rounded-19px p-5 animate-on-scroll"
           >
-            <h2
-              class="text-prudentoe-green font-bold text-dynamic-large leading-1.2 mb-2.5"
-            >
-              Gentle, Human, Preventive
-            </h2>
-            <!-- <p
-              class="text-prudentoe-dark font-bold text-dynamic-base leading-1.2 mb-5"
-              style="font-size: 1rem"
-            >
-              Prudentoe is NOT for emergencies. It's for EVERYTHING BEFORE that.
-            </p> -->
-            <div class="flex flex-col sm:flex-row gap-4">
-              <div class="flex-1 space-y-2.5">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-1 space-y-2.5 md:order-1">
+                <h2
+                  class="text-prudentoe-green font-bold text-dynamic-large leading-1.2 mb-2.5"
+                >
+                  Gentle, Human, Preventive
+                </h2>
+                <p
+                  class="text-prudentoe-dark font-bold text-dynamic-base leading-1.2 mb-5"
+                  style="font-size: 1rem"
+                >
+                  Prudentoe is NOT for emergencies. It's for EVERYTHING BEFORE that.
+                </p>
                 <div class="flex items-center">
                   <img
                     src="static/images/check-mark.png"
@@ -1445,16 +1456,16 @@
                   >
                 </div>
                 <button
-                  class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] shadow-sm h-[51px] inline-block booking-btn"
+                  class="bg-prudentoe-green text-white text-bold text-dynamic-xxs py-0 px-4 rounded-5px mt-4 w-[164px] md:w-[225px] shadow-sm h-[51px] inline-block booking-btn"
                 >
-                  Book An Appointment
+                  Can someone just check?
                 </button>
               </div>
-              <div class="flex-1 mt-[-11rem] ml-auto sm:mt-0 relative">
+            <div class="zoom-photo mt-[-11rem] ml-auto md:mt-0 md:order-2 relative md:flex md:justify-center md:items-center md:zoom-160">
                 <img
                   src="static/images/dental-procedure.png"
                   alt="Dental procedure"
-                  class="w-full max-w-[150px] h-auto rounded-[12px] shadow-[3px_4px_4px_rgba(0,0,0,0)] ml-auto block"
+                  class="w-full max-w-[150px] h-auto rounded-[12px] shadow-[3px_4px_4px_rgba(0,0,0,0)] ml-auto block md:ml-0 md:max-w-[250px]"
                 />
               </div>
             </div>
@@ -1473,10 +1484,14 @@
             Real smiles, real results! Explore our patient reviews and see why
             we're the ultimate choice for dental care.
           </p>
+          <!-- Google Business Card - Always Visible -->
           <div
-            class="mx-auto mb-5 w-full max-w-[340px] animate-on-scroll"
+            class="mx-auto mb-5 w-full max-w-[340px] md:max-w-full animate-on-scroll"
             style="animation-delay: 0.2s"
           >
+            <div class="md:flex md:gap-6 md:items-start md:justify-center">
+              <!-- Google Business Card -->
+              <div class="md:flex-shrink-0 md:w-80">
             <div class="bg-white p-4 rounded-lg w-full">
               <!-- Top Section: Image and Info -->
               <div class="flex items-start space-x-3">
@@ -1620,8 +1635,11 @@
                 </a>
               </div>
             </div>
-          </div>
-          <div id="reviewsCarousel" class="relative carousel-container">
+            </div>
+            
+            <!-- Reviews Carousel - Desktop positioned beside Google card -->
+            <div class="md:flex-1 md:max-w-md">
+              <div id="reviewsCarousel" class="relative carousel-container">
             <div class="carousel-slides">
               <div class="carousel-slide">
                 <div
@@ -1734,11 +1752,13 @@
             <button class="carousel-next">
               <i class="fas fa-chevron-right"></i>
             </button> -->
+              </div>
+              <div class="carousel-dots"></div>
+            </div>
+            </div>
           </div>
-          <div class="carousel-dots"></div>
-        </div>
         <div
-          class="relative min-h-[237px] mx-auto w-full max-w-[380px] animate-on-scroll fade-in-section"
+          class="relative min-h-[237px] mx-auto w-full max-w-[380px] md:max-w-[61vw] md:min-h-[300px] md:w-screen md:ml-[calc(-50vw+50%)] md:left-[65%] md:-translate-x-[] animate-on-scroll fade-in-section"
         >
           <img
             src="static/images/blurred-medical-professionals.png"
@@ -1749,8 +1769,8 @@
             class="absolute inset-0 bg-prudentoe-green/85 rounded-t-19px p-5 flex flex-col justify-center items-start text-white"
           >
             <h2
-              class="font-bold text-dynamic-xl leading-1.2 mb-2.5 w-3/4"
-              style="font-size: 1.5rem"
+              class="font-bold text-dynamic-xl leading-1.2 mb-2.5 w-3/4 md:w-2/3 md:text-4xl md:fontSize-[2rem] fontSize-[1.5rem] md:leading-1.2"
+              style="text-align: left;"
             >
               Your mouth might be quiet — but it's still saying something.
             </h2>
@@ -1769,7 +1789,7 @@
                   class="w-[22px] h-[22px]"
                 />
               </span>
-              Book An Appointment
+              Yes, show me how it's works
             </button>
           </div>
         </div>
@@ -1777,51 +1797,91 @@
     </div>
     
     <!-- Footer Section -->
-    <footer class="bg-prudentoe-green text-white py-8 px-5 mt-2">
-      <div class="main-container">
-        <!-- Logo and Links Side by Side -->
-        <div class="flex flex-row items-start justify-between mb-6">
-          <!-- Logo -->
-          <div class="self-start">
-            <img
-              src="static/images/prudentoe-logo1.png"
-              alt="Prudentoe Logo"
-              class="h-10 sm:h-12 filter brightness-0 invert"
-            />
+    <footer class="bg-prudentoe-green text-white py-8 px-5 mt-2" style="margin-top: -1.8rem; width: calc(100% + 3rem); margin-left: -1rem; max-width: 105%;">
+      <div class="w-full max-w-none px-4 md:px-8">
+        <!-- Desktop: Two-row layout, Mobile: Original layout -->
+        <div class="flex flex-col md:flex-col md:items-center md:space-y-6">
+          
+          <!-- Logo Section -->
+          <div class="flex justify-between items-start md:justify-center mb-6 md:mb-0">
+            <div class="md:text-center">
+              <img
+                src="static/images/prudentoe-logo1.png"
+                alt="Prudentoe Logo"
+                class="h-10 sm:h-12 md:h-16 filter brightness-0 invert md:mx-auto"
+              />
+            </div>
+            
+            <!-- Mobile Links (visible only on mobile) -->
+            <div class="flex flex-col items-end space-y-2 md:hidden">
+              <a
+                href="https://prudentoe.com/contact-us/"
+                target="_blank"
+                class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              >
+                Contact Us
+              </a>
+              <a
+                href="https://prudentoe.com/terms-and-conditions/"
+                target="_blank"
+                class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              >
+                Terms and Conditions
+              </a>
+              <a
+                href="https://prudentoe.com/privacy-policy/"
+                target="_blank"
+                class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="/cancelation-policy"
+                class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              >
+                Cancellation Policy
+              </a>
+              <a
+                href="/refund-policy"
+                class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              >
+                Refund Policy
+              </a>
+            </div>
           </div>
           
-          <!-- Footer Links - Stacked Vertically -->
-          <div class="flex flex-col items-start space-y-2 sm:space-y-3">
+          <!-- Desktop Links (visible only on desktop) -->
+          <div class="hidden md:flex md:flex-wrap md:justify-center md:gap-x-8 md:gap-y-3 md:max-w-4xl">
             <a
               href="https://prudentoe.com/contact-us/"
               target="_blank"
-              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-base font-medium"
             >
               Contact Us
             </a>
             <a
               href="https://prudentoe.com/terms-and-conditions/"
               target="_blank"
-              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-base font-medium"
             >
               Terms and Conditions
             </a>
             <a
               href="https://prudentoe.com/privacy-policy/"
               target="_blank"
-              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-base font-medium"
             >
               Privacy Policy
             </a>
             <a
               href="/cancelation-policy"
-              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-base font-medium"
             >
               Cancellation Policy
             </a>
             <a
               href="/refund-policy"
-              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-dynamic-small font-medium"
+              class="text-white hover:text-prudentoe-light-green transition-colors duration-300 text-base font-medium"
             >
               Refund Policy
             </a>
@@ -1829,8 +1889,8 @@
         </div>
         
         <!-- Copyright -->
-        <div class="border-t border-white/20 pt-4 text-center">
-          <p class="text-dynamic-xs text-white/80">
+        <div class="border-t border-white/20 pt-4 mt-6 text-center md:mt-8" style="max-width: 100%;">
+          <p class="text-dynamic-xs text-white/80 md:text-sm">
             © 2025 Prudentoe Dental. All rights reserved.
           </p>
         </div>
@@ -2276,8 +2336,16 @@
               <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your email" required>
             </div>
             <div>
-              <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Address</label>
-              <textarea id="address" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter your address" required></textarea>
+              <label for="addressLine1" class="block text-sm font-medium text-gray-700 mb-2">Address Line 1</label>
+              <input type="text" id="addressLine1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter address line 1" required>
+            </div>
+            <div>
+              <label for="addressLine2" class="block text-sm font-medium text-gray-700 mb-2">Address Line 2 <span class="text-gray-500">(Optional)</span></label>
+              <input type="text" id="addressLine2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter address line 2 (optional)">
+            </div>
+            <div>
+              <label for="landmark" class="block text-sm font-medium text-gray-700 mb-2">Nearby Landmark</label>
+              <input type="text" id="landmark" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-prudentoe-green focus:border-transparent" placeholder="Enter nearby landmark" required>
             </div>
             <div>
               <label for="zipcode" class="block text-sm font-medium text-gray-700 mb-2">Zipcode</label>
@@ -2377,8 +2445,8 @@
               <button id="step4Back" class="flex-1 bg-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-400 transition-colors">
                 Back
               </button>
-              <button id="payButton" class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
-                Pay ₹99
+              <button id="confirmBookingButton" class="flex-1 bg-prudentoe-green text-white py-3 px-4 rounded-md hover:bg-prudentoe-green/90 transition-colors">
+                Confirm Booking
               </button>
             </div>
           </div>
@@ -2712,12 +2780,14 @@
         document.getElementById('step2Next').addEventListener('click', function() {
           const name = document.getElementById('fullName').value.trim();
           const email = document.getElementById('email').value.trim();
-          const address = document.getElementById('address').value.trim();
+          const addressLine1 = document.getElementById('addressLine1').value.trim();
+          const addressLine2 = document.getElementById('addressLine2').value.trim();
+          const landmark = document.getElementById('landmark').value.trim();
           const zipcode = document.getElementById('zipcode').value.trim();
           const error = document.getElementById('step2Error');
           
-          if (!name || !email || !address || !zipcode) {
-            error.textContent = 'Please fill in all fields';
+          if (!name || !email || !addressLine1 || !landmark || !zipcode) {
+            error.textContent = 'Please fill in all required fields';
             error.classList.remove('hidden');
             return;
           }
@@ -2740,7 +2810,9 @@
               name: name || null,
               email: email || null,
               phone: document.getElementById('phoneNumber').value.trim() || null,
-              address1: address || null,
+              address_line_1: addressLine1 || null,
+              address_line_2: addressLine2 || null,
+              landmark: landmark || null,
               zipCode: zipcode || null,
               preferredContact: 'phone',
               date: null,
@@ -2784,8 +2856,8 @@
           showStep(2);
         });
 
-        // Payment functionality
-        document.getElementById('payButton').addEventListener('click', function() {
+        // Booking confirmation functionality
+        document.getElementById('confirmBookingButton').addEventListener('click', function() {
           const selectedDate = document.getElementById('selectedDate').value;
           const selectedTime = document.getElementById('selectedTime').value;
           const step4Error = document.getElementById('step4Error');
@@ -2803,7 +2875,9 @@
             name: document.getElementById('fullName').value.trim(),
             email: document.getElementById('email').value.trim(),
             phone: document.getElementById('phoneNumber').value.trim(),
-            address1: document.getElementById('address').value.trim(),
+            address_line_1: document.getElementById('addressLine1').value.trim(),
+            address_line_2: document.getElementById('addressLine2').value.trim(),
+            landmark: document.getElementById('landmark').value.trim(),
             zipCode: document.getElementById('zipcode').value.trim(),
             preferredContact: 'phone', // Default to phone
             date: selectedDate,
@@ -2811,20 +2885,20 @@
             utm_data: urlParameters // Include URL parameters as JSON
           };
           
-          // Initiate payment
-          initiatePayment(bookingData);
+          // Confirm booking without payment
+          confirmBooking(bookingData);
         });
 
-        // Payment processing functions
-        function initiatePayment(bookingData) {
+        // Booking confirmation function
+        function confirmBooking(bookingData) {
           // Show loading state
-          const payButton = document.getElementById('payButton');
-          const originalText = payButton.textContent;
-          payButton.textContent = 'Processing...';
-          payButton.disabled = true;
+          const confirmButton = document.getElementById('confirmBookingButton');
+          const originalText = confirmButton.textContent;
+          confirmButton.textContent = 'Processing...';
+          confirmButton.disabled = true;
           
-          // Create order on backend
-          fetch('/create-order', {
+          // Save booking to backend
+          fetch('/confirm-booking', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -2834,160 +2908,47 @@
           .then(response => response.json())
           .then(data => {
             if (data.success) {
-              // Open Razorpay checkout
-              openRazorpayCheckout(data, bookingData);
+              // Booking confirmed successfully
+              showBookingSuccess(bookingData, data.booking_id);
             } else {
-              throw new Error(data.error || 'Failed to create order');
+              throw new Error(data.error || 'Failed to confirm booking');
             }
           })
           .catch(error => {
-            console.error('Error creating order:', error);
-            alert('Failed to initiate payment. Please try again.');
+            console.error('Error confirming booking:', error);
+            alert('Failed to confirm booking. Please try again.');
             
             // Reset button
-            payButton.textContent = originalText;
-            payButton.disabled = false;
-            
-            // Log payment failure
-            logPaymentFailure(bookingData, {
-              code: 'ORDER_CREATION_FAILED',
-              description: error.message,
-              source: 'frontend',
-              step: 'order_creation'
-            });
+            confirmButton.textContent = originalText;
+            confirmButton.disabled = false;
           });
         }
 
-        function openRazorpayCheckout(orderData, bookingData) {
-          const options = {
-            key: orderData.key_id,
-            amount: orderData.amount,
-            currency: orderData.currency,
-            name: 'Prudentoe Dental',
-            description: 'Dental Appointment Booking',
-            image: '/static/images/prudentoe-logo1.png',
-            order_id: orderData.order_id,
-            handler: function(response) {
-              // Payment successful
-              verifyPayment(response, bookingData);
-            },
-            prefill: {
-              name: bookingData.name,
-              email: bookingData.email,
-              contact: bookingData.phone
-            },
-            notes: {
-              address: bookingData.address1,
-              zipcode: bookingData.zipCode,
-              appointment_date: bookingData.date,
-              appointment_time: bookingData.time
-            },
-            theme: {
-              color: '#1A472A'
-            },
-            modal: {
-              ondismiss: function() {
-                // Payment cancelled
-                logPaymentCancellation(bookingData);
-                resetPayButton();
-              }
-            }
-          };
-
-          const rzp = new Razorpay(options);
-          
-          rzp.on('payment.failed', function(response) {
-            // Payment failed
-            logPaymentFailure(bookingData, response.error);
-            resetPayButton();
-            alert('Payment failed. Please try again.');
-          });
-
-          rzp.open();
-        }
-
-        function verifyPayment(paymentResponse, bookingData) {
-          fetch('/verify-payment', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              razorpay_order_id: paymentResponse.razorpay_order_id,
-              razorpay_payment_id: paymentResponse.razorpay_payment_id,
-              razorpay_signature: paymentResponse.razorpay_signature,
-              booking_data: bookingData
-            })
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              // Payment verified successfully
-              showPaymentSuccess(bookingData, data.booking_id);
-            } else {
-              throw new Error(data.error || 'Payment verification failed');
-            }
-          })
-          .catch(error => {
-            console.error('Error verifying payment:', error);
-            alert('Payment verification failed. Please contact support.');
-            resetPayButton();
-          });
-        }
-
-        function logPaymentFailure(bookingData, errorDetails) {
-          fetch('/payment-failed', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              booking_data: bookingData,
-              error_details: errorDetails,
-              timestamp: new Date().toISOString(),
-              user_agent: navigator.userAgent,
-              url: window.location.href
-            })
-          })
-          .catch(error => {
-            console.error('Error logging payment failure:', error);
-          });
-        }
-
-        function logPaymentCancellation(bookingData) {
-          fetch('/payment-cancelled', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              booking_data: bookingData
-            })
-          })
-          .catch(error => {
-            console.error('Error logging payment cancellation:', error);
-          });
-        }
-
-        function showPaymentSuccess(bookingData, bookingId) {
+        function showBookingSuccess(bookingData, bookingId) {
           // Create URL parameters for the thank you page
           const params = new URLSearchParams();
           
-          if (bookingData.name) params.append('name', bookingData.name);
-          if (bookingData.date) params.append('date', bookingData.date);
-          if (bookingData.time) params.append('time', bookingData.time);
-          if (bookingData.phone) params.append('phone', bookingData.phone);
-          if (bookingId) params.append('booking_id', bookingId);
+          // First, add all original URL parameters from the index page
+          for (const [key, value] of Object.entries(urlParameters)) {
+            params.append(key, value);
+          }
           
-          // Redirect to thank you page with booking details
+          // Then add booking-specific data (these will override any existing params with same names)
+          if (bookingData.name) params.set('name', bookingData.name);
+          if (bookingData.date) params.set('date', bookingData.date);
+          if (bookingData.time) params.set('time', bookingData.time);
+          if (bookingData.phone) params.set('phone', bookingData.phone);
+          if (bookingId) params.set('booking_id', bookingId);
+          
+          // Redirect to thank you page with all parameters
           const thankYouUrl = `/thank-you?${params.toString()}`;
           window.location.href = thankYouUrl;
         }
 
-        function resetPayButton() {
-          const payButton = document.getElementById('payButton');
-          payButton.textContent = 'Pay ₹99';
-          payButton.disabled = false;
+        function resetConfirmButton() {
+          const confirmButton = document.getElementById('confirmBookingButton');
+          confirmButton.textContent = 'Confirm Booking';
+          confirmButton.disabled = false;
         }
 
         // Function to save booking data for non-serviceable areas

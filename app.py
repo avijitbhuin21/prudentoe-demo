@@ -170,7 +170,9 @@ def save_booking_to_db(booking_data, payment_status):
             'name': booking_data.get('name') or None,
             'email': booking_data.get('email') or None,
             'phone_number': booking_data.get('phone') or None,
-            'address': booking_data.get('address1') or None,
+            'address_line_1': booking_data.get('address_line_1') or booking_data.get('address1') or None,
+            'address_line_2': booking_data.get('address_line_2') or None,
+            'landmark': booking_data.get('landmark') or None,
             'zipcode': booking_data.get('zipCode') or None,
             'contact_method': booking_data.get('preferredContact') or None,
             'selected_date': booking_data.get('date') or None,
@@ -220,11 +222,13 @@ def create_order():
                 'name': data.get('name'),
                 'email': data.get('email'),
                 'phone': data.get('phone'),
-                'address': data.get('address1'),  # Updated field name
-                'zipcode': data.get('zipCode'),   # Updated field name
-                'contact_method': data.get('preferredContact'),  # Updated field name
-                'selected_date': data.get('date'),  # Updated field name
-                'selected_time': data.get('time'),  # Updated field name
+                'address_line_1': data.get('address_line_1'),
+                'address_line_2': data.get('address_line_2'),
+                'landmark': data.get('landmark'),
+                'zipcode': data.get('zipCode'),
+                'contact_method': data.get('preferredContact'),
+                'selected_date': data.get('date'),
+                'selected_time': data.get('time'),
                 'booking_type': 'dental_appointment'
             }
         }
@@ -410,6 +414,33 @@ def save_non_serviceable():
         
     except Exception as e:
         logger.error(f"Error saving non-serviceable booking: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@app.route('/confirm-booking', methods=['POST'])
+def confirm_booking():
+    try:
+        # Get booking data from request
+        data = request.get_json()
+        
+        logger.info(f"Confirming booking for customer: {data.get('name', 'Unknown')}")
+        
+        # Save to database with "payment method not added yet" status
+        db_result = save_booking_to_db(data, 'success')
+        
+        logger.info(f"Booking confirmed and saved: {db_result}")
+        
+        return jsonify({
+            'success': True,
+            'message': 'Booking confirmed successfully',
+            'booking_id': db_result.get('id') if db_result else None
+        })
+        
+    except Exception as e:
+        logger.error(f"Error confirming booking: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
         return jsonify({
             'success': False,
             'error': str(e)
