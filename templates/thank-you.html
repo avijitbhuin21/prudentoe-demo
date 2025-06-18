@@ -277,7 +277,7 @@
           <!-- Success Icon and Message -->
           <div class="text-center mb-8 fade-in">
             <div class="success-checkmark mb-6">
-              <svg class="w-20 h-20 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-20 h-20 text-prudentoe-green mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
@@ -288,7 +288,7 @@
               Your Appointment is Confirmed
             </h2>
             <p class="text-prudentoe-dark text-dynamic-base leading-1.37 mb-6">
-              We've received your booking and payment successfully. Our team will contact you shortly to confirm the details.
+              We've successfully received your booking details. Our team will contact you shortly to confirm the details.
             </p>
           </div>
 
@@ -520,9 +520,9 @@
           
           if (bookingData.bookingId) {
             detailsHtml += `
-              <div class="flex justify-between items-center py-2">
-                <span class="font-medium text-prudentoe-dark">Booking ID:</span>
-                <span class="text-prudentoe-green font-bold">${bookingData.bookingId}</span>
+              <div class="flex justify-between items-start py-2">
+                <span class="font-medium text-prudentoe-dark flex-shrink-0 mr-2">Booking ID:</span>
+                <span class="text-gray-500 text-sm break-all text-right">${bookingData.bookingId}</span>
               </div>
             `;
           }
