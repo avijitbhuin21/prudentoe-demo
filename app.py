@@ -714,6 +714,132 @@ def dashboard_logout():
     flash('You have been logged out successfully.', 'success')
     return redirect(url_for('dashboard_login'))
 
+# CRUD Routes for Dashboard
+@app.route('/dashboard/booking', methods=['POST'])
+def create_booking():
+    if not session.get('dashboard_logged_in'):
+        return jsonify({'success': False, 'error': 'Unauthorized'}), 401
+    
+    try:
+        data = request.get_json()
+        
+        # Validate required fields
+        required_fields = ['name', 'phone_number', 'email', 'address_line_1', 'zipcode', 'contact_method', 'payment_status']
+        for field in required_fields:
+            if not data.get(field):
+                return jsonify({'success': False, 'error': f'{field} is required'}), 400
+        
+        # Prepare data for insertion
+        booking_data = {
+            'name': data.get('name'),
+            'email': data.get('email'),
+            'phone_number': data.get('phone_number'),
+            'address_line_1': data.get('address_line_1'),
+            'address_line_2': data.get('address_line_2'),
+            'landmark': data.get('landmark'),
+            'zipcode': data.get('zipcode'),
+            'contact_method': data.get('contact_method'),
+            'selected_date': data.get('selected_date') if data.get('selected_date') else None,
+            'selected_time': data.get('selected_time') if data.get('selected_time') else None,
+            'payment_status': data.get('payment_status'),
+            'utm_data': data.get('utm_data', {})
+        }
+        
+        # Insert into database
+        result = supabase.table('booking').insert(booking_data).execute()
+        
+        if result.data:
+            logger.info(f"New booking created manually: {result.data[0]['id']}")
+            return jsonify({'success': True, 'booking_id': result.data[0]['id']})
+        else:
+            return jsonify({'success': False, 'error': 'Failed to create booking'}), 500
+            
+    except Exception as e:
+        logger.error(f"Error creating booking: {str(e)}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/dashboard/booking/<booking_id>', methods=['GET'])
+def get_booking(booking_id):
+    if not session.get('dashboard_logged_in'):
+        return jsonify({'success': False, 'error': 'Unauthorized'}), 401
+    
+    try:
+        print(f"Fetching booking with ID: {booking_id}" )
+        # Fetch booking from database
+        response = supabase.table('booking').select('*').eq('id', booking_id).execute()
+        
+        if response.data and len(response.data) > 0:
+            booking = response.data[0]
+            return jsonify({'success': True, 'booking': booking})
+        else:
+            return jsonify({'success': False, 'error': 'Booking not found'}), 404
+            
+    except Exception as e:
+        logger.error(f"Error fetching booking {booking_id}: {str(e)}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/dashboard/booking/<booking_id>', methods=['PUT'])
+def update_booking(booking_id):
+    if not session.get('dashboard_logged_in'):
+        return jsonify({'success': False, 'error': 'Unauthorized'}), 401
+    
+    try:
+        data = request.get_json()
+        
+        # Validate required fields
+        required_fields = ['name', 'phone_number', 'email', 'address_line_1', 'zipcode', 'contact_method', 'payment_status']
+        for field in required_fields:
+            if not data.get(field):
+                return jsonify({'success': False, 'error': f'{field} is required'}), 400
+        
+        # Prepare data for update
+        booking_data = {
+            'name': data.get('name'),
+            'email': data.get('email'),
+            'phone_number': data.get('phone_number'),
+            'address_line_1': data.get('address_line_1'),
+            'address_line_2': data.get('address_line_2'),
+            'landmark': data.get('landmark'),
+            'zipcode': data.get('zipcode'),
+            'contact_method': data.get('contact_method'),
+            'selected_date': data.get('selected_date') if data.get('selected_date') else None,
+            'selected_time': data.get('selected_time') if data.get('selected_time') else None,
+            'payment_status': data.get('payment_status'),
+            'utm_data': data.get('utm_data', {})
+        }
+        
+        # Update in database
+        result = supabase.table('booking').update(booking_data).eq('id', booking_id).execute()
+        
+        if result.data:
+            logger.info(f"Booking updated manually: {booking_id}")
+            return jsonify({'success': True, 'booking_id': booking_id})
+        else:
+            return jsonify({'success': False, 'error': 'Failed to update booking'}), 500
+            
+    except Exception as e:
+        logger.error(f"Error updating booking {booking_id}: {str(e)}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/dashboard/booking/<booking_id>', methods=['DELETE'])
+def delete_booking(booking_id):
+    if not session.get('dashboard_logged_in'):
+        return jsonify({'success': False, 'error': 'Unauthorized'}), 401
+    
+    try:
+        # Delete from database
+        result = supabase.table('booking').delete().eq('id', booking_id).execute()
+        
+        if result.data:
+            logger.info(f"Booking deleted manually: {booking_id}")
+            return jsonify({'success': True, 'message': 'Booking deleted successfully'})
+        else:
+            return jsonify({'success': False, 'error': 'Booking not found or failed to delete'}), 404
+            
+    except Exception as e:
+        logger.error(f"Error deleting booking {booking_id}: {str(e)}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
 if __name__ == '__main__':
     logger.info(f"Starting Flask app with payment amount: Rs. {PAYMENT_AMOUNT_RS}")
     logger.info(f"Razorpay Key ID: {RAZORPAY_KEY_ID}")
